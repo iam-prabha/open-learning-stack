@@ -1,3 +1,11 @@
+# Linked List
+# Data Structures for objects in linear order
+#  each object has data and a pointer to the next object.
+#               order determined by
+# array         - indices
+# linked list   - pointers
+
+
 class Node:
     def __init__(self, data):
         self.data = data
@@ -26,7 +34,6 @@ class LinkedList:
         node.next = self.head
         if self.head:
             self.head.prev = node
-
         self.head = node
         node.prev = None
 
@@ -40,19 +47,18 @@ class LinkedList:
         if node.next is not None:
             node.next.prev = node.prev
 
-    def print_list(list):
-        current = list.head
+    def print_list(self):
+        current = self.head
         while current:
             print(f"{current.data} -->", end=" ")
             current = current.next
 
-        print("None")
+        print(current)
 
 
 def main():
     ll = LinkedList()
     ll.print_list()
-
     ll.insert(Node(5))
     ll.print_list()
 
