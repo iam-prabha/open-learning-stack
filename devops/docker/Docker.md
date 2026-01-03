@@ -1,18 +1,19 @@
 # Docker
 
+## why we need this and what is solve?
+- Before docker we run our one application in one server.
+- VMware (virtual machine) solve this problem by creating a virtual environment that isolates our application from the host system.
+- Docker solves this problem by creating a lightweight container that isolates our application from the host system.
+
 Docker learning resources and notes for containerization.
 
-## 📚 Contents
-
-### Core Concepts
-
-#### What is Docker?
+## What is Docker?
 
 - Docker is a platform that helps us build, run and share software applications inside containers.
 - Docker uses containers to create isolated environments where programs run.
 - It provides a consistent environment across different machines and operating systems.
 
-#### What is a Container?
+## What is a Container?
 
 - Containers use the same hardware as our operating system (CPU, RAM, etc.).
 - However, they are separated entities that operate in a sandbox environment.
@@ -20,7 +21,7 @@ Docker learning resources and notes for containerization.
 - Perfect for team collaboration where each member has a different OS.
 - Containers are lightweight and start quickly compared to virtual machines.
 
-#### What are Images?
+## What are Images?
 
 - Docker images are similar to GitHub repositories.
 - But instead of software - they store environments where software is installed.
@@ -30,9 +31,9 @@ Docker learning resources and notes for containerization.
 - Containers are running instances of images.
 - Unlike images, we can change and interact with them.
 
-## 🚀 Common Docker Commands
+# 🚀 Common Docker Commands
 
-### Image Management
+##Image Management
 ```bash
 # Pull an image from Docker Hub
 docker pull image_name:tag
@@ -47,7 +48,7 @@ docker rmi image_name
 docker build -t image_name:tag .
 ```
 
-### Container Management
+## Container Management
 ```bash
 # Run a container
 docker run image_name
@@ -74,7 +75,7 @@ docker rm container_id
 docker exec -it container_id command
 ```
 
-### Docker Compose
+## Docker Compose
 ```bash
 # Start services
 docker-compose up
