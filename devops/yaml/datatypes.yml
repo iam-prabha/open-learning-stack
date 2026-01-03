@@ -1,0 +1,41 @@
+# string varibale
+person: friend
+job: "swe" # "swe"
+
+bio: |
+  hey this write for test.
+  you got it.
+
+# write single line in multiple lines
+message: >
+  this will
+  all in single line.
+
+# same as
+anotherMsg: this will
+  all in single line.
+
+number: 4872
+marks: 95.78
+booleanValue: No # n, N, false, FALSE
+# same for true -> y, Y, yes
+
+# specify the type
+zero: !!int 0
+positiveNumber: !!int 25
+negativeNumber: !!int -45
+binaryNumber: !!binary 0b01101
+octaNumbetr: !!int 06547
+hexa: !!int 0x45
+commaValue: !!str +540_000 # 540,000
+
+# float points numbers
+marked: !!float 45.54
+
+# null
+surname: !!null Null # or null, NULL
+
+# date and time
+date: 2004-12-15
+india time: 2001-12-15T02:59:43.9 +5:30
+no time zone: 2001-12-15T02:59:43.9

@@ -1,0 +1,12 @@
+"apple": "I am delicious apple"
+1: "this is row one"
+---
+cities:
+  - New york
+  - India
+  - London
+---
+cities: [kolkata, mumbai]
+---
+{ mango: "yellow fruit", taste: "sweet" }
+... # this tell document end here
