@@ -1,51 +1,49 @@
 // ---String objects can produce unexpected results and slows down execution speed.--
 let X = "John";
 let y = new String("John");
-// console.log(x === y); // false
+// console.log(X === y); // false
 
 let z = new String("John");
-// console.log(z === x); console.log(z === y); // Both will return false
+// console.log(z === X);
+// console.log(z === y); // Both will return false
 
 // NOTE:: Comparing two JavaScript objects always returns false.
 
 //-----------------Js timing------------------
 
 setTimeout(() => {
-     console.log("Delayed for 1 second.");
- }, 1000);
+  console.log("Delayed for 1 second.");
+}, 1000);
 
 // -----Dot notation------
 
 let x = {
-    name: 'bob',
-    age: 22
- }
+  name: "bob",
+  age: 22,
+};
 
- let person = {
-     ...x,
-     age: 24,
-     gender: 'male'
- }
- console.log(person);
- console.log(x);
- console.log(person);
+let person = {
+  ...x,
+  age: 24,
+  gender: "male",
+};
+console.log(x);
+console.log(person);
 // -------------------Manipulating Arrays--------------
 // Pushing and popping
 // Arrays can also function as a stack. The push and pop methods insert and remove variables from the end of an array.
 
 // For example, let's create an empty array and push a few variables.
 
-let myStack = [];
+const myStack = [];
 myStack.push(1);
 myStack.push(2);
 myStack.push(3);
-// console.log(myStack);
+console.log(myStack);
 
 // After pushing variables to the array, we can then pop variables off from the end.
 
 // console.log(myStack.pop());
-console.log(myStack);
-
 
 // Queues using shifting and unshifting
 // The unshift and shift methods are similar to push and pop, only they work from the beginning of the array. We can use the push and shift methods consecutively to utilize an array as a queue. For example:
@@ -56,8 +54,8 @@ myQueue.push(2);
 myQueue.push(3);
 
 console.log(myQueue.shift());
-console.log(myQueue.shift());
-console.log(myQueue.shift());
+// console.log(myQueue.shift());
+// console.log(myQueue.shift());
 
 // The unshift method is used to insert a variable at the beginning of an array. For example:
 
@@ -74,7 +72,6 @@ myArray.unshift(0);
 
 // Confirm boxes will return "true" if ok is selected, and return "false" if cancel is selected. Alert boxes will not return anything. Prompt boxes will return whatever is in the text box. Note: prompt boxes also have an optional second parameter, which is the text that will already be in the text box.
 
-
 //-----Promises----
 // Promises are the basics of asynchronous programming in JavaScript, and are very important to master.
 
@@ -90,13 +87,13 @@ myArray.unshift(0);
 // To make the code above work, we will need to write the function in the following manner:
 
 function getServerStatus() {
-    // Could be GET or POST/PUT/PATCH/DELETE
-    const result = fetch('https://dummyjson.com/test');
+  // Could be GET or POST/PUT/PATCH/DELETE
+  const result = fetch("https://dummyjson.com/test");
 
-    // THIS WILL WORK!
-    result.then(function (status) {
-        console.log("The status from the server is: ", status.ok);
-    });
+  // THIS WILL WORK!
+  result.then(function (status) {
+    console.log("The status from the server is: ", status.ok);
+  });
 }
 // getServerStatus();
 //Notice that we used the then function here, which is one of the methods of a Promise.
@@ -109,82 +106,86 @@ function getServerStatus() {
 // For example, let's say that we would like to calculate the sum of two numbers, but by writing a function which returns a Promise and not the value.
 
 function sumAsync(x, y) {
-    const p = new Promise((resolve, reject) => {
-        // this resolves the promise we just created with the output of x+y
-        resolve(x + y);
-    });
+  const p = new Promise((resolve, reject) => {
+    // this resolves the promise we just created with the output of x+y
+    resolve(x + y);
+  });
 
-    // This returns the promise, not the value
-    return p;
+  // This returns the promise, not the value
+  return p;
 }
 // console.log(sumAsync(1, 2));
 // let's use the function now
 sumAsync(5, 7).then((result) => {
-    console.log("The result of the addition is:", result);
+  console.log("The result of the addition is:", result);
 });
 // When can this be very useful ? When the calculation needs to happen indirectly, for example after waiting a while or when retrieving information from the server using the fetch command for example.
 
-// Let's modify the example to resolve the solution only after a half a second: 
+// Let's modify the example to resolve the solution only after a half a second:
 
 function sumAsync(x, y) {
-    console.log("1. sumAsync is executed");
-    const p = new Promise((resolve, reject) => {
-        // run this in 500ms from now
-        setTimeout(() => {
-            console.log("4. Resolving sumAsync's Promise with the result after 500ms");
-            resolve(x + y);
-        }, 500);
+  console.log("1. sumAsync is executed");
+  const p = new Promise((resolve, reject) => {
+    // run this in 500ms from now
+    setTimeout(() => {
+      console.log(
+        "4. Resolving sumAsync's Promise with the result after 500ms",
+      );
+      resolve(x + y);
+    }, 500);
 
-        // we don't need to return anything
-        console.log("2. sumAsync Promise is initialized");
-    });
-    console.log("3. sumAsync has returned the Promise");
-    return p;
+    // we don't need to return anything
+    console.log("2. sumAsync Promise is initialized");
+  });
+  console.log("3. sumAsync has returned the Promise");
+  return p;
 }
 
 // console.log(sumAsync(2, 2));
 
 // let's use the function now
 sumAsync(5, 7).then((result) => {
-    console.log("5. The result of the addition is:", result);
+  console.log("5. The result of the addition is:", result);
 });
 
 // Rejecting promises
 // In a synchronous flow, if we want to tell the user that something went wrong so he can catch an exception, we throw an exception using the throw argument.When using promises, we need to trigger the reject function instead.
 
-// Let's say we want to write the same function, but with a rejection if a value is negative: 
+// Let's say we want to write the same function, but with a rejection if a value is negative:
 
 function sumAsync(x, y) {
-    return new Promise((resolve, reject) => {
-        // run this in 500ms from now
-        setTimeout(() => {
-            if (x < 0 || y < 0) {
-                reject("Negative values received");
-            } else {
-                resolve(x + y);
-            }
-        }, 500);
+  return new Promise((resolve, reject) => {
+    // run this in 500ms from now
+    setTimeout(() => {
+      if (x < 0 || y < 0) {
+        reject("Negative values received");
+      } else {
+        resolve(x + y);
+      }
+    }, 500);
 
-        // we don't need to return anything
-    });
+    // we don't need to return anything
+  });
 }
 
-sumAsync(-5, 7).then((result) => {
+sumAsync(-5, 7)
+  .then((result) => {
     console.log("The result of the addition is:", result);
-}).catch((error) => {
+  })
+  .catch((error) => {
     console.log("Error received:", error);
-});
+  });
 // split the string at the first occurrence of x
 // return the larger of the two resulting strings
 // i.e. HappyxDeveloper => Developer
 function splitAtX(string) {
-    const index = string.indexOf('x');
-    console.log(index)
-    const a = string.slice(0, index);
-    console.log(a)
-    const b = string.slice(index + 1);
-    console.log(b)
-    return (a.length > b.length) ? a : b;
+  const index = string.indexOf("x");
+  console.log(index);
+  const a = string.slice(0, index);
+  console.log(a);
+  const b = string.slice(index + 1);
+  console.log(b);
+  return a.length > b.length ? a : b;
 }
 // splitAtX("HappyxDeveloper");
 
@@ -197,22 +198,21 @@ function splitAtX(string) {
 //A "Q" is 3 points
 //A "J" is 2 points
 
-
 function playerHandScore(hand) {
-    const scores = {
-        "K": 4,
-        "Q": 3,
-        "J": 2
-    }
+  const scores = {
+    K: 4,
+    Q: 3,
+    J: 2,
+  };
 
-    const handArr = hand.split("");
-    let sum = 0;
-    for (let i = 0; i < handArr.length; i++) {
-        const score = scores[handArr[i]];
-        sum += score;
-    }
+  const handArr = hand.split("");
+  let sum = 0;
+  for (let i = 0; i < handArr.length; i++) {
+    const score = scores[handArr[i]];
+    sum += score;
+  }
 
-    return sum;
+  return sum;
 }
 
 // console.log(playerHandScore('KQQ'));
@@ -220,20 +220,20 @@ function playerHandScore(hand) {
 //Modify the array directly and do not return anything from this function.
 
 const array = [1, 2, 3, 1];
-removeOccurrences(array,);
+removeOccurrences(array);
 // console.log(array); // [2, 3]
 
 // given an array of integers
 // find all occurrences of num and remove them
 function removeOccurrences(array, num) {
-    for (let i = array.length - 1; i >= 0; i--) {
-        if (array[i] === num) {
-            array.splice(i, 1);
-        }
+  for (let i = array.length - 1; i >= 0; i--) {
+    if (array[i] === num) {
+      array.splice(i, 1);
     }
+  }
 }
 
 function sortUp(array) {
-    return array.sort((a, b) => a - b);
+  return array.sort((a, b) => a - b);
 }
 // console.log(sortUp([3, 2, 4, 1]));

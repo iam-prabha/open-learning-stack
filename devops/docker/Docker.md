@@ -16,7 +16,7 @@ Docker learning resources and notes for containerization.
 ## What is a Container?
 
 - Containers use the same hardware as our operating system (CPU, RAM, etc.).
-- However, they are separated entities that operate in a sandbox environment.
+- However, they are separate entities that operate in a sandbox environment.
 - All software requirements are pre-installed inside the container.
 - Perfect for team collaboration where each member has a different OS.
 - Containers are lightweight and start quickly compared to virtual machines.
