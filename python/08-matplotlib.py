@@ -4,30 +4,24 @@
 # # Libraries
 # ======================================================================
 
-# %%
 import matplotlib.pyplot as plt
 
-# %%
 import pandas as pd
 
 # ======================================================================
 # # Load data
 # ======================================================================
 
-# %%
 cyclones = pd.read_csv("../data/chennai_cyclones.csv")
 
-# %%
 cyclones.info()
 
-# %%
 cyclones
 
 # ======================================================================
 # # Basic line plot
 # ======================================================================
 
-# %%
 plt.plot(cyclones["Year"], cyclones["Fatalities"])
 plt.xlabel("Year")
 plt.ylabel("death rate")
@@ -38,7 +32,6 @@ plt.show()
 # # Plot beautifiers (colour, marker, linewidth, grid, linestyle, markersize)
 # ======================================================================
 
-# %%
 plt.plot(
     cyclones["Year"],
     cyclones["Fatalities"],
@@ -58,7 +51,6 @@ plt.show()
 # # Multiple plots
 # ======================================================================
 
-# %%
 fig = plt.figure(figsize=(25, 15))  # width , height
 
 ax1 = fig.add_subplot(2, 2, 1)
@@ -126,7 +118,6 @@ plt.ylabel("death rate")
 # # Bar plot
 # ======================================================================
 
-# %%
 def convert_damages(damages):
     endresult = []
     for i in damages:
@@ -141,19 +132,14 @@ def convert_damages(damages):
         endresult.append(result)
     return endresult
 
-# %%
 damage_converted = convert_damages(cyclones["Damage"])
 
-# %%
 damage_converted
 
-# %%
 cyclones["Damage_converted"] = damage_converted
 
-# %%
 cyclones
 
-# %%
 fig = plt.figure(figsize=(25, 10))
 ax = fig.add_subplot(1, 1, 1)
 
@@ -175,7 +161,6 @@ plt.show()
 # # Histogram
 # ======================================================================
 
-# %%
 plt.hist(cyclones["Year"], bins=5, edgecolor="black")
 plt.show()
 
@@ -183,39 +168,30 @@ plt.show()
 # # Scatterplot
 # ======================================================================
 
-# %%
 cyclones["cyclone_birth_month"] = cyclones["Formed"].apply(lambda x: x.split()[0])
 
-# %%
 cyclones
 
-# %%
 plt.scatter(cyclones["Cyclone Name"], cyclones["cyclone_birth_month"])
 plt.xticks(rotation=45)
 plt.show()
 
-# %%
 cyclones["Formed"]
 
 # ======================================================================
 # # Pie chart
 # ======================================================================
 
-# %%
 cyclones
 
-# %%
 cyclones["death_percentage"] = (
     cyclones["Fatalities"] / cyclones["Fatalities"].sum() * 100
 )
 
-# %%
 plt.figure(figsize=(15, 10))
 plt.pie(cyclones["death_percentage"], labels=cyclones["Cyclone Name"], shadow=True)
 
-# %%
 
 
-# %%
 
 

@@ -26,7 +26,6 @@
 # * **Naming Convention:** Class names typically use `PascalCase` (e.g., `MyClass`, `Car`, `Person`).
 # ======================================================================
 
-# %%
 # Defining a simple class
 class Dog:
     # class attribute (shared by all instances of Dog)
@@ -68,24 +67,20 @@ class Dog:
 # **Creation:** You create an object by calling the class as if it were a function.
 # ======================================================================
 
-# %%
 # Creating object (instance) of the Dog class
 my_dog = Dog("Buddy", "Golden Retriever", 5)
 your_dog = Dog("Max", "Labrador", 3)
 
-# %%
 # Accessing attributes
 print(f"{my_dog.name} is a {my_dog.breed} and is {my_dog.age} years old.")
 print(f"{your_dog.name} is a {your_dog.breed} and is {your_dog.age} years old.")
 
-# %%
 # Calling methods
 print(my_dog.bark())
 print(your_dog.eat())
 print(your_dog.eat())  # Try eating again
 print(f"Is {my_dog.name} hungry? {my_dog.is_hungry}")
 
-# %%
 # using __str__ and __repr__
 print(my_dog)  # Calls __str__
 print(repr(your_dog))  # Calls __repr__
@@ -100,7 +95,6 @@ print(repr(your_dog))  # Calls __repr__
 # `super():` Used to call methods of the parent class, especially the parent's  `__init__` method.
 # ======================================================================
 
-# %%
 class Animal:
     def __init__(self, name, age):
         self.name = name
@@ -146,7 +140,6 @@ print(my_cat.speak())
 # **Multiple Inheritance:** Python supports inheriting from multiple parent classes. While powerful, it can lead to complex method resolution orders (MRO) and potential diamond problems. Use with caution.
 # ======================================================================
 
-# %%
 class Flyer:
     def fly(self):
         return "I can fly!"
@@ -175,7 +168,6 @@ print(d.quack())
 # **Duck Typing:** A core Python concept. If an object "walks like a duck and quacks like a duck," then it's treated as a duck. Python doesn't care about the object's explicit type, only whether it has the necessary methods or attributes.
 # ======================================================================
 
-# %%
 # Reusing our Dog and Cat classes from Inheritance example
 
 
@@ -214,7 +206,6 @@ make_animal_speak(my_robot)  # Output: R2D2: Beep boop! (Demonstrates duck typin
 # **Private (Name Mangling):** `__my_attribute` - Double leading underscore. Python "mangles" the name (e.g., `_ClassName__my_attribute`) to make it harder (but not impossible) to access directly from outside the class. This is primarily to avoid naming conflicts in inheritance.
 # ======================================================================
 
-# %%
 class BankAccount:
     def __init__(self, initial_balance):
         self._balance = initial_balance  # Protected attribute (by convention)
@@ -270,7 +261,6 @@ my_account.public_method_calling_private()  # Works
 # **Abstract Base Classes (ABCs):** Using the `abc` module, you can define abstract classes and abstract methods. Abstract methods must be implemented by concrete subclasses. This enforces a contract.
 # ======================================================================
 
-# %%
 from abc import ABC, abstractmethod
 
 
@@ -326,6 +316,5 @@ print(f"Circle area: {circle.area()}")
 print(f"Circle perimeter: {circle.perimeter()}")
 print(circle.describe())
 
-# %%
 
 

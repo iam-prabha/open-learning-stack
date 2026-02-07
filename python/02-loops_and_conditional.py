@@ -4,41 +4,32 @@
 # # Functions
 # ======================================================================
 
-# %%
 def coconut_chutney():
     print("COCONUT CHUTNEY RECIPE:")
     print("coconut+potukkadalai + chilli + salt")
 
-# %%
 for i in range(10):
     coconut_chutney()
 
-# %%
 def tomato_chutney():
     print("tomato + onion + chilli + salt")
 
-# %%
 coconut_chutney()
 
 # ======================================================================
 # # For loop
 # ======================================================================
 
-# %%
 range(7)
 
-# %%
 for i in range(7):
     print(i)
 
-# %%
 for k in range(7):
     coconut_chutney()
 
-# %%
 k = 0
 
-# %%
 for k in range(7):
     print("day", k, "- RECIPE")
     coconut_chutney()
@@ -47,7 +38,6 @@ for k in range(7):
 # # while loop
 # ======================================================================
 
-# %%
 day = 0
 while (day < 7):
     print("day", day,"- recipe")
@@ -67,13 +57,10 @@ while (day < 7):
 # - pass
 # ======================================================================
 
-# %%
 coconut_availability = int(input())
 
-# %%
 coconut_availability
 
-# %%
 for i in range(7):
     print("day", i, "- recipe")
     if coconut_availability == 1:
@@ -84,19 +71,14 @@ for i in range(7):
         print("make sambar...")
 
 
-# %%
 coconut_availability = int(input())
 
-# %%
 coconut_availability_list = [1,0,0,1,1,0,0]
 
-# %%
 type(coconut_availability_list)
 
-# %%
 coconut_availability_list[3]
 
-# %%
 for i in range(7):
     print("day",i,"- recipe")
     if coconut_availability_list[i] == 1:
@@ -114,10 +96,8 @@ for i in range(7):
 # # Ternary operation or conditional expressions
 # ======================================================================
 
-# %%
 coconut_chutney() if coconut_availability == 1 else tomato_chutney()
 
-# %%
 coconut_availability
 
 # ======================================================================
@@ -130,7 +110,6 @@ coconut_availability
 # - pass: do nothing
 # ======================================================================
 
-# %%
 for j in range(3):
     print("week no:", j,"--------------------------")
     for i in range(7):
@@ -151,7 +130,6 @@ for j in range(3):
 # # Nested loops
 # ======================================================================
 
-# %%
 for j in range(3):
     print("week no:", j,"--------------------------")
     for i in range(7):
@@ -163,7 +141,6 @@ for j in range(3):
         else:
             print("make sambar")
 
-# %%
 a = 5
 b= 10
 c= 15
@@ -176,7 +153,6 @@ if a<b:
 else:
     print("a is big")
 
-# %%
 x = 5
 if x>10:
     print("x is greater than 10")
@@ -185,8 +161,6 @@ elif x==5:
 else:
     print("x is just dummy")
 
-# %%
 for i in range(1, 10, 3):
     print(i)
 
-# %%

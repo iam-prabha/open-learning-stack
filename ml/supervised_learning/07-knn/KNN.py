@@ -64,32 +64,27 @@
 # `scikit-learn` Implementation
 # ======================================================================
 
-# %%
 from sklearn.neighbors import KNeighborsClassifier  # KNeighborsRegressor for regression
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.datasets import load_breast_cancer  # A binary classification dataset
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 
-# %%
 # 1. Load Data
 cancer = load_breast_cancer()
 X = cancer.data
 y = cancer.target
 
-# %%
 # 2. Split Data
 X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.3, random_state=42, stratify=y
 )
 
-# %%
 # 3. Scale Features (CRUCIAL for KNN as it's distance-based)
 scaler = StandardScaler()
 X_train_scaled = scaler.fit_transform(X_train)
 X_test_scaled = scaler.transform(X_test)
 
-# %%
 # 4. Instantiate and Train the KNN Model
 # n_neighbors: The number of neighbors to consider (K). This is the most important hyperparameter.
 # weights: ('uniform', 'distance') How to weigh neighbors. 'uniform' gives equal weight, 'distance' weights closer neighbors more.
@@ -97,11 +92,9 @@ X_test_scaled = scaler.transform(X_test)
 knn_model = KNeighborsClassifier(n_neighbors=5, weights="uniform", metric="euclidean")
 knn_model.fit(X_train_scaled, y_train)  # Training simply involves storing the data
 
-# %%
 # 5. Make Predictions
 y_pred_knn = knn_model.predict(X_test_scaled)
 
-# %%
 # 6. Evaluate the Model
 print("\n--- K-Nearest Neighbors (KNN) Classifier ---")
 print(f"Accuracy: {accuracy_score(y_test, y_pred_knn):.4f}")
@@ -119,6 +112,5 @@ print(
 # - algorithm: ('auto', 'ball_tree', 'kd_tree', 'brute') Algorithm used to compute the nearest neighbors.
 # - metric: (str or callable) The distance metric to use. Default is 'minkowski' (whic
 
-# %%
 
 

@@ -8,7 +8,6 @@
 # Vector are like arrows:they have both a direction and a length (magnitude). Think of them as moving a certain distance in a certain direction!
 # ======================================================================
 
-# %%
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -21,7 +20,6 @@ import matplotlib.pyplot as plt
 # Each number tells you how far to move in that direction.
 # ======================================================================
 
-# %%
 # Example vectors in 2D
 v1 = np.array([3, 4])  # move 3 units right, 4 units up
 v2 = np.array([-2, 1]) # move 2 units left, 1 units up
@@ -62,7 +60,6 @@ plt.show()
 # Adding vectors means following one vector, then the other. Result: move the total distance in the combined direction!
 # ======================================================================
 
-# %%
 # Example : v1 + v2
 v1 = np.array([3, 2])
 v2 = np.array([1, 3])
@@ -102,7 +99,6 @@ plt.show()
 
 print("\nNotice: v1 + v2 goes from origin to the end of v2 ( when v2 starts from v1 )")
 
-# %%
 # Example: 2 * v, 0.5 * v, -1 * v
 v = np.array([2, 1])
 
@@ -149,7 +145,6 @@ plt.show()
 # The magnitude (length) of the vector v = [x ,y] is: √(x² + y²) This comes from thr pythagorean theorem!
 # ======================================================================
 
-# %%
 # Example: magnitude of vectors
 v1 = np.array([3, 4])
 v2 = np.array([5, 0])
@@ -204,7 +199,6 @@ plt.show()
 # - Negative = pointing in opposite directions
 # ======================================================================
 
-# %%
 # Example: dot product
 v1 = np.array([3, 4])
 v2 = np.array([1, 2])
@@ -264,7 +258,6 @@ plt.show()
 # Substracting vectors: v1 - v2 = v1 + (-v2) The result points from v2 to v1!
 # ======================================================================
 
-# %%
 # Example: v1 - v2
 v1 = np.array([4, 3])
 v2 = np.array([1, 2])

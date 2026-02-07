@@ -64,7 +64,6 @@
 # `scikit-learn` implementation
 # ======================================================================
 
-# %%
 # RandomForestRegresssion for regression tasks
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
@@ -72,7 +71,6 @@ from sklearn.datasets import load_wine  # multi-class classification dataset
 from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
 import pandas as pd
 
-# %%
 # 1. Load dataset
 wine = load_wine()
 X = wine.data
@@ -81,13 +79,11 @@ y = wine.target
 print(f"{X[:5]}\n")
 print(f"{y[:5]}")
 
-# %%
 # 2. split Dataset
 X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.2, random_state=42
 )
 
-# %%
 # No scaling needed for tree-based models typically
 
 # 3. Instantiate and Train the Random Forest Model
@@ -100,12 +96,10 @@ rf_model = RandomForestClassifier(
 )
 rf_model.fit(X_train, y_train)
 
-# %%
 # 4. Make Predictions
 y_pred_rf = rf_model.predict(X_test)
 print(f"Predictions: {y_pred[:5]}")
 
-# %%
 # 5. Evaluate the Model
 print("\n--- Random Forest Classifier ---")
 print(f"Accuracy: {accuracy_score(y_test, y_pred_rf):.4f}")
@@ -115,7 +109,6 @@ print(
     classification_report(y_test, y_pred_rf, target_names=wine.target_names),
 )
 
-# %%
 # Feature Importance (a nice benefit of Random Forests)
 feature_importances = pd.Series(rf_model.feature_importances_, index=wine.feature_names)
 print("\nTop 10 Feature Importances:\n", feature_importances.nlargest(10))
@@ -132,6 +125,5 @@ print("\nTop 10 Feature Importances:\n", feature_importances.nlargest(10))
 # - bootstrap: (bool) Whether bootstrap samples are used when building trees. (Default: True)
 # - n_jobs: (int) Number of jobs to run in parallel. -1 means use all processors.
 
-# %%
 
 

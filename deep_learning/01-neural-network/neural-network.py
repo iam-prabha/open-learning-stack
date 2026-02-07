@@ -20,7 +20,6 @@
 # - In this senses, neural networks refer to systems of neurons, either organic or artificial in nature.
 # ======================================================================
 
-# %%
 import warnings
 
 import numpy as np
@@ -28,7 +27,6 @@ import numpy as np
 warnings.filterwarnings("ignore")
 
 
-# %%
 class NeuralNetwork:
     def __init__(self):
         np.random.seed(1)
@@ -85,4 +83,3 @@ if __name__ == "__main__":
     print("output data: ")
     print(neural_network.think(np.array([A, B, C])))
 
-# %%

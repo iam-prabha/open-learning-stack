@@ -41,18 +41,15 @@
 # **K-Means with `scikit-learn`**
 # ======================================================================
 
-# %%
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.datasets import make_blobs  # For generating clusting data
 from sklearn.cluster import KMeans
 from sklearn.preprocessing import StandardScaler
 
-# %%
 # 1. generate Sample data for clustering
 X, y = make_blobs(n_samples=300, centers=3, cluster_std=0.60, random_state=0)
 
-# %%
 # 2. here just for visualization to see the data
 plt.figure(figsize=(8, 6))
 plt.scatter(X[:, 0], X[:, 1], s=50, alpha=0.8)
@@ -62,23 +59,19 @@ plt.ylabel("Feature 2")
 plt.grid(True)
 plt.show()
 
-# %%
 # Scale the data (important for distance-based algorithms like K-Means)
 scaler_kmeans = StandardScaler()
 X_scaled_kmeans = scaler_kmeans.fit_transform(X)
 
-# %%
 # Initialize and train K-Means Model
 # n_init='auto' handles multiple initializations and picks the best one
 kmeans_sklearn = KMeans(n_clusters=3, n_init="auto", random_state=0)
 kmeans_sklearn.fit(X_scaled_kmeans)
 
-# %%
 # Get cluster labels
 cluster_labels_sklearn = kmeans_sklearn.labels_
 centroids_sklearn = kmeans_sklearn.cluster_centers_
 
-# %%
 # plotting the results
 plt.figure(figsize=(8, 6))
 plt.scatter(
@@ -104,7 +97,6 @@ plt.legend()
 plt.grid(True)
 plt.show()
 
-# %%
 # Note: For unsupervised learning, there's no "ground truth" y to evaluate against in the same way as supervised.
 # We often use internal metrics like Silhouette Score or visual inspection.
 # Or, if we do have labels (like y_true in this generated data), we can use adjusted_rand_score, etc.
@@ -113,6 +105,5 @@ from sklearn.metrics import adjusted_rand_score
 ari = adjusted_rand_score(y, cluster_labels_sklearn)
 print(f"Adjusted Rand Index (ARI): {ari:.4f}")
 
-# %%
 
 

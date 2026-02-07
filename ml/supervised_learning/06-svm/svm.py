@@ -72,7 +72,6 @@
 # **Implementation** with `scikit-learn`(iris dataset)
 # ======================================================================
 
-# %%
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn import datasets
@@ -81,7 +80,6 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.svm import SVC  # Support Vector Classifier
 from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
 
-# %%
 # 1. load the dataset
 iris = datasets.load_iris()
 X = iris.data[:, :2]  # we'll just use the first two features for easy visualization
@@ -89,20 +87,17 @@ y = iris.target
 
 print(f"Iris dataset: {X[:5]}, \n{y[:5]}")
 
-# %%
 # 2. split Data
 X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.4, random_state=42, stratify=y
 )
 print(f"X_train data: {X_train[:5]}, \n{y_train[:5]}")
 
-# %%
 # 3. scale features (important for SVM, especially with RBF kernel)
 scalar = StandardScaler()
 X_train_scaled = scalar.fit_transform(X_train)
 X_test_scaled = scalar.transform(X_test)
 
-# %%
 # 3. Instantiate and train the SVM model (with RBF kernel)
 # C: Regularization parameter. Smaller C MEANS stronger regularization (more margin violation allowed).
 # gamma: Kernel coefficient for 'rbf', 'poly' and 'sigmoid'. Determines the influence of single training examples.
@@ -112,19 +107,16 @@ svm_model = SVC(
 )  # 'scale' uses 1 / (n_features * X.var())
 svm_model.fit(X_train_scaled, y_train)
 
-# %%
 # 5. Make predictions
 y_pred_svm = svm_model.predict(X_test_scaled)
 print(f"Predictions: {y_pred_svm[:5]}")
 
-# %%
 # 6. Evaluate the Model
 print("--- Support Vector Machine (SVM) ---")
 print(f"Accuracy: {accuracy_score(y_test, y_pred_svm):.4f}")
 print("\nConfusion Matrix:\n", confusion_matrix(y_test, y_pred_svm))
 print("\nClassification Report:\n", classification_report(y_test, y_pred_svm))
 
-# %%
 # Plotting the decision boundary (only works easily for 2 features)
 def plot_decision_boundary(X, y, model, title, scalar=None):
     x_min, x_max = X[:, 0].min() - 1, X[:, 0].max() + 1
@@ -151,7 +143,6 @@ plot_decision_boundary(
     X_test, y_test, svm_model, "SVM Decision Boundary on Test Data", scalar
 )
 
-# %%
 # Important Hyperparameters for SVC:
 # - C: (float) Regularization parameter. The strength of the regularization is inversely proportional to C.
 #      It controls the trade-off between achieving a low training error and a large margin.
@@ -162,6 +153,5 @@ plot_decision_boundary(
 # - degree: (int) Degree of the polynomial kernel function ('poly'). Ignored by other kernels.
 # - class_weight: (dict or 'balanced') Weights associated with classes. Useful for imbalanced datasets.
 
-# %%
 
 

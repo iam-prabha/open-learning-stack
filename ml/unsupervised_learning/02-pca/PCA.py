@@ -68,43 +68,36 @@
 # `scikit-learn` **Implementation**
 # ======================================================================
 
-# %%
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.decomposition import PCA
 from sklearn.datasets import load_iris
 from sklearn.preprocessing import StandardScaler
 
-# %%
 # 1. Load Data
 iris = load_iris()
 X = iris.data
 y = iris.target  # We'll use y just for coloring the plot after PCA
 
-# %%
 # 2. Scale Features (CRUCIAL for PCA)
 scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X)
 
-# %%
 # 3. Instantiate and Apply PCA
 # n_components: The number of principal components to keep.
 #               Can be an int (e.g., 2), a float (e.g., 0.95 for 95% variance explained), or None.
 pca = PCA(n_components=2)  # Reduce to 2 dimensions for visualization
 X_pca = pca.fit_transform(X_scaled)
 
-# %%
 print("\n--- Principal Component Analysis (PCA) ---")
 print(f"Original Data Shape: {X.shape}")
 print(f"Reduced Data Shape: {X_pca.shape}")
 
-# %%
 # Explained Variance Ratio
 # This tells us how much variance each principal component explains.
 print(f"Explained Variance Ratio per component: {pca.explained_variance_ratio_}")
 print(f"Cumulative Explained Variance: {np.sum(pca.explained_variance_ratio_):.4f}")
 
-# %%
 # 4. Visualize the PCA-transformed Data
 plt.figure(figsize=(8, 6))
 scatter = plt.scatter(
@@ -122,13 +115,11 @@ plt.colorbar(
 plt.grid(True)
 plt.show()
 
-# %%
 # If you wanted to see how many components explain a certain amount of variance:
 pca_full = PCA(n_components=None)  # Keep all components
 pca_full.fit(X_scaled)
 cumulative_variance = np.cumsum(pca_full.explained_variance_ratio_)
 
-# %%
 plt.figure(figsize=(8, 5))
 plt.plot(
     range(1, len(cumulative_variance) + 1),
@@ -154,6 +145,5 @@ plt.show()
 #    'auto' (default) chooses the best one based on data.
 #    'randomized' is often good for large datasets and small n_components.
 
-# %%
 
 

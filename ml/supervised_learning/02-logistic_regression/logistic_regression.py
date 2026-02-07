@@ -35,7 +35,6 @@
 # **Logistic Regression with `scikit-learn`**
 # ======================================================================
 
-# %%
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.linear_model import LogisticRegression
@@ -43,7 +42,6 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
 
-# %%
 # 1. Generate Sample data (for classification)
 np.random.seed(0)
 # Class 0 data
@@ -60,7 +58,6 @@ print(X[:5])
 print()
 print(y[:5])
 
-# %%
 # visualize the data
 plt.figure(figsize=(8, 6))
 plt.scatter(X[y == 0, 0], X[y == 0, 1], color="red", label="Class 0")
@@ -72,38 +69,32 @@ plt.legend()
 plt.grid(True)
 plt.show()
 
-# %%
 # Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.2, random_state=42
 )
 
-# %%
 # scale features (important for Gradient Descent)
 scaler = StandardScaler()
 X_train_scaled = scaler.fit_transform(X_train)
 X_test_scaled = scaler.transform(X_test)
 
-# %%
 # Instantiate and train the model
 # 'solver' specifies the algorithm to use for optimization
 # 'liblinear' is good for small datasets and L1/L2 regularization
 model_lr_sklearn = LogisticRegression(solver="liblinear", random_state=42)
 model_lr_sklearn.fit(X_train_scaled, y_train)
 
-# %%
 # Make predictions
 y_pred_lr_sklearn = model_lr_sklearn.predict(X_test_scaled)
 print(y_pred_lr_sklearn[:5])
 
-# %%
 # Evaluate the model
 accuracy_sklearn = accuracy_score(y_test, y_pred_lr_sklearn)
 print(f"Accuracy of Logistic Regression model: {accuracy_sklearn:.2f}")
 print(f"confusion_matrix:\n {confusion_matrix(y_test, y_pred_lr_sklearn)}")
 print(f"classification_report:\n {classification_report(y_test, y_pred_lr_sklearn)}")
 
-# %%
 # plotting decision boundary (for 2 features)
 def plot_decision_boundary(X, y, model, title):
     x_min, x_max = X[:, 0].min() - 1, X[:, 0].max() + 1
@@ -128,7 +119,6 @@ def plot_decision_boundary(X, y, model, title):
     plt.grid(True)
     plt.show()
 
-# %%
 # plotting decision boundary
 plot_decision_boundary(
     X_test_scaled,
@@ -137,6 +127,5 @@ plot_decision_boundary(
     "Logistic Regression Scikit-learn Decision Boundary",
 )
 
-# %%
 
 

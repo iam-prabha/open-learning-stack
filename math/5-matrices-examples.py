@@ -8,7 +8,6 @@
 # Matrices are likes tables of numbers: rows and columns arranged in a grid. Think of them as way to organize and transform data - essential for neural networks! 
 # ======================================================================
 
-# %%
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -20,7 +19,6 @@ import matplotlib.pyplot as plt
 # A matrix is a rectangular array of numbers arranged in rows and columns. We write it as: A = [[a₁₁, a₁₂], [a₂₁, a₂₂]]§ The first number is the row, the second is the column!
 # ======================================================================
 
-# %%
 # Examples matrices
 # A 2x2 matrix (2 rows, 2 columns)
 A = np.array([[1, 2],
@@ -57,7 +55,6 @@ print(f"\nShape: {C.shape}  (rows={C.shape[0]}, columns={C.shape[1]})")
 # You can access individual elements using row and column indices. Remember: Python starts counting from 0!
 # ======================================================================
 
-# %%
 # Example: Accessing matrix elements
 A = np.array([[1, 2],
               [3, 4],
@@ -96,7 +93,6 @@ print(f"A[:, 1] = {A[:, 1]}  (second column)")
 # Adding two matrices: add corresponding elements! Both matrices must have the same shape (same number of rows and columns).
 # ======================================================================
 
-# %%
 # Example: A + B
 A = np.array([[1, 2],
               [3, 4]])
@@ -134,7 +130,6 @@ print(f"A[1, 1] + B[1, 1] = {A[1, 1]} + {B[1, 1]} = {result[1, 1]}")
 # Multiplying a matrix by a number: multiply every element by that number! This scales the entire matrix
 # ======================================================================
 
-# %%
 # Example: 2 * A, 0.5 * A, -1 * A
 A = np.array([[1, 2],
               [3, 4]])
@@ -174,7 +169,6 @@ print(f"2 * {A[1, 1]} = {A_doubled[1, 1]}")
 # Multiplying a matrix by a vector: transform the vector! This is the most important operation for neural networks. For A (m×n) × v (n×1), we get a result (m×1).
 # ======================================================================
 
-# %%
 # Example: A × v
 # A is 2×3, v is 3×1, result is 2×1
 A = np.array([[1, 2, 3],
@@ -224,7 +218,6 @@ print(f"              = {result[1]}")
 # Multiplying two matrices: A (m×n) × B (n×p) = C (m×p) The number of columns in A must equal the number of rows in B! Each element of C is the dot product of a row from A and a column from B.
 # ======================================================================
 
-# %%
 # Example: A × B
 # A is 2×3, B is 3×2, result is 2×2
 A = np.array([[1, 2, 3],
@@ -288,7 +281,6 @@ print(f"        = {A[1, 0]*B[0, 1]} + {A[1, 1]*B[1, 1]} + {A[1, 2]*B[2, 1]}")
 # Transposing a matrix: flip rows and columns! A transpose turns a m×n matrix into an n×m matrix. Notation: Aᵀ
 # ======================================================================
 
-# %%
 # Example: A transpose
 A = np.array([[1, 2, 3],
               [4, 5, 6]])
@@ -330,7 +322,6 @@ print(f"(Aᵀ)ᵀ = \n{A_transpose_transpose}")
 # The identity matrix I is special: when you multiply any matrix by I, you get back the same matrix! I has 1s on the diagonal and 0s everywhere else. A × I = A and I × A = A
 # ======================================================================
 
-# %%
 # Example: Identity matrix
 # 2×2 identity matrix
 I2 = np.eye(2)  # or np.identity(2)
@@ -393,7 +384,6 @@ print("Notice: The identity matrix acts like the number 1 in multiplication!")
 # - But A × B ≠ B × A in general! (multiplication is NOT commutative)
 # ======================================================================
 
-# %%
 # Example: Matrix properties
 A = np.array([[1, 2],
               [3, 4]])
@@ -459,7 +449,6 @@ print("Notice: They're different! Order matters in matrix multiplication!")
 # Let's see different matrix operations side by side!
 # ======================================================================
 
-# %%
 # Summary: Different matrix operations
 A = np.array([[1, 2],
               [3, 4]])

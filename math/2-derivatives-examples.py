@@ -8,7 +8,6 @@
 # Derivatives tell us how fast a function is changing at any point. Think of it as `slope` or `steepness` of a curves at a specific point.
 # ======================================================================
 
-# %%
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -25,7 +24,6 @@ def numerical_derivatives(f, x, h=0.001):
 # A derivative measures how much y changes when x changes by a tiny amount. if the function y = 2x, then derivative is always 2 (steepness is constant).
 # ======================================================================
 
-# %%
 # Example: y = 2x
 # The derivative of y = 2x is always 2
 # This means: for every step in x, y increases by 2
@@ -72,7 +70,6 @@ plt.show()
 # The derivative of y = x² is y' = 2x. This means the slope changes as x changes!
 # ======================================================================
 
-# %%
 # Example: y = x², derivative = 2x
 def f(x):
     return x ** 2
@@ -127,7 +124,6 @@ plt.show()
 # The derivative gives us the slope of the tangent line by any point. Let's draw the line on the curve
 # ======================================================================
 
-# %%
 # Draw tangent lines at different points on y = x²
 def f(x):
     return x ** 2
@@ -174,7 +170,6 @@ plt.show()
 # Here are some simple rules for finding derivatives:
 # ======================================================================
 
-# %%
 # Rule 1: Derivative of constant is 0
 # y = 5 → dy/dx = 0
 
@@ -217,7 +212,6 @@ for x in test_points:
 # Let's visualize the function and its derivative together.
 # ======================================================================
 
-# %%
 # y = x³, derivative = 3x²
 def f(x):
     return x ** 3
@@ -262,7 +256,6 @@ plt.show()
 # The derivative of a sum is the sum of derivatives. y = 2x + 3 → dy/dx = 2 (the constant 3 disappears!)
 # ======================================================================
 
-# %%
 # y = 2x + 3, derivative = 2
 def f(x):
     return 2 * x + 3
@@ -308,7 +301,6 @@ print("The slope is always 2, regardless of where we are on the line.")
 # Let's see multiple functions and their derivatives side by side.
 # ======================================================================
 
-# %%
 x = np.linspace(-3, 3, 100)
 
 # Define functions and their derivatives

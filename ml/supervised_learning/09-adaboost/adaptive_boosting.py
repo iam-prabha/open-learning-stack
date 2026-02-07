@@ -36,7 +36,6 @@
 # **Dataset:** A synthetic classification dataset.
 # ======================================================================
 
-# %%
 from sklearn.ensemble import AdaBoostClassifier
 from sklearn.tree import DecisionTreeClassifier  # AdaBoost often uses shallow trees
 from sklearn.datasets import make_classification
@@ -45,13 +44,11 @@ from sklearn.metrics import accuracy_score, classification_report, confusion_mat
 
 print("--- AdaBoost Classifier ---")
 
-# %%
 # 1. create a asynthetic classification dataset
 X, y = make_classification(
     n_samples=1000, n_features=10, n_informative=5, n_redundant=0
 )
 
-# %%
 # split the dataset into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(
     X, y, stratify=y, test_size=0.2, random_state=42
@@ -59,7 +56,6 @@ X_train, X_test, y_train, y_test = train_test_split(
 print(f"Training set size: {X_train.shape[0]}")
 print(f"Testing set size: {X_test.shape[0]}")
 
-# %%
 # 2. Train the model
 model_ab = AdaBoostClassifier(
     estimator=DecisionTreeClassifier(max_depth=1),
@@ -71,12 +67,10 @@ model_ab.fit(X_train, y_train)
 print("Model trained successfully!")
 print(f"Number of estimators: {model_ab.n_estimators}")
 
-# %%
 # 3. make predictions on the test set
 y_pred = model_ab.predict(X_test)
 print(f"Predictions: {y_pred[:10]}")  # Display first 10 predictions
 
-# %%
 # 4. Evaluate the model
 accuracy_ab = accuracy_score(y_test, y_pred)
 conf_matrix_ab = confusion_matrix(y_test, y_pred)
@@ -86,11 +80,9 @@ print(f"Accuracy: {accuracy_ab:.2f}")
 print(f"Confusion Matrix: {conf_matrix_ab}")
 print(f"Classification Report: {class_report_ab}")
 
-# %%
 print(
     "\nDiscussion: AdaBoost sequentially builds 'weak' learners (like shallow decision trees). It focuses on misclassified samples by giving them more weight in subsequent iterations, leading to a strong combined classifier. It's good for improving the performance of simple models."
 )
 
-# %%
 
 

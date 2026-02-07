@@ -8,7 +8,6 @@
 # Probability tells us how likely something to happen!.Think of it as a number between 0 (never happens) and 1 (always happens). Essential for understanding uncertainty and randomness in data! 
 # ======================================================================
 
-# %%
 import numpy as np
 import matplotlib.pyplot as plt
 from collections import Counter
@@ -27,7 +26,6 @@ from collections import Counter
 # Formula: P(event) = (Number of ways event can happen) / (Total possible outcomes)
 # ======================================================================
 
-# %%
 # Example: Probability of flipping a coin and getting heads
 # A coin has 2 sides: heads (H) or tails (T)
 # Getting heads is 1 way out of 2 possible outcomes
@@ -71,7 +69,6 @@ print(f"Certain event: P = 1")
 # We can simulate random events using computers! Let's flip a coin many times and see how often we get heads.
 # ======================================================================
 
-# %%
 # Simulate coin flips
 np.random.seed(42)  # For reproducible results
 
@@ -118,7 +115,6 @@ print("Notice: More flips → closer to theoretical probability of 0.5!")
 # Let's roll a die and see the probability of different outcomes! A fair die has 6 sides, each equally likely (probability = 1/6).
 # ======================================================================
 
-# %%
 # Roll a die many times
 np.random.seed(42)
 
@@ -189,7 +185,6 @@ plt.show()
 # - **OR:** At least one event happens (add probabilities for mutually exclusive events)
 # ======================================================================
 
-# %%
 # Example 1: Rolling two dice
 # P(roll 1 AND roll 6) = P(roll 1) × P(roll 6)
 # P(roll 1 OR roll 6) = P(roll 1) + P(roll 6) - P(roll 1 AND roll 6)
@@ -250,7 +245,6 @@ print(f"At least one heads: {at_least_one_heads}/10000 = {at_least_one_heads/100
 # A probability distribution shows the probability of each possible outcome. Let's visualize the probability distribution of rolling two dice and summing them!
 # ======================================================================
 
-# %%
 # Sum of two dice
 # Possible sums: 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
 # Let's calculate the theoretical probabilities
@@ -332,7 +326,6 @@ print(f"Most likely sum: {max(theoretical_probs, key=theoretical_probs.get)} (pr
 # Expected value is the average outcome if we repeat an experiment many times. Formula: E[X] = Σ(x × P(x)) for all possible outcomes x
 # ======================================================================
 
-# %%
 # Example 1: Expected value of a single die roll
 die_faces = [1, 2, 3, 4, 5, 6]
 prob_each = 1/6
@@ -386,7 +379,6 @@ print("Notice: Expected value = average outcome over many trials!")
 # Conditional probability: P(A | B) = probability of A given that B happened. Formula: P(A | B) = P(A AND B) / P(B)
 # ======================================================================
 
-# %%
 # Example: Rolling a die
 # What's P(roll 6 | roll even number)?
 # Even numbers: 2, 4, 6
@@ -432,7 +424,6 @@ print(f"Simulation: P(6 | even) ≈ {six_given_even:.4f} (theoretical: {p_6_give
 # Let's create visualizations to understand probability better!
 # ======================================================================
 
-# %%
 # Visualize probability convergence
 # Show how experimental probability approaches theoretical as we increase sample size
 

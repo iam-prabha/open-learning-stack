@@ -38,7 +38,6 @@
 # This is highly recommended due to the complexity of the algorithm.
 # ======================================================================
 
-# %%
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.tree import DecisionTreeClassifier, plot_tree
@@ -46,7 +45,6 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
 
-# %%
 # 1. Genearate Sample data (for classification)
 np.random.seed(0)
 # Class 0 data
@@ -63,7 +61,6 @@ print(X[:5])
 print()
 print(y[:5])
 
-# %%
 # visualize the data
 plt.figure(figsize=(8, 6))
 plt.scatter(X[y == 0, 0], X[y == 0, 1], color="red", label="Class 0")
@@ -75,25 +72,21 @@ plt.legend()
 plt.grid(True)
 plt.show()
 
-# %%
 # No scaling is typically needed for Decision Trees as they are not sensitive to feature scales
 # Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.2, random_state=42
 )
 
-# %%
 # Instantiate and train the Decision Tree Classifier
 # max_depth: limits the depth of the tree to prevent overfitting
 # random_state: for reproducibility
 model_dt_sklearn = DecisionTreeClassifier(max_depth=3, random_state=42)
 model_dt_sklearn.fit(X_train, y_train)
 
-# %%
 # Make predictions on the test set
 y_pred_dt_sklearn = model_dt_sklearn.predict(X_test)
 
-# %%
 # Evaluate the model
 accuracy_dt_sklearn = accuracy_score(y_test, y_pred_dt_sklearn)
 print(f"\nScikit-learn Decision Tree Classifier Accuracy: {accuracy_dt_sklearn:.2f}")
@@ -104,7 +97,6 @@ print(
     f"\nScikit-learn Decision Tree Classifier Classification Report:\n{classification_report(y_test, y_pred_dt_sklearn)}"
 )
 
-# %%
 # Visualize the decision tree (requires matplotlib)
 plt.figure(figsize=(12, 8))
 plot_tree(
@@ -117,6 +109,5 @@ plot_tree(
 plt.title("Decision Tree Visualization")
 plt.show()
 
-# %%
 
 

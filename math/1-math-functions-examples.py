@@ -8,7 +8,6 @@
 # A function is like machine: you put number of a (x) and get out another number (y).
 # ======================================================================
 
-# %%
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -18,7 +17,6 @@ import numpy as np
 # The simplest function Multiply x by a constant number k.
 # ======================================================================
 
-# %%
 # Example: y = 2 * x
 # If x = 1, then y = 2
 # If x = 2, then y = 4
@@ -45,7 +43,6 @@ plt.grid(True)
 plt.legend()
 plt.show()
 
-# %%
 # Different values of k
 k_values = [1, 2, 3, 0.5, -1]
 x = np.linspace(-5, 5, 100)
@@ -72,7 +69,6 @@ plt.axvline(x=0, color="k", linewidth=0.5)
 # Sqaure the input number. if x = 2, then y = 4. if x = 3, then y = 9.
 # ======================================================================
 
-# %%
 # Example: y = x²
 examples = [-3, -2, -1, 0, 1, 2, 3]
 for x in examples:
@@ -102,7 +98,6 @@ plt.show()
 # Cube the input number. if  x = 2, then y = 8. if x = 3, then y = 27.
 # ======================================================================
 
-# %%
 # Example: y = x³
 examples = [-2, -1, 0, 1, 2]
 for x in examples:
@@ -132,7 +127,6 @@ plt.show()
 # The opposite of squaring. if x = 4, then y = 2. if x = 9, then y = 3.
 # ======================================================================
 
-# %%
 # Example: y = √x
 examples = [0, 1, 4, 9, 16, 25]
 for x in examples:
@@ -160,7 +154,6 @@ plt.show()
 # Double the result each time increases by 1. if x = 1, then y = 2. if x = 3, then y = 8.
 # ======================================================================
 
-# %%
 # Example: y = 2^x
 examples = [0, 1, 2, 3, 4, 5]
 for x in examples:
@@ -190,7 +183,6 @@ plt.show()
 # A wavy function that repeats. used for waves, circle, and oscillations.
 # ======================================================================
 
-# %%
 # Example: y = sin(x)
 import math
 
@@ -221,7 +213,6 @@ plt.show()
 # You can combine operations! Multiply x by 2, then add 3.
 # ======================================================================
 
-# %%
 # Example: y = 2x + 3
 examples = [0, 1, 2, 3, 4]
 for x in examples:
@@ -247,7 +238,6 @@ plt.show()
 # ## summary: compare All Functions
 # ======================================================================
 
-# %%
 x = np.linspace(0, 5, 100)
 
 plt.figure(figsize=(12, 8))
@@ -279,4 +269,3 @@ plt.grid(True)
 plt.tight_layout()
 plt.show()
 
-# %%

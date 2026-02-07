@@ -24,7 +24,6 @@
 # ## 3️⃣ How to Create and Call a Function?
 # ======================================================================
 
-# %%
 # Defining a function
 def say_hello():
     print("Hello, World!")
@@ -37,7 +36,6 @@ say_hello()
 # ## 4️⃣ Function Arguments and Return Values
 # ======================================================================
 
-# %%
 # Function with parameters and return value
 def add_numbers(a, b):
     return a + b
@@ -51,7 +49,6 @@ print("Sum:", result)
 # ## 5️⃣ Default and Keyword Arguments
 # ======================================================================
 
-# %%
 # Function with default argument
 def greet(name="Guest"):
     print("Hello,", name)
@@ -64,7 +61,6 @@ greet()  # Using default argument
 # ## 6️⃣ Lambda Functions
 # ======================================================================
 
-# %%
 # Lambda function (Anonymous function)
 multiply = lambda x, y: x * y
 print("Multiplication:", multiply(4, 5))
@@ -73,7 +69,6 @@ print("Multiplication:", multiply(4, 5))
 # ## 7️⃣ Scope of Variables in Functions
 # ======================================================================
 
-# %%
 # Example of variable scope
 def example():
     local_var = "I'm inside the function"
@@ -87,7 +82,6 @@ example()
 # ## 8️⃣ Practical Example
 # ======================================================================
 
-# %%
 # Function to check if a number is even or odd
 def check_even_odd(number):
     if number % 2 == 0:

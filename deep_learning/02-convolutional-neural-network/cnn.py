@@ -18,11 +18,9 @@
 # ![con2.img](https://www.kaggleusercontent.com/kf/99705616/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..mS32FYLYwSsMSYO5vJAuZg.cXnDOwrGdtNgp8rFz2msenOptZMX1EkbxHcpivlCbaZ8bCZGfGkQWCS1XxhjMEFc_tfDkA-vchSRIrVp0_Det0nPjIY2ULmSaJl4K1qh4dgnYITyJKh5aLqu6e-cTzYTI3Z_9VH3RKrFoHRSgtRFOX5nHhD0W0N1twKKCXt9FOtoaPtILmefWCaj5jLwilnPc51SLU4YV-fhMkzPsBbXPS-NwCOlVGh9ro4D9BqmVeh2CLnfr4ob9C5oshfYqSUrj59HjhF596oM6HLqMv3Qvo1aee5YAWsQQaIHomc78ET9Pc08Cq_cgH-HYpMpxdBQSHTaTqexErxZZ3e4ChSZT5ehUQCX7pInt0ShsLOIO2VVDQUHzVx1Q1iGaZCQXpfY1xIFQpEw7MlW-z7J0RRFvaiscyyT6rZKdpGxQJBi2OReFAt7ubyRFEfMJ-MCzgkiOV9xtN84smPA5NQqCS16TVnQeBAUS79fkbpGXm2SbjSrtZgsiYVHmH6KFxrBDj8_W-Wg8p1u9sbZ-ry0ZjFRn4BUDy5XgK-wv-Lv749mWggYyGFRoO3FALi8DLCz7wdEVow-MndI3C3bdCUa2eUSfKctOCQntGoh6JvYEvVNRi2aACQJ5xHdyOOWEj84QCUOJd8vSSRoPZDMW6ycYZA9dYDOylHhwZlpPvl313VQeKA.ai3Ue7GYk7OizC8bppsMUA/__results___files/__results___46_0.png)
 # ======================================================================
 
-# %%
 import numpy as np
 from sklearn import datasets
 
-# %%
 class Conv:
 
     def __init__(self, num_filters):
@@ -88,7 +86,6 @@ class Conv:
 # ![example.png](https://www.kaggleusercontent.com/kf/99705616/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..mS32FYLYwSsMSYO5vJAuZg.cXnDOwrGdtNgp8rFz2msenOptZMX1EkbxHcpivlCbaZ8bCZGfGkQWCS1XxhjMEFc_tfDkA-vchSRIrVp0_Det0nPjIY2ULmSaJl4K1qh4dgnYITyJKh5aLqu6e-cTzYTI3Z_9VH3RKrFoHRSgtRFOX5nHhD0W0N1twKKCXt9FOtoaPtILmefWCaj5jLwilnPc51SLU4YV-fhMkzPsBbXPS-NwCOlVGh9ro4D9BqmVeh2CLnfr4ob9C5oshfYqSUrj59HjhF596oM6HLqMv3Qvo1aee5YAWsQQaIHomc78ET9Pc08Cq_cgH-HYpMpxdBQSHTaTqexErxZZ3e4ChSZT5ehUQCX7pInt0ShsLOIO2VVDQUHzVx1Q1iGaZCQXpfY1xIFQpEw7MlW-z7J0RRFvaiscyyT6rZKdpGxQJBi2OReFAt7ubyRFEfMJ-MCzgkiOV9xtN84smPA5NQqCS16TVnQeBAUS79fkbpGXm2SbjSrtZgsiYVHmH6KFxrBDj8_W-Wg8p1u9sbZ-ry0ZjFRn4BUDy5XgK-wv-Lv749mWggYyGFRoO3FALi8DLCz7wdEVow-MndI3C3bdCUa2eUSfKctOCQntGoh6JvYEvVNRi2aACQJ5xHdyOOWEj84QCUOJd8vSSRoPZDMW6ycYZA9dYDOylHhwZlpPvl313VQeKA.ai3Ue7GYk7OizC8bppsMUA/__results___files/__results___50_0.png)
 # ======================================================================
 
-# %%
 class MaxPool:
     def iterate_regions(self, image):
         h , w , _ = image.shape
@@ -147,7 +144,6 @@ class MaxPool:
 # ![gradient](https://www.kaggleusercontent.com/kf/99705616/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..mS32FYLYwSsMSYO5vJAuZg.cXnDOwrGdtNgp8rFz2msenOptZMX1EkbxHcpivlCbaZ8bCZGfGkQWCS1XxhjMEFc_tfDkA-vchSRIrVp0_Det0nPjIY2ULmSaJl4K1qh4dgnYITyJKh5aLqu6e-cTzYTI3Z_9VH3RKrFoHRSgtRFOX5nHhD0W0N1twKKCXt9FOtoaPtILmefWCaj5jLwilnPc51SLU4YV-fhMkzPsBbXPS-NwCOlVGh9ro4D9BqmVeh2CLnfr4ob9C5oshfYqSUrj59HjhF596oM6HLqMv3Qvo1aee5YAWsQQaIHomc78ET9Pc08Cq_cgH-HYpMpxdBQSHTaTqexErxZZ3e4ChSZT5ehUQCX7pInt0ShsLOIO2VVDQUHzVx1Q1iGaZCQXpfY1xIFQpEw7MlW-z7J0RRFvaiscyyT6rZKdpGxQJBi2OReFAt7ubyRFEfMJ-MCzgkiOV9xtN84smPA5NQqCS16TVnQeBAUS79fkbpGXm2SbjSrtZgsiYVHmH6KFxrBDj8_W-Wg8p1u9sbZ-ry0ZjFRn4BUDy5XgK-wv-Lv749mWggYyGFRoO3FALi8DLCz7wdEVow-MndI3C3bdCUa2eUSfKctOCQntGoh6JvYEvVNRi2aACQJ5xHdyOOWEj84QCUOJd8vSSRoPZDMW6ycYZA9dYDOylHhwZlpPvl313VQeKA.ai3Ue7GYk7OizC8bppsMUA/__results___files/__results___54_0.png)
 # ======================================================================
 
-# %%
 class Softmax:
     def __init__(self, input_len, nodes):
         # We divide by input_len to reduce the variance of our initial values
@@ -209,7 +205,6 @@ class Softmax:
             self.biases -= learn_rate * d_l_d_b
             return d_l_d_inputs.reshape(self.last_input_shape)
 
-# %%
 import torch
 from torchvision import datasets, transforms
 
@@ -231,7 +226,6 @@ test_labels = mnist_test.targets[:1000].numpy()
 # ![cnn-train.png](https://www.kaggleusercontent.com/kf/99705616/eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..mS32FYLYwSsMSYO5vJAuZg.cXnDOwrGdtNgp8rFz2msenOptZMX1EkbxHcpivlCbaZ8bCZGfGkQWCS1XxhjMEFc_tfDkA-vchSRIrVp0_Det0nPjIY2ULmSaJl4K1qh4dgnYITyJKh5aLqu6e-cTzYTI3Z_9VH3RKrFoHRSgtRFOX5nHhD0W0N1twKKCXt9FOtoaPtILmefWCaj5jLwilnPc51SLU4YV-fhMkzPsBbXPS-NwCOlVGh9ro4D9BqmVeh2CLnfr4ob9C5oshfYqSUrj59HjhF596oM6HLqMv3Qvo1aee5YAWsQQaIHomc78ET9Pc08Cq_cgH-HYpMpxdBQSHTaTqexErxZZ3e4ChSZT5ehUQCX7pInt0ShsLOIO2VVDQUHzVx1Q1iGaZCQXpfY1xIFQpEw7MlW-z7J0RRFvaiscyyT6rZKdpGxQJBi2OReFAt7ubyRFEfMJ-MCzgkiOV9xtN84smPA5NQqCS16TVnQeBAUS79fkbpGXm2SbjSrtZgsiYVHmH6KFxrBDj8_W-Wg8p1u9sbZ-ry0ZjFRn4BUDy5XgK-wv-Lv749mWggYyGFRoO3FALi8DLCz7wdEVow-MndI3C3bdCUa2eUSfKctOCQntGoh6JvYEvVNRi2aACQJ5xHdyOOWEj84QCUOJd8vSSRoPZDMW6ycYZA9dYDOylHhwZlpPvl313VQeKA.ai3Ue7GYk7OizC8bppsMUA/__results___files/__results___58_0.png)
 # ======================================================================
 
-# %%
 conv = Conv(8)
 pool = MaxPool()
 softmax = Softmax(13 * 13 * 8, 10)

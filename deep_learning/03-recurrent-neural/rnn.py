@@ -11,11 +11,9 @@
 # - This makes them applicable to tasks such as unsegmented, connected handwriting recognition or speech recognition
 # ======================================================================
 
-# %%
 from numpy.random import randn
 import numpy as np
 
-# %%
 train_data = {
   'good': True,
   'bad': False,
@@ -100,7 +98,6 @@ test_data = {
   'i was not happy and not good earlier': False,
 }
 
-# %%
 class RNN:
     # A many-to-one Vanilla Recurrent Neural network.
 
@@ -184,7 +181,6 @@ class RNN:
         self.bh -= learn_rate * d_bh
         self.by -= learn_rate * d_by
 
-# %%
 # Create the vocabulary.
 vocab = list(set([w for text in train_data.keys() for w in text.split(' ')]))
 vocab_size =  len(vocab)
@@ -194,7 +190,6 @@ print(f'unique words found: {vocab_size}')
 word_to_idx = { w: i for i , w in enumerate(vocab)}
 idx_to_word = { i: w for i, w in enumerate(vocab)}
 
-# %%
 import random
 
 
@@ -265,6 +260,5 @@ for epoch in range(1000):
         test_loss, test_acc = processData(test_data, backprop=False)
         print('Test:/tLoss %.3f | Accuracy: %.3f' % (test_loss, test_acc))
 
-# %%
 
 

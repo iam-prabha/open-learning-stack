@@ -8,7 +8,6 @@
 # Gradients are like derivatives, but for functions with multiple variables! The gradient points in the direction of steepest ascent (biggest increase). Think of it as a multi-dimensional slope!
 # ======================================================================
 
-# %%
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import cm
@@ -21,7 +20,6 @@ from matplotlib import cm
 # For a function f(x, y), the gradients is ∇f = [∂f/∂x, ∂f/∂y]. It's a vector that tells you direction of steepest increase and how steep it is!
 # ======================================================================
 
-# %%
 # Example: f(x, y) = x² + y²
 # The gradient is: ∇f = [2x, 2y]
 # At point (1, 1), the gradient is [2, 2]
@@ -81,7 +79,6 @@ plt.show()
 # For f(x, y) = 2x + 3y, the gradient is constant: ∇f = [2, 3] This means the slope is the same everywhere!
 # ======================================================================
 
-# %%
 # Example: f(x, y) = 2x + 3y
 # Gradient: ∇f = [2, 3] (constant everywhere!)
 
@@ -130,7 +127,6 @@ plt.axhline(y=0, color='k', linewidth=0.5)
 plt.axvline(x=0, color='k', linewidth=0.5)
 plt.show()
 
-# %%
 # Example: f(x, y) = x² + y² (bowl shape)
 def f(x, y):
     return x**2 + y**2
@@ -201,7 +197,6 @@ plt.show()
 # The gradient always points in the direction of steepest increase! Following the gradient = going uphill the fastest way.
 # ======================================================================
 
-# %%
 # Example: f(x, y) = x² + y²
 # At point (1, 1), the gradient is [2, 2]
 # This means: increase x AND y to go uphill fastest!
@@ -276,7 +271,6 @@ print("\nNotice: The gradient direction gives the steepest path uphill!")
 # The negative gradient (-∇f) points in the direction of steepest decrease! Following -∇f = going downhill the fastest way. Used in optimization!
 # ======================================================================
 
-# %%
 # Example: f(x, y) = x² + y²
 # At point (2, 1), gradient is [4, 2] (points uphill)
 # Negative gradient is [-4, -2] (points downhill to minimum)
@@ -340,7 +334,6 @@ plt.show()
 print("\nFollowing -∇f (negative gradient) finds the minimum!")
 print("This is the idea behind gradient descent optimization!")
 
-# %%
 # Compare different functions
 x_plot = np.linspace(-2, 2, 20)
 y_plot = np.linspace(-2, 2, 20)

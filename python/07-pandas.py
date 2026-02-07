@@ -25,7 +25,6 @@
 # Then, in your Python script or Jupyter Notebook, you typically import it like this:
 # ======================================================================
 
-# %%
 import warnings
 import pandas as pd
 import numpy as np
@@ -42,7 +41,6 @@ warnings.filterwarnings("ignore")
 # You can create a Series from a list, a NumPy array, or a dictionary.
 # ======================================================================
 
-# %%
 # From a list
 s = pd.Series([1, 3, 5, np.nan, 6, 8])
 print("Series from a list:")
@@ -66,7 +64,6 @@ print(s_dict)
 # DataFrames can be created in several ways, most commonly from dictionaries of Series/lists or NumPy arrays.
 # ======================================================================
 
-# %%
 # From a dictionary of lists/Series
 data = {
     "Name": ["Alice", "Bob", "Charlie", "David"],
@@ -99,7 +96,6 @@ print(df_from_list_of_dict)
 # Once you have a DataFrame, you'll want to inspect it.
 # ======================================================================
 
-# %%
 # Create a sample DataFrame for demonstration
 data = {
     "A": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
@@ -146,7 +142,6 @@ print(df.index)
 # **Selecting a Single Column**
 # ======================================================================
 
-# %%
 print("Selecting columns 'A':")
 print(df["A"])  # Return a Series
 
@@ -157,7 +152,6 @@ print(df.B)  # Works if column name is a valid Python identifier
 # **Selecting Multiple Columns**
 # ======================================================================
 
-# %%
 print("\nSelecting columns 'A' and 'C':")
 print(df[["A", "C"]])  # Return a DataFrame
 
@@ -167,7 +161,6 @@ print(df[["A", "C"]])  # Return a DataFrame
 # `.loc[]` is primarily label-based.
 # ======================================================================
 
-# %%
 # Select a single row by its index label (e.g., row with index 2)
 print("\nSelecting row with index 2 using  .loc:")
 print(df.loc[2])
@@ -190,7 +183,6 @@ print(df.loc[[0, 1], ["A", "C"]])
 # `.iloc[]` is primarily integer-position based.
 # ======================================================================
 
-# %%
 # Selec a single row by its integer position (e.g., the 3rd row, which has index 2)
 print("\nSelecting row at position 2 using .iloc:")
 print(df.iloc[2])
@@ -213,7 +205,6 @@ print(df.iloc[[0, 1], [0, 2]])
 # This is a very powerful way to select data based on conditions.
 # ======================================================================
 
-# %%
 # Select row where column 'A' is greater than 5
 print("\nRows where 'A' > 5:")
 print(df[df["A"] > 5])
@@ -239,7 +230,6 @@ print(df[df["C"].isin(["x", "y"])])
 # Missing data is represented by `NaN` (Not a Number).
 # ======================================================================
 
-# %%
 df_missing = df.copy()
 df_missing.iloc[1, 0] = np.nan  # set A[1] to NaN
 df_missing.iloc[4, 1] = np.nan  # set B[4] to NaN
@@ -272,7 +262,6 @@ print(df_missing["A"].fillna(df_missing["A"].mean()))
 # **Basic Arithmetic Operations**
 # ======================================================================
 
-# %%
 df_ops = df.copy()
 df_ops["D"] = df_ops["A"] + df_ops["B"]  # Add two columns
 print("\nDataFrame with new column 'D' (A + B):")
@@ -286,7 +275,6 @@ print(df_ops)
 # **Aggregations**
 # ======================================================================
 
-# %%
 # Mean of column 'A'
 print("\nMean of column 'A':", df["A"].mean())
 
@@ -305,7 +293,6 @@ print("Count of non-null in 'A':", df["A"].count())
 # This is similar to SQL's GROUP BY.
 # ======================================================================
 
-# %%
 # Group by 'C' and calculate the mean of 'A' and 'B' for each group
 print("\nGroup by 'C' and calculate mean of 'A' and 'B':")
 print(df.groupby("C").mean())
@@ -320,7 +307,6 @@ print(df["C"].value_counts())
 # Pandas can read and write data in various formats.
 # ======================================================================
 
-# %%
 # To CSV
 df.to_csv(
     "../data/my_data.csv", index=False
@@ -341,6 +327,5 @@ print(df_from_csv.head())
 # print("\nDataFrame read from 'my_data.xlsx':")
 # print(df_from_excel.head())
 
-# %%
 
 
