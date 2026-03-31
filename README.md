@@ -1,94 +1,98 @@
-# What Am I Learning? — Quick, Action-Oriented Guide 🚀
+# Open Learning Stack 🚀
 
-[![Python](https://img.shields.io/badge/Python-3.12+-blue.svg)](https://www.python.org/)
+> A single repo to learn and master Programming Languages + AI/ML concepts — with examples, hands-on exercises, and structured order.
+
+[![Topics](https://img.shields.io/badge/Topics-146-blue.svg)]()
+[![Languages](https://img.shields.io/badge/Languages-5-orange.svg)]()
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Status](https://img.shields.io/badge/Status-Active-success.svg)]()
 
-TL;DR
-- Purpose: A compact, practical collection of code, notes, and projects for Python, Data Science, ML, Deep Learning, DSA, and related tooling.
-- Goal: Help you get working fast — run examples, follow the learning path, and contribute improvements.
+## What is this?
 
-Get started (fast)
-1. Clone:
-   - `git clone git@github.com:iam-prabha/what-am-i-learning.git`
-   - `cd what-am-i-learning`
-2. Choose environment:
-   - Preferred (project uses `uv`): `uv sync`
-   - Alternative (standard Python venv + pip):
-     - `python -m venv .venv && . .venv/bin/activate`
-     - `pip install -r requirements.txt` (if present)
-3. Run examples:
-   - Run a script: `uv run python python/01-data_types.py` (or `python python/01-data_types.py` inside a venv)
-   - Open notebooks: `uv run jupyter lab` or `uv run jupyter notebook`
+This is a structured, self-paced learning repository covering **Python, JavaScript, TypeScript, Go, and Rust** — plus a complete **AI/ML track** from math foundations to LLMs and MLOps. Every topic follows a consistent 4-file pattern: read the concept, run the example, solve the exercises, check the solutions. No ambiguity, no guessing where to start.
 
-Core commands (common)
-- Install deps (uv): `uv add package_name`
-- Install dev deps (uv): `uv add --group dev package_name`
-- Sync / install from lock: `uv sync`
-- Format / lint / test:
-  - `uv run black .`
-  - `uv run flake8 .`
-  - `uv run mypy .`
-  - `uv run pytest tests/`
+## How to use this repo
 
-If you prefer not to use `uv`
-- Create a venv and install packages with `pip`.
-- I recommend keeping `pyproject.toml` / `requirements.txt` in sync for reproducibility.
+```bash
+# 1. Clone the repo
+git clone https://github.com/iam-prabha/open-learning-stack.git
+cd open-learning-stack
 
-Repository layout (action-first)
-- `python/` — Python fundamentals, examples, and notebooks (start here).
-- `ml/` — Supervised & unsupervised learning examples.
-- `deep_learning/` — PyTorch notebooks and models.
-- `dsa/` — Data structures & algorithms implementations.
-- `sql/` — SQL examples and exercises.
-- `projects/` — End-to-end project workflows and templates.
-- `data/` — Sample datasets used by examples.
-- `tests/` — Unit tests (when present).
+# 2. Pick a language folder (e.g. python/)
+cd python/01-fundamentals/01-variables/
 
-Recommended learning path (short)
-1. `python/` — Basics → OOP → data libraries (NumPy, Pandas).
-2. `statistics/` → core stats concepts used in ML.
-3. `ml/` → supervised algorithms → model evaluation.
-4. `deep_learning/` → neural network fundamentals → CNNs/RNNs.
-5. `projects/` → apply end-to-end.
+# 3. Open a topic folder — read, run, practice
+cat README.md              # Read the concept
+python example.py          # Run the demo
+python exercise.py         # Try the exercises (fill in TODOs)
+python solution.py         # Check the answers
+```
 
-How I expect you to use this repo
-- Explore directory READMEs for hands-on steps.
-- Run notebooks to reproduce examples.
-- Use `projects/` templates to practice end-to-end workflows.
-- Open issues or PRs with small, focused improvements.
+## Repository structure
 
-Troubleshooting (quick fixes)
-- `uv` command not found: install via the documented installer or `pip install uv`.
-- Python version mismatch: install and point `uv` to the required Python or use a venv with the correct interpreter.
-- Jupyter kernel missing: `uv run python -m ipykernel install --user --name=what-am-i-learning`
-- Import errors: ensure `uv sync` ran successfully or your venv is active.
+```text
+open-learning-stack/
+├── _templates/          ← boilerplate for new topics
+├── python/              ← 🐍 Python (fundamentals → advanced)
+├── javascript/          ← 🟨 JavaScript (fundamentals → advanced)
+├── typescript/          ← 🔷 TypeScript (fundamentals → advanced)
+├── go/                  ← 🐹 Go (fundamentals → advanced)
+├── rust/                ← 🦀 Rust (fundamentals → advanced)
+├── ai-ml/               ← 🤖 AI/ML (math → ML → DL → LLMs → MLOps)
+├── ROADMAP.md           ← Visual learning roadmap
+├── GLOSSARY.md          ← Shared terminology
+└── README.md            ← You are here
+```
 
-Code quality & checks
-- I run formatting, linting, and type checks as part of the workflow. Use:
-  - `uv run black .`
-  - `uv run flake8 .`
-  - `uv run mypy .`
-  - `uv run pytest tests/` (where tests exist)
+## Languages
 
-Contributing (brief)
-- Everyone is welcome to contribute — feel free to open issues or pull requests.
-- Fork → branch → commit focused changes.
-- Run quality checks before opening a PR.
-- Suggested PR checklist:
-  - Adds value or fixes an issue
-  - Includes tests where appropriate
-  - Passes `black`, `flake8`, and `mypy`
-  - Includes short description & usage notes in PR body
+| Language | Status | Topics | Start here |
+|---|---|---|---|
+| Python | 🟢 Active | 24 | [python/01-fundamentals/01-variables](python/01-fundamentals/01-variables/) |
+| JavaScript | 🟢 Active | 23 | [javascript/01-fundamentals/01-variables](javascript/01-fundamentals/01-variables/) |
+| TypeScript | 🟡 Planned | 23 | [typescript/01-fundamentals/01-types-and-annotations](typescript/01-fundamentals/01-types-and-annotations/) |
+| Go | 🟡 Planned | 23 | [go/01-fundamentals/01-variables](go/01-fundamentals/01-variables/) |
+| Rust | 🟡 Planned | 23 | [rust/01-fundamentals/01-variables](rust/01-fundamentals/01-variables/) |
 
-License & contact
-- License: MIT (see `LICENSE`)
-- GitHub: https://github.com/iam-prabha/what-am-i-learning
-- Issues & PRs: use the repository issue tracker for suggestions and bugs.
+## AI/ML Roadmap
 
-Notes & extras
-- I keep notebooks and examples organized by topic and difficulty.
-- Sample datasets live in `data/` — refer to each project README for dataset specifics.
-- If you want a more minimal README (just a launcher), tell me and I will shorten it further.
+| Phase | Folder | Focus | Topics | Status |
+|---|---|---|---|---|
+| 0 | `ai-ml/01-math-foundations/` | Linear algebra, calculus, probability | 5 | 🟢 Active |
+| 1 | `ai-ml/02-ml-core/` | Classical ML algorithms | 8 | 🟢 Active |
+| 2 | `ai-ml/03-deep-learning/` | Neural networks, CNNs, RNNs | 6 | 🟡 Planned |
+| 3 | `ai-ml/04-llms/` | Transformers, fine-tuning, RAG | 6 | 🟡 Planned |
+| 4 | `ai-ml/05-mlops/` | Deployment, monitoring, CI/CD | 5 | 🟡 Planned |
 
-Happy learning — jump into `python/` to start today! 🎓✨
+## The 4-file pattern
+
+Every topic folder contains the same 4 files:
+
+| File | Purpose |
+|---|---|
+| `README.md` | Concept explanation with analogy, use cases, common mistakes |
+| `example.[ext]` | One clean, runnable demo — annotated with WHY comments |
+| `exercise.[ext]` | 6 TODOs + 1 challenge — with assert-based self-checking |
+| `solution.[ext]` | Complete answers with WHY comments and alternative approaches |
+
+This pattern ensures every topic is **self-contained** — you never need to look outside the folder.
+
+## Contributing
+
+Everyone is welcome! To add a new topic:
+
+1. Copy `_templates/` to the correct location (e.g. `python/01-fundamentals/11-new-topic/`)
+2. Fill in all 4 files following the patterns in existing topics
+3. Ensure `example.[ext]` and `solution.[ext]` run with zero errors
+4. Ensure `exercise.[ext]` has asserts that fail until TODOs are filled in
+5. Open a PR with a short description
+
+See [ROADMAP.md](ROADMAP.md) for topics that need contributors.
+
+## License
+
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
+
+---
+
+Made with ❤️ by [@iam-prabha](https://github.com/iam-prabha) — Happy learning! 🎓✨

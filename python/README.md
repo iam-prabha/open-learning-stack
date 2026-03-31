@@ -1,70 +1,44 @@
-# Python Fundamentals
+# Python 🐍
 
-This directory contains comprehensive Python learning materials covering fundamentals to advanced concepts.
+Learn Python from fundamentals to advanced topics.
 
-## 📚 Contents
+## Levels
 
-### Core Python Concepts
-- **01-data_types.ipynb** - Variables, data types, type conversion
-- **02-loops_and_conditional.ipynb** - Control flow, if/else, for/while loops
-- **03-functions.ipynb** - Function definitions, parameters, scope, lambda functions
-- **04-data_structures.ipynb** - Lists, tuples, sets, dictionaries
-- **05-oops_concept.ipynb** - Classes, objects, inheritance, polymorphism
+| Level | Folder | Topics |
+|---|---|---|
+| Fundamentals | `01-fundamentals/` | Variables, types, operators, strings, conditionals, loops, functions, collections, file I/O |
+| Intermediate | `02-intermediate/` | Comprehensions, error handling, OOP, decorators, generators, closures |
+| Advanced | `03-advanced/` | Concurrency, metaclasses, context managers, type hints, testing, performance |
 
-### Data Science Libraries
-- **06-numpy.ipynb** - NumPy arrays, operations, linear algebra
-- **07-pandas.ipynb** - DataFrames, data manipulation, analysis
-- **08-matplotlib.ipynb** - Data visualization, plotting basics
-- **09-seaborn.ipynb** - Statistical visualizations, advanced plots
+## Start here
 
-### Advanced Concepts
-- **10-exception_handling.ipynb** - Try/except, error handling
-- **11-multiprocessing.py** - Parallel processing, CPU-bound tasks
-- **12-multithreading.py** - Concurrent execution, I/O-bound tasks
-- **13-decorator.py** - Function decorators, metaprogramming
-- **14-generator.py** - Generator functions, memory efficiency
-- **pattern.ipynb** - Pattern programming exercises and examples
+→ [01-fundamentals/01-variables/](01-fundamentals/01-variables/)
 
-## 🎯 Learning Path
+## Topic order
 
-1. Start with data types and control flow (01-02)
-2. Learn functions and data structures (03-04)
-3. Understand OOP concepts (05)
-4. Master data science libraries (06-09)
-5. Explore advanced topics (10-14)
-
-## 📊 Sample Data
-
-Sample datasets are now located in the `../data/` directory.
-
-## 📖 Additional Resources
-
-- **slides/** - Presentation materials and learning aids (PowerPoint presentations and handouts)
-- **sample.txt** - Sample text file for file I/O examples
-
-## 💻 Usage
-
-### Running Jupyter Notebooks
-```bash
-# From repository root
-uv run jupyter notebook python/
-
-# Or navigate to this directory first
-cd python
-uv run jupyter notebook
-```
-
-### Running Python Scripts
-```bash
-# From repository root
-uv run python python/11-multiprocessing.py
-uv run python python/12-multithreading.py
-uv run python python/13-decorator.py
-uv run python python/14-generator.py
-```
-
-## 🔗 Related Content
-
-- Data Science Projects: `../projects/`
-- Machine Learning: `../ml/`
-- Sample Datasets: `../data/`
+| # | Folder | Concept | Level |
+|---|---|---|---|
+| 1 | `01-variables` | Variables & naming | fundamentals |
+| 2 | `02-data-types` | Built-in types | fundamentals |
+| 3 | `03-operators` | Arithmetic & logic ops | fundamentals |
+| 4 | `04-strings` | String manipulation | fundamentals |
+| 5 | `05-conditionals` | If/elif/else branching | fundamentals |
+| 6 | `06-loops` | For & while loops | fundamentals |
+| 7 | `07-functions` | Defining & calling funcs | fundamentals |
+| 8 | `08-lists-and-tuples` | Ordered collections | fundamentals |
+| 9 | `09-dictionaries-and-sets` | Key-value & unique sets | fundamentals |
+| 10 | `10-file-io` | Reading & writing files | fundamentals |
+| 11 | `01-list-comprehensions` | Concise list building | intermediate |
+| 12 | `02-error-handling` | Try/except/finally | intermediate |
+| 13 | `03-modules-and-packages` | Import system | intermediate |
+| 14 | `04-oop-basics` | Classes & objects | intermediate |
+| 15 | `05-oop-inheritance` | Inheritance & polymorphism | intermediate |
+| 16 | `06-decorators` | Function wrappers | intermediate |
+| 17 | `07-generators` | Lazy iteration | intermediate |
+| 18 | `08-lambda-and-closures` | Anonymous funcs & scope | intermediate |
+| 19 | `01-concurrency` | Threads & multiprocessing | advanced |
+| 20 | `02-metaclasses` | Class factories | advanced |
+| 21 | `03-context-managers` | With statement protocol | advanced |
+| 22 | `04-type-hints` | Static type annotations | advanced |
+| 23 | `05-testing` | Pytest & unittest | advanced |
+| 24 | `06-performance` | Profiling & optimization | advanced |

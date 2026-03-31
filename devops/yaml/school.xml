@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<School name="DPS" priniple="someone">
-    <Student>
-        <rno>23</rno>
-        <name>riya</name>
-        <marks>89</marks>
-    </Student>
-</School>
