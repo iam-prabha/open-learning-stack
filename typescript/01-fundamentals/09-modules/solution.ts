@@ -1,79 +1,37 @@
-"""
-[Topic Name] — Solutions
-========================
-Run: python solution.py
+// solution.ts - Modules answers
 
-Complete answers for all exercises.
-"""
+// TODO 1 & 2
+/*
+// config.ts
+export const API_KEY = "123-abc";
+export interface Settings { theme: string; }
+*/
 
+// TODO 3
+// import { API_KEY, Settings } from "./config";
 
-# ── Solution 1 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
+// TODO 4
+// Answer: Use 'import type { Settings } from "./config";'
 
+// TODO 5
+// import * as MathTools from "./math";
 
+// TODO 6
+// Answer: They are completely removed (erased). The compiled 
+// JavaScript will have no reference to them at all.
 
-print("✓ Exercise 1 passed")
+// CHALLENGE ANSWER
+/*
+// logger.ts
+export const LOG_LEVEL = "DEBUG";
+export default function log(m: string) { console.log(m); }
 
-# ALTERNATIVE: [show a different valid approach]
+// main.ts
+import log, { LOG_LEVEL } from "./logger";
+*/
 
-
-# ── Solution 2 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 2 passed")
-
-
-# ── Solution 3 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Solution 4 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Solution 5 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Solution 6 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge Solution ──────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Challenge passed")
-
-
-# ─── KEY TAKEAWAYS ───────────────────────────────────────────────────
-#
-# 1. [Takeaway 1]
-# 2. [Takeaway 2]
-# 3. [Takeaway 3]
-# 4. [Takeaway 4]
-# 5. [Takeaway 5]
-#
-# Next topic: [next-topic-name]
-# ─────────────────────────────────────────────────────────────────────
-
-print("\n🎉 All exercises passed!")
+console.log("\n--- Why it works ---");
+console.log("1. Organization: You can break massive projects into small, manageable units without cluttering the global scope.");
+console.log("2. Type-safety: By exporting interfaces, you ensure that every part of your app 'speaks the same language.'");
+console.log("3. Compilation: TS handles the complex logic of converting modern imports into whatever format your runtime needs (CommonJS, ESM, etc.).");
+console.log("4. Clarity: 'import type' gives an explicit hint to both the developer and the compiler that this is a zero-runtime dependency.");

@@ -1,68 +1,35 @@
-"""
-[Topic Name] — Exercises
-========================
-Run: python exercise.py (after filling in the TODOs)
+// exercise.js - Practice with Modules
+// Note: This exercise focuses on syntax as running multiple files 
+// requires .mjs or a local server.
 
-6 exercises + 1 challenge. Fill in every TODO, then run
-the file — you should see "All exercises passed! 🎉"
-"""
+// TODO 1: Given a file 'math.js', how would you export a constant 'PI'?
+// Write the line below:
+// ...
 
+// TODO 2: How would you export a function 'square(n)' as the DEFAULT export?
+// ...
 
-# ── Exercise 1: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-# Hint: [optional hint]
+// TODO 3: How would you import BOTH 'PI' and 'square' in another file?
+// Assume they are in './math.js'
+// ...
 
+// TODO 4: How would you rename 'PI' to 'circleConstant' during import?
+// ...
 
+// TODO 5: Create a conceptual "Logger" module. 
+// Export three levels: 'info', 'warn', and 'error' as named functions.
+/*
+export function info(msg) { ... }
+...
+*/
 
-print("✓ Exercise 1 passed")
+// TODO 6: What happens if you try to export TWO default values from one file?
+// Answer: ...
 
+// CHALLENGE: Create a mock 'database.mjs' that exports an object 
+// with 'connect' and 'query' methods as the default, 
+// AND also exports a named constant 'VERSION'.
 
-# ── Exercise 2: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 2 passed")
-
-
-# ── Exercise 3: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Exercise 4: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Exercise 5: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Exercise 6: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge: [Title] ──────────────────────────────────────────────
-# TODO: [describe challenge that combines multiple ideas]
-
-
-
-print("✓ Challenge passed")
-
-
-print("\n🎉 All exercises passed!")
+// --- Verification ---
+console.log("--- Results ---");
+console.log("This topic is about file structure. Check solution.js for syntax details!");

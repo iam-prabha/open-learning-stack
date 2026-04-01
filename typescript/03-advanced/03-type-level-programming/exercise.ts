@@ -1,68 +1,31 @@
-"""
-[Topic Name] — Exercises
-========================
-Run: python exercise.py (after filling in the TODOs)
+// exercise.ts - Practice with Type-Level Programming
 
-6 exercises + 1 challenge. Fill in every TODO, then run
-the file — you should see "All exercises passed! 🎉"
-"""
+// TODO 1: Create a recursive type 'DeepReadonly<T>' 
+// that makes every property at every level 'readonly'.
 
+// TODO 2: Test 'DeepReadonly' on the 'ComplexUser' interface.
 
-# ── Exercise 1: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-# Hint: [optional hint]
+// TODO 3: Create a type 'Reverse<T>' that reverses 
+// a tuple (e.g., [1, 2, 3] -> [3, 2, 1]).
+// (Hint: T extends [infer First, ...infer Rest] ? [...Reverse<Rest>, First] : [])
 
+// TODO 4: Create a type 'Join<T, D>' that joins a tuple 
+// of strings with a delimiter (e.g., Join<['a', 'b'], '-'> -> 'a-b').
 
+// TODO 5: Create a type 'Trim<T>' that removes leading 
+// and trailing whitespace from a string.
+// (Hint: T extends ` ${infer R}` | `${infer R} ` ? Trim<R> : T)
 
-print("✓ Exercise 1 passed")
+// TODO 6: What is the main risk of using deeply recursive 
+// types in a large project?
+// Answer: ...
 
+// CHALLENGE: Create a type-level 'Add<N1, N2>' that increments 
+// numbers represented as tuple lengths.
+// (e.g., Add<[any, any], [any]> -> [any, any, any] (3))
 
-# ── Exercise 2: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
+// --- Verification ---
+console.log("--- Results ---");
+// Check your type-level magic vs the solution!
 
-
-
-print("✓ Exercise 2 passed")
-
-
-# ── Exercise 3: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Exercise 4: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Exercise 5: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Exercise 6: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge: [Title] ──────────────────────────────────────────────
-# TODO: [describe challenge that combines multiple ideas]
-
-
-
-print("✓ Challenge passed")
-
-
-print("\n🎉 All exercises passed!")
+export {};

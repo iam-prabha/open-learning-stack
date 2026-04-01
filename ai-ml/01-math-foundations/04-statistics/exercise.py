@@ -1,68 +1,33 @@
-"""
-[Topic Name] — Exercises
-========================
-Run: python exercise.py (after filling in the TODOs)
+# exercise.py - Practice with Statistics
 
-6 exercises + 1 challenge. Fill in every TODO, then run
-the file — you should see "All exercises passed! 🎉"
-"""
+import numpy as np
 
+# TODO 1: Generate a random sample of 50 integers 
+# between 0 and 100.
 
-# ── Exercise 1: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-# Hint: [optional hint]
+# TODO 2: Calculate the Mean and Variance of the sample.
 
+# TODO 3: Why is the 'Median' often preferred over the 
+# 'Mean' when dealing with variables like 'House Prices'?
+# Answer: ...
 
+# TODO 4: Use 'np.std' to find the standard deviation 
+# of the following data: [5, 5, 5, 5, 5]. 
+# What is the result?
+# Answer: ...
 
-print("✓ Exercise 1 passed")
+# TODO 5: Standardize the value 'x=85' given a 
+# population mean of 70 and standard deviation of 10.
+# (Formula: Z = (x - mean) / std)
 
+# TODO 6: What is a 'P-value' in the context of 
+# comparing two models?
+# Answer: ...
 
-# ── Exercise 2: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
+# CHALLENGE: Write a function that identifies 'Outliers' 
+# in a dataset (defined as any value more than 3 standard 
+# deviations away from the mean).
 
-
-
-print("✓ Exercise 2 passed")
-
-
-# ── Exercise 3: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Exercise 4: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Exercise 5: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Exercise 6: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge: [Title] ──────────────────────────────────────────────
-# TODO: [describe challenge that combines multiple ideas]
-
-
-
-print("✓ Challenge passed")
-
-
-print("\n🎉 All exercises passed!")
+# --- Verification ---
+print("--- Results ---")
+# Check your stats logic vs the solution!

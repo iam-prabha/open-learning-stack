@@ -1,20 +1,52 @@
-"""
-[Topic Name] — Working Demo
-============================
-Run: python example.py
+// example.ts - Reusable, Type-safe Components with Generics
 
-Covers: [list what this demo covers]
-"""
+// 1. Generic Function
+// The <T> is a placeholder for the type
+function identity<T>(arg: T): T {
+    return arg;
+}
 
+console.log("--- Generic Functions ---");
+let output1 = identity<string>("Hello");
+let output2 = identity<number>(100);
+console.log(`Identity string: ${output1}`);
+console.log(`Identity number: ${output2}`);
 
-# ─── SECTION: [Section Name] ────────────────────────────────────────
+// 2. Generic Interfaces
+interface Box<T> {
+    content: T;
+}
 
-# WHY: [explain why this approach is used]
+const stringBox: Box<string> = { content: "Present" };
+const numBox: Box<number> = { content: 5 };
 
+console.log("\n--- Generic Interfaces ---");
+console.log(`Box has: ${stringBox.content}`);
 
-# ─── SECTION: [Section Name] ────────────────────────────────────────
+// 3. Generic Classes
+class DataStorage<T> {
+    private data: T[] = [];
 
-# WHY: [explain why this approach is used]
+    addItem(item: T) {
+        this.data.push(item);
+    }
 
+    getItems(): T[] {
+        return this.data;
+    }
+}
 
-print("\n✅ All examples ran successfully!")
+const textStore = new DataStorage<string>();
+textStore.addItem("A");
+textStore.addItem("B");
+console.log("\n--- Generic Classes ---");
+console.log(textStore.getItems());
+
+// 4. Multiple Type Parameters
+function pair<T, U>(first: T, second: U): [T, U] {
+    return [first, second];
+}
+
+const myPair = pair<number, string>(1, "Apple");
+console.log("\n--- Multiple Params ---");
+console.log(myPair);

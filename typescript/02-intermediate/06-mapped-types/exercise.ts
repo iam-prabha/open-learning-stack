@@ -1,68 +1,31 @@
-"""
-[Topic Name] — Exercises
-========================
-Run: python exercise.py (after filling in the TODOs)
+// exercise.ts - Practice with Mapped Types
 
-6 exercises + 1 challenge. Fill in every TODO, then run
-the file — you should see "All exercises passed! 🎉"
-"""
+interface Point {
+    x: number;
+    y: number;
+}
 
+// TODO 1: Create a mapped type 'Stringify<T>' that 
+// transforms every property of T into a 'string'.
 
-# ── Exercise 1: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-# Hint: [optional hint]
+// TODO 2: Create a type 'PointStrings' by using 
+// 'Stringify' on the 'Point' interface.
 
+// TODO 3: Create a mapped type 'Nullable<T>' that 
+// makes every property 'T[P] | null'.
 
+// TODO 4: Create a mapped type 'Mandatory<T>' that 
+// REMOVES the optional ('?') modifier from all properties.
 
-print("✓ Exercise 1 passed")
+// TODO 5: Use key remapping to create a type 'EventHandlers<T>' 
+// that transforms { click: any } into { onClick: any }.
 
+// TODO 6: What is the benefit of the '-readonly' modifier?
+// Answer: ...
 
-# ── Exercise 2: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
+// CHALLENGE: Create a mapped type that prefixes every key 
+// with 'data_' and changes the value to { old: T[P], new: T[P] }.
 
-
-
-print("✓ Exercise 2 passed")
-
-
-# ── Exercise 3: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Exercise 4: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Exercise 5: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Exercise 6: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge: [Title] ──────────────────────────────────────────────
-# TODO: [describe challenge that combines multiple ideas]
-
-
-
-print("✓ Challenge passed")
-
-
-print("\n🎉 All exercises passed!")
+// --- Verification ---
+console.log("--- Results ---");
+// Check your mapping logic vs the solution!

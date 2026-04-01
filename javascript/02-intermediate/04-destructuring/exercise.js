@@ -1,68 +1,41 @@
-"""
-[Topic Name] — Exercises
-========================
-Run: python exercise.py (after filling in the TODOs)
+// exercise.js - Practice with Destructuring
 
-6 exercises + 1 challenge. Fill in every TODO, then run
-the file — you should see "All exercises passed! 🎉"
-"""
+// TODO 1: Extract 'brand' and 'model' from this object:
+// const car = { brand: "Tesla", model: "Model 3", year: 2022 };
 
+// TODO 2: Destructure 'firstName' and rename it to 'name'. 
+// Also provide a default value of "User" for 'status'.
+// const profile = { firstName: "Bob" };
 
-# ── Exercise 1: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-# Hint: [optional hint]
+// TODO 3: Extract the first and third items from this array into 'p1' and 'p3':
+// const points = [10, 20, 30, 40];
 
+// TODO 4: Use the rest operator (...) to collect the remaining items 
+// of 'points' into an array called 'remaining'.
 
+// TODO 5: Destructure the 'city' from inside the 'address' object:
+/*
+const user = {
+  name: "Alice",
+  address: {
+    city: "New York",
+    zip: 10001
+  }
+};
+*/
 
-print("✓ Exercise 1 passed")
+// TODO 6: Swapping variables! Use destructuring to swap the values of 'a' and 'b'.
+// let a = 5, b = 10;
 
+// CHALLENGE: Create a function 'displaySummary' that takes an object 
+// with 'title', 'stats: { views, likes }' and logs a literal string.
+// Use parameter destructuring!
 
-# ── Exercise 2: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 2 passed")
-
-
-# ── Exercise 3: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Exercise 4: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Exercise 5: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Exercise 6: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge: [Title] ──────────────────────────────────────────────
-# TODO: [describe challenge that combines multiple ideas]
-
-
-
-print("✓ Challenge passed")
-
-
-print("\n🎉 All exercises passed!")
+// --- Verification ---
+console.log("--- Results ---");
+try {
+    // console.log(`Name: ${name}`);
+    // console.log(`Lat: ${lat}`);
+} catch (e) {
+    console.log("Error: fill in all TODOs to see results!");
+}

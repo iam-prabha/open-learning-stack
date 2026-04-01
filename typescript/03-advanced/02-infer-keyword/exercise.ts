@@ -1,68 +1,32 @@
-"""
-[Topic Name] — Exercises
-========================
-Run: python exercise.py (after filling in the TODOs)
+// exercise.ts - Practice with 'infer'
 
-6 exercises + 1 challenge. Fill in every TODO, then run
-the file — you should see "All exercises passed! 🎉"
-"""
+// TODO 1: Create a type 'FirstElement<T>' that:
+// - If T is an array, infers the first element's type.
+// - Otherwise, returns 'never'.
 
+// TODO 2: Use 'FirstElement' on '[string, number]' 
+// and observe the result.
 
-# ── Exercise 1: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-# Hint: [optional hint]
+// TODO 3: Create a type 'UnwrapPromise<T>' that uses 
+// 'infer' to recursively get the nested type of a Promise.
+// (Hint: T extends Promise<infer U> ? UnwrapPromise<U> : T)
 
+// TODO 4: Create a type 'GetParameters<T>' that extracts 
+// the parameters of a function as a tuple.
 
+// TODO 5: Create a type 'LastChar<T>' that extracts the 
+// last character of a template literal string.
+// (Hint: T extends `${infer Rest}${infer Last}` ? ...)
+// Actually, let's keep it simpler: T extends `${string}${infer Last}` where Last is 1 char.
 
-print("✓ Exercise 1 passed")
+// TODO 6: Where can the 'infer' keyword be used in TypeScript?
+// Answer: ...
 
+// CHALLENGE: Create a type 'Pop<T>' that takes a tuple 
+// [1, 2, 3] and returns [1, 2] using 'infer' and rest '...'.
 
-# ── Exercise 2: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
+// --- Verification ---
+console.log("--- Results ---");
+// Check your inference logic vs the solution!
 
-
-
-print("✓ Exercise 2 passed")
-
-
-# ── Exercise 3: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Exercise 4: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Exercise 5: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Exercise 6: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge: [Title] ──────────────────────────────────────────────
-# TODO: [describe challenge that combines multiple ideas]
-
-
-
-print("✓ Challenge passed")
-
-
-print("\n🎉 All exercises passed!")
+export {}; // Prevent global scope collisions

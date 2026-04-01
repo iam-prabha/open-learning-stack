@@ -1,79 +1,48 @@
-"""
-[Topic Name] — Solutions
-========================
-Run: python solution.py
+// solution.js - Prototypes answers
 
-Complete answers for all exercises.
-"""
+// TODO 1 & 2
+const parent = { role: "user" };
+const child = { __proto__: parent };
 
+// TODO 3
+console.log(`Initial child role: ${child.role}`);
+child.role = "admin";
+console.log(`After override: child=${child.role}, parent=${parent.role}`);
 
-# ── Solution 1 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
+// TODO 4
+const shape = { type: "basic" };
+const square = Object.create(shape);
+square.side = 4;
 
+// TODO 5
+function Person(name) {
+    this.name = name;
+}
+Person.prototype.greet = function() {
+    console.log(`Hi, I'm ${this.name}`);
+};
 
+// TODO 6
+const p1 = new Person("Alice");
+const p2 = new Person("Bob");
+console.log(`Same greet function? ${p1.greet === p2.greet}`);
 
-print("✓ Exercise 1 passed")
+// CHALLENGE ANSWER
+if (!Array.prototype.last) {
+    Array.prototype.last = function() {
+        return this[this.length - 1];
+    };
+}
+console.log(`Challenge [1, 2, 3].last(): ${[1, 2, 3].last()}`);
 
-# ALTERNATIVE: [show a different valid approach]
+// --- Verification ---
+console.log("--- Verification ---");
+p1.greet();
+p2.greet();
+console.log(`Square type: ${square.type}`);
 
-
-# ── Solution 2 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 2 passed")
-
-
-# ── Solution 3 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Solution 4 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Solution 5 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Solution 6 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge Solution ──────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Challenge passed")
-
-
-# ─── KEY TAKEAWAYS ───────────────────────────────────────────────────
-#
-# 1. [Takeaway 1]
-# 2. [Takeaway 2]
-# 3. [Takeaway 3]
-# 4. [Takeaway 4]
-# 5. [Takeaway 5]
-#
-# Next topic: [next-topic-name]
-# ─────────────────────────────────────────────────────────────────────
-
-print("\n🎉 All exercises passed!")
+console.log("\n--- Why it works ---");
+console.log("1. Memory Efficiency: By putting methods on the prototype, thousands of objects share ONE function in memory, rather than each having their own copy.");
+console.log("2. Shadowing: When you set a property directly on an object, it hides (shadows) the property with the same name on the prototype.");
+console.log("3. Chain lookup: JS follows the __proto__ pointers until it finds the property or reaches null (Object.prototype is usually the end).");
+console.log("4. Object.create: The modern, explicit way to set up inheritance without the overhead of constructor functions.");

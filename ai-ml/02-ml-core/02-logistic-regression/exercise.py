@@ -1,68 +1,31 @@
-"""
-[Topic Name] — Exercises
-========================
-Run: python exercise.py (after filling in the TODOs)
+# exercise.py - Practice with Logistic Regression
 
-6 exercises + 1 challenge. Fill in every TODO, then run
-the file — you should see "All exercises passed! 🎉"
-"""
+import numpy as np
+from sklearn.linear_model import LogisticRegression
 
+# TODO 1: Create X (Features) for whether a customer 
+# clicked an ad based on 'Age'. 
+# (X = [20, 25, 30, 45, 50, 60] reshaped)
 
-# ── Exercise 1: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-# Hint: [optional hint]
+# TODO 2: Create y (Clicked: 0=No, 1=Yes)
+# (y = [0, 0, 0, 1, 1, 1])
 
+# TODO 3: Fit a LogisticRegression model.
 
+# TODO 4: Predict for someone aged 35. 
+# Are they predicted to click?
 
-print("✓ Exercise 1 passed")
+# TODO 5: Use 'model.predict_proba' to see the confidence 
+# for that 35-year-old.
 
+# TODO 6: What is 'Log-Loss' (Cross-Entropy)? 
+# Why don't we use Mean Squared Error for classification?
+# Answer: ...
 
-# ── Exercise 2: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
+# CHALLENGE: Manually implement the Sigmoid function 
+# using np.exp, and calculate the probability for 
+# a score of z = 2.0.
 
-
-
-print("✓ Exercise 2 passed")
-
-
-# ── Exercise 3: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Exercise 4: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Exercise 5: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Exercise 6: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge: [Title] ──────────────────────────────────────────────
-# TODO: [describe challenge that combines multiple ideas]
-
-
-
-print("✓ Challenge passed")
-
-
-print("\n🎉 All exercises passed!")
+# --- Verification ---
+print("--- Results ---")
+# Check your classification logic vs the solution!

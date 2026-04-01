@@ -1,68 +1,26 @@
-"""
-[Topic Name] — Exercises
-========================
-Run: python exercise.py (after filling in the TODOs)
+// exercise.ts - Practice with Advanced Generics
 
-6 exercises + 1 challenge. Fill in every TODO, then run
-the file — you should see "All exercises passed! 🎉"
-"""
+// TODO 1: Create an interface 'HasId' that requires an 'id' (number).
 
+// TODO 2: Write a generic function 'findItem<T>' that takes an 
+// array of T (where T extends HasId) and a number id. 
+// It should return the found item or undefined.
 
-# ── Exercise 1: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-# Hint: [optional hint]
+// TODO 3: Create a generic interface 'Box<T>' where T 
+// defaults to 'string'.
 
+// TODO 4: Create a variable 'myBox' that uses the 
+// default type from TODO 3.
 
+// TODO 5: Write a function 'pluck<T, K extends keyof T>' 
+// that takes an object and a key and returns the value.
 
-print("✓ Exercise 1 passed")
+// TODO 6: Why is 'T extends object' safer than just using 'T'?
+// Answer: ...
 
+// CHALLENGE: Create a generic class 'Container<T extends { value: any }>' 
+// that has a method 'getValue()' returning the internal value.
 
-# ── Exercise 2: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 2 passed")
-
-
-# ── Exercise 3: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Exercise 4: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Exercise 5: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Exercise 6: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge: [Title] ──────────────────────────────────────────────
-# TODO: [describe challenge that combines multiple ideas]
-
-
-
-print("✓ Challenge passed")
-
-
-print("\n🎉 All exercises passed!")
+// --- Verification ---
+console.log("--- Results ---");
+// After filling in, check your code logic!

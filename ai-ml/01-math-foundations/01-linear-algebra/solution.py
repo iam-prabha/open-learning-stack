@@ -1,79 +1,43 @@
-"""
-[Topic Name] — Solutions
-========================
-Run: python solution.py
+# solution.py - Linear Algebra answers
 
-Complete answers for all exercises.
-"""
+import numpy as np
 
+# TODO 1
+v = np.array([10, 20, 30])
 
-# ── Solution 1 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
+# TODO 2
+M = np.zeros((2, 3))
 
+# TODO 3
+magnitude = np.linalg.norm(v)
+print(f"Magnitude of v: {magnitude:.2f}")
 
+# TODO 4
+scaled_v = v * 0.5
 
-print("✓ Exercise 1 passed")
+# TODO 5
+A = np.array([[1, 2], [3, 4]])
+B = np.array([[1], [2]])
+result = A @ B 
+# result = [[1*1 + 2*2], [3*1 + 4*2]] = [[5], [11]]
+print(f"Matrix Mult result shape: {result.shape}")
 
-# ALTERNATIVE: [show a different valid approach]
+# TODO 6
+# Answer: The Dot Product (specifically Cosine Similarity). 
+# It tells you how much two arrows are pointing in the same direction.
 
+# CHALLENGE ANSWER
+def cosine_similarity(a, b):
+    return np.dot(a, b) / (np.linalg.norm(a) * np.linalg.norm(b))
 
-# ── Solution 2 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
+v1 = np.array([1, 0])
+v2 = np.array([1, 1])
+print(f"Cosine Similarity: {cosine_similarity(v1, v2):.4f}")
 
+print("\n--- Why it works ---")
+print("1. Density: Matrices allow us to pack millions of numbers into a single object, making data manageable for computers.")
+print("2. Parallelism: Modern GPUs are specifically designed to do one thing: matrix multiplication. This is why AI is so fast on GPUs.")
+print("3. Foundations: Every single 'Weight' in a neural network is just an entry in a matrix.")
+print("4. Transformations: When you rotate a 3D model in a video game or apply a filter on Instagram, you are doing Linear Algebra.")
 
-
-print("✓ Exercise 2 passed")
-
-
-# ── Solution 3 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Solution 4 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Solution 5 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Solution 6 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge Solution ──────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Challenge passed")
-
-
-# ─── KEY TAKEAWAYS ───────────────────────────────────────────────────
-#
-# 1. [Takeaway 1]
-# 2. [Takeaway 2]
-# 3. [Takeaway 3]
-# 4. [Takeaway 4]
-# 5. [Takeaway 5]
-#
-# Next topic: [next-topic-name]
-# ─────────────────────────────────────────────────────────────────────
-
-print("\n🎉 All exercises passed!")
+export {};

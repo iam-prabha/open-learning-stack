@@ -50,7 +50,7 @@ open-learning-stack/
 |---|---|---|---|
 | Python | 🟢 Active | 24 | [python/01-fundamentals/01-variables](python/01-fundamentals/01-variables/) |
 | JavaScript | 🟢 Active | 23 | [javascript/01-fundamentals/01-variables](javascript/01-fundamentals/01-variables/) |
-| TypeScript | 🟡 Planned | 23 | [typescript/01-fundamentals/01-types-and-annotations](typescript/01-fundamentals/01-types-and-annotations/) |
+| TypeScript | 🟢 Active | 23 | [typescript/01-fundamentals/01-types-and-annotations](typescript/01-fundamentals/01-types-and-annotations/) |
 | Go | 🟡 Planned | 23 | [go/01-fundamentals/01-variables](go/01-fundamentals/01-variables/) |
 | Rust | 🟡 Planned | 23 | [rust/01-fundamentals/01-variables](rust/01-fundamentals/01-variables/) |
 
@@ -60,7 +60,7 @@ open-learning-stack/
 |---|---|---|---|---|
 | 0 | `ai-ml/01-math-foundations/` | Linear algebra, calculus, probability | 5 | 🟢 Active |
 | 1 | `ai-ml/02-ml-core/` | Classical ML algorithms | 8 | 🟢 Active |
-| 2 | `ai-ml/03-deep-learning/` | Neural networks, CNNs, RNNs | 6 | 🟡 Planned |
+| 2 | `ai-ml/03-deep-learning/` | Neural networks, CNNs, RNNs | 6 | 🟢 Active |
 | 3 | `ai-ml/04-llms/` | Transformers, fine-tuning, RAG | 6 | 🟡 Planned |
 | 4 | `ai-ml/05-mlops/` | Deployment, monitoring, CI/CD | 5 | 🟡 Planned |
 

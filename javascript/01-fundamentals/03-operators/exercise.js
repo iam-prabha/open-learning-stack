@@ -1,68 +1,39 @@
-"""
-[Topic Name] — Exercises
-========================
-Run: python exercise.py (after filling in the TODOs)
+// exercise.js - Practice with operators
 
-6 exercises + 1 challenge. Fill in every TODO, then run
-the file — you should see "All exercises passed! 🎉"
-"""
+// TODO 1: Calculate the area of a circle with radius 5. 
+// (Use Math.PI and the exponentiation operator **)
+// const radius = 5;
+// const area = ...
 
+// TODO 2: Use the modulo operator (%) to check if 17 is even.
+// const isEven = ...
 
-# ── Exercise 1: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-# Hint: [optional hint]
+// TODO 3: Compare 10 and "10" using == and then using ===. 
+// Console.log both results.
 
+// TODO 4: Write a logical expression that is true if 'age' is 
+// between 18 and 65 (inclusive).
+// const age = 25;
+// const isWorkingAge = ...
 
+// TODO 5: Use the nullish coalescing operator (??) to provide a 
+// default value of "Guest" for a variable 'username' that is currently null.
+// let username = null;
+// const displayName = ...
 
-print("✓ Exercise 1 passed")
+// TODO 6: Increment a variable 'points' by 10 in a single step using +=.
+// let points = 100;
+// ...
 
+// CHALLENGE: Explain the difference between 'x++' and '++x'. 
+// Use console.log to demonstrate if you can.
 
-# ── Exercise 2: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 2 passed")
-
-
-# ── Exercise 3: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Exercise 4: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Exercise 5: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Exercise 6: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge: [Title] ──────────────────────────────────────────────
-# TODO: [describe challenge that combines multiple ideas]
-
-
-
-print("✓ Challenge passed")
-
-
-print("\n🎉 All exercises passed!")
+// --- Verification ---
+console.log("--- Results ---");
+try {
+    // console.log(`Area: ${area}`);
+    // console.log(`Is 17 even? ${isEven}`);
+    // console.log(`Display Name: ${displayName}`);
+} catch (e) {
+    console.log("Error: fill in all TODOs to see results!");
+}

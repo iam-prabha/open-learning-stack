@@ -1,68 +1,32 @@
-"""
-[Topic Name] — Exercises
-========================
-Run: python exercise.py (after filling in the TODOs)
+// exercise.ts - Practice with Project References
 
-6 exercises + 1 challenge. Fill in every TODO, then run
-the file — you should see "All exercises passed! 🎉"
-"""
+// TODO 1: What is the main benefit of Project References 
+// in a large codebase?
+// Answer: ...
 
+// TODO 2: Which flag in tsconfig.json MUST be set to 'true' 
+// in a project that is being referenced by others?
 
-# ── Exercise 1: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-# Hint: [optional hint]
+// TODO 3: What is the CLI flag used to perform a 
+// "Build Mode" compilation?
+// (Hint: tsc --...)
 
+// TODO 4: Why does a 'composite' project require 
+// 'declaration: true'?
+// (Hint: Think about how other projects see the types)
 
+// TODO 5: Create a mock 'tsconfig.json' section 
+// that references two other projects: '../utils' and '../api'.
 
-print("✓ Exercise 1 passed")
+// TODO 6: Can Project References have circular 
+// dependencies (A -> B -> A)?
+// Answer: ...
 
+// CHALLENGE: Explain how 'incremental' builds work 
+// with the '.tsbuildinfo' file.
 
-# ── Exercise 2: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
+// --- Verification ---
+console.log("--- Results ---");
+// Check your architecture knowledge vs the solution!
 
-
-
-print("✓ Exercise 2 passed")
-
-
-# ── Exercise 3: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Exercise 4: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Exercise 5: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Exercise 6: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge: [Title] ──────────────────────────────────────────────
-# TODO: [describe challenge that combines multiple ideas]
-
-
-
-print("✓ Challenge passed")
-
-
-print("\n🎉 All exercises passed!")
+export {};

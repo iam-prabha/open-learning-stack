@@ -1,68 +1,31 @@
-"""
-[Topic Name] — Exercises
-========================
-Run: python exercise.py (after filling in the TODOs)
+# exercise.py - Practice with Clustering
 
-6 exercises + 1 challenge. Fill in every TODO, then run
-the file — you should see "All exercises passed! 🎉"
-"""
+import numpy as np
+from sklearn.cluster import KMeans
+from sklearn.datasets import load_iris
 
+# TODO 1: Load the 'iris' data (X only).
+iris = load_iris()
+X = iris.data
 
-# ── Exercise 1: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-# Hint: [optional hint]
+# TODO 2: Initialize KMeans with k=3. 
+# Why 3? (Hint: How many flower types are in iris?)
 
+# TODO 3: Fit the model and predict the labels.
 
+# TODO 4: Print the cluster centers.
 
-print("✓ Exercise 1 passed")
+# TODO 5: What is 'Inertia' in K-Means? 
+# Does a HIGHER or LOWER inertia mean better clusters?
+# Answer: ...
 
+# TODO 6: Define 'Unsupervised Learning' in one sentence.
+# Answer: ...
 
-# ── Exercise 2: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
+# CHALLENGE: Implement the 'Elbow Method' for K=1 to K=6. 
+# Print the Inertia for each K. 
+# Where does the 'elbow' appear visually (if you could plot it)?
 
-
-
-print("✓ Exercise 2 passed")
-
-
-# ── Exercise 3: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Exercise 4: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Exercise 5: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Exercise 6: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge: [Title] ──────────────────────────────────────────────
-# TODO: [describe challenge that combines multiple ideas]
-
-
-
-print("✓ Challenge passed")
-
-
-print("\n🎉 All exercises passed!")
+# --- Verification ---
+print("--- Results ---")
+# Check your clustering logic vs the solution!

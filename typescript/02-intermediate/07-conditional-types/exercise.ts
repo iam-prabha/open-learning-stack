@@ -1,68 +1,28 @@
-"""
-[Topic Name] — Exercises
-========================
-Run: python exercise.py (after filling in the TODOs)
+// exercise.ts - Practice with Conditional Types
 
-6 exercises + 1 challenge. Fill in every TODO, then run
-the file — you should see "All exercises passed! 🎉"
-"""
+// TODO 1: Create a conditional type 'IsString<T>' 
+// that returns true if T is a string, false otherwise.
 
+// TODO 2: Create a type 'Result' by passing 'number' 
+// to your 'IsString' type.
 
-# ── Exercise 1: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-# Hint: [optional hint]
+// TODO 3: Create a type 'Flatten<T>' that:
+// - If T is an array 'Array<infer U>', returns U.
+// - Otherwise, returns T.
 
+// TODO 4: Use 'Flatten' on 'string[]' and 'number'.
 
+// TODO 5: Create a type 'GetIdType<T>' that:
+// - If T has an 'id' property, returns the type of 'id'.
+// - Otherwise, returns 'never'.
 
-print("✓ Exercise 1 passed")
+// TODO 6: What happens when you pass a Union 
+// (e.g. string | number) to a conditional type?
+// Answer: ...
 
+// CHALLENGE: Create a type 'MyReturnType<T>' that 
+// uses 'infer' to extract the return type of any function T.
 
-# ── Exercise 2: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 2 passed")
-
-
-# ── Exercise 3: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Exercise 4: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Exercise 5: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Exercise 6: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge: [Title] ──────────────────────────────────────────────
-# TODO: [describe challenge that combines multiple ideas]
-
-
-
-print("✓ Challenge passed")
-
-
-print("\n🎉 All exercises passed!")
+// --- Verification ---
+console.log("--- Results ---");
+// Check your type logic vs the solution!

@@ -1,79 +1,52 @@
-"""
-[Topic Name] — Solutions
-========================
-Run: python solution.py
+// solution.ts - Interfaces answers
 
-Complete answers for all exercises.
-"""
+// TODO 1
+interface Product {
+    readonly id: number;
+    name: string;
+    price: number;
+    description?: string;
+}
 
+// TODO 2
+const laptop: Product = {
+    id: 1,
+    name: "ThinkPad",
+    price: 1200
+};
 
-# ── Solution 1 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
+// TODO 3
+// laptop.id = 2; // Error: Cannot assign to 'id' (readonly)
 
+// TODO 4 & 5
+interface DigitalProduct extends Product {
+    downloadUrl: string;
+}
 
+const musicFile: DigitalProduct = {
+    id: 50,
+    name: "Song.mp3",
+    price: 0.99,
+    downloadUrl: "https://example.com/dl"
+};
 
-print("✓ Exercise 1 passed")
+// TODO 6
+interface Settings {
+    [key: string]: boolean;
+}
+const config: Settings = {
+    darkMode: true,
+    showSidebar: false
+};
 
-# ALTERNATIVE: [show a different valid approach]
+// CHALLENGE ANSWER
+interface MathOperation {
+    (a: number, b: number): number;
+}
+const add: MathOperation = (x, y) => x + y;
 
-
-# ── Solution 2 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 2 passed")
-
-
-# ── Solution 3 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Solution 4 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Solution 5 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Solution 6 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge Solution ──────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Challenge passed")
-
-
-# ─── KEY TAKEAWAYS ───────────────────────────────────────────────────
-#
-# 1. [Takeaway 1]
-# 2. [Takeaway 2]
-# 3. [Takeaway 3]
-# 4. [Takeaway 4]
-# 5. [Takeaway 5]
-#
-# Next topic: [next-topic-name]
-# ─────────────────────────────────────────────────────────────────────
-
-print("\n🎉 All exercises passed!")
+console.log("\n--- Why it works ---");
+console.log("1. Consistency: Interfaces ensure that different parts of your app use the same data structure, preventing 'undefined' errors.");
+console.log("2. Extensibility: By using 'extends', you can build complex types from simpler ones, keeping your code DRY (Don't Repeat Yourself).");
+console.log("3. Erasure: Interfaces disappear during compilation. They add zero weight to your final JavaScript bundle.");
+console.log("4. Readonly/Optional: These features give you fine-grained control over how data can be accessed and modified.");

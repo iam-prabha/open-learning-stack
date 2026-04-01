@@ -1,20 +1,19 @@
-"""
-[Topic Name] — Working Demo
-============================
-Run: python example.py
+// example.ts - Using untyped JS with declaration files
 
-Covers: [list what this demo covers]
-"""
+// This import works because of my-lib.d.ts!
+import { version, greet, calculate } from "my-lib";
 
+console.log("--- Declaration Files ---");
+console.log(`Library Version: ${version}`);
+console.log(greet("Alice"));
+console.log(`5 + 10 = ${calculate(5, 10)}`);
 
-# ─── SECTION: [Section Name] ────────────────────────────────────────
+// Custom global declaration example
+declare global {
+    interface Window {
+        myCustomFlag: boolean;
+    }
+}
 
-# WHY: [explain why this approach is used]
-
-
-# ─── SECTION: [Section Name] ────────────────────────────────────────
-
-# WHY: [explain why this approach is used]
-
-
-print("\n✅ All examples ran successfully!")
+// Now TS knows window has this flag!
+// if (window.myCustomFlag) { ... }

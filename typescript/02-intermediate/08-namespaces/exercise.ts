@@ -1,68 +1,26 @@
-"""
-[Topic Name] — Exercises
-========================
-Run: python exercise.py (after filling in the TODOs)
+// exercise.ts - Practice with Namespaces
 
-6 exercises + 1 challenge. Fill in every TODO, then run
-the file — you should see "All exercises passed! 🎉"
-"""
+// TODO 1: Create a namespace 'MathUtils'.
 
+// TODO 2: Inside 'MathUtils', export a function 
+// 'add(a: number, b: number)' and a constant 'PHI = 1.618'.
 
-# ── Exercise 1: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-# Hint: [optional hint]
+// TODO 3: Use the 'MathUtils' namespace to add 10 and 20.
 
+// TODO 4: Create a nested namespace 'Geometry' 
+// inside 'MathUtils'.
 
+// TODO 5: Export a class 'Circle' from 'Geometry' 
+// that has a 'radius' and an 'area()' method.
 
-print("✓ Exercise 1 passed")
+// TODO 6: Why are ES Modules (import/export) preferred 
+// over Namespaces in modern development?
+// Answer: ...
 
+// CHALLENGE: Create an alias 'G' for the nested 
+// 'MathUtils.Geometry' namespace and use it to 
+// instantiate a 'Circle'.
 
-# ── Exercise 2: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 2 passed")
-
-
-# ── Exercise 3: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Exercise 4: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Exercise 5: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Exercise 6: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge: [Title] ──────────────────────────────────────────────
-# TODO: [describe challenge that combines multiple ideas]
-
-
-
-print("✓ Challenge passed")
-
-
-print("\n🎉 All exercises passed!")
+// --- Verification ---
+console.log("--- Results ---");
+// Check your namespace logic vs the solution!

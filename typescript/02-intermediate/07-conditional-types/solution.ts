@@ -1,79 +1,31 @@
-"""
-[Topic Name] — Solutions
-========================
-Run: python solution.py
+// solution.ts - Conditional Types answers
 
-Complete answers for all exercises.
-"""
+// TODO 1
+type IsString<T> = T extends string ? true : false;
 
+// TODO 2
+type Result = IsString<number>; // false
 
-# ── Solution 1 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
+// TODO 3
+type Flatten<T> = T extends Array<infer U> ? U : T;
 
+// TODO 4
+type F1 = Flatten<string[]>; // string
+type F2 = Flatten<number>; // number
 
+// TODO 5
+type GetIdType<T> = T extends { id: infer I } ? I : never;
 
-print("✓ Exercise 1 passed")
+// TODO 6
+// Answer: If the type is distributive (most are), the condition 
+// check is run for EACH member of the union. The result is a 
+// new union containing the individual results.
 
-# ALTERNATIVE: [show a different valid approach]
+// CHALLENGE ANSWER
+type MyReturnType<T> = T extends (...args: any[]) => infer R ? R : any;
 
-
-# ── Solution 2 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 2 passed")
-
-
-# ── Solution 3 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Solution 4 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Solution 5 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Solution 6 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge Solution ──────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Challenge passed")
-
-
-# ─── KEY TAKEAWAYS ───────────────────────────────────────────────────
-#
-# 1. [Takeaway 1]
-# 2. [Takeaway 2]
-# 3. [Takeaway 3]
-# 4. [Takeaway 4]
-# 5. [Takeaway 5]
-#
-# Next topic: [next-topic-name]
-# ─────────────────────────────────────────────────────────────────────
-
-print("\n🎉 All exercises passed!")
+console.log("\n--- Why it works ---");
+console.log("1. Type-level Logic: Conditional types allow the type system to 'compute' types based on existing ones, just like JS code computes values.");
+console.log("2. Distribution: The automatic 'looping' over unions makes these types incredibly powerful for transforming entire data models.");
+console.log("3. Inference: The 'infer' keyword allows you to extract information that's otherwise hard to reach (like a function's return type).");
+console.log("4. Robustness: You can eliminate impossible types (using 'never') or provide safe defaults, ensuring your APIs are 100% accurate.");

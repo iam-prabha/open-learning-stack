@@ -1,20 +1,31 @@
-"""
-[Topic Name] — Working Demo
-============================
-Run: python example.py
+// example.js - Interacting with the webpage
 
-Covers: [list what this demo covers]
-"""
+// 1. Selecting Elements
+const title = document.querySelector("#main-title");
+const button = document.querySelector("#btn-click");
+const input = document.querySelector("#user-input");
+const output = document.querySelector("#output");
 
+console.log("--- Selection ---");
+console.log(`Title text: ${title.textContent}`);
 
-# ─── SECTION: [Section Name] ────────────────────────────────────────
+// 2. Changing Content and Style
+title.textContent = "DOM Content Updated!";
+title.style.color = "blue";
 
-# WHY: [explain why this approach is used]
+// 3. Handling Events
+button.addEventListener("click", () => {
+    output.textContent = "Button was clicked! 🚀";
+    button.classList.add("highlight");
+});
 
+// 4. Input Events
+input.addEventListener("input", (event) => {
+    const text = event.target.value;
+    output.textContent = `You typed: ${text}`;
+});
 
-# ─── SECTION: [Section Name] ────────────────────────────────────────
-
-# WHY: [explain why this approach is used]
-
-
-print("\n✅ All examples ran successfully!")
+// 5. Creating New Elements
+const newPara = document.createElement("p");
+newPara.textContent = "I was created dynamically via JS!";
+document.body.appendChild(newPara);

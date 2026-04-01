@@ -1,68 +1,31 @@
-"""
-[Topic Name] — Exercises
-========================
-Run: python exercise.py (after filling in the TODOs)
+// exercise.js - Practice data types
 
-6 exercises + 1 challenge. Fill in every TODO, then run
-the file — you should see "All exercises passed! 🎉"
-"""
+// TODO 1: Create variables for each of the 5 main primitives: 
+// string, number, boolean, null, undefined.
 
+// TODO 2: Use the 'typeof' operator to check the type of '42n'.
+// const result2 = ...
 
-# ── Exercise 1: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-# Hint: [optional hint]
+// TODO 3: Create an object 'car' with properties 'make', 'model', and 'year'.
 
+// TODO 4: Create an array 'colors' with 3 color strings.
 
+// TODO 5: Demonstrate the "Floating Point" quirk. 
+// Console.log the result of 0.1 + 0.2 and see if it equals 0.3.
+// const sumResult = ...
 
-print("✓ Exercise 1 passed")
+// TODO 6: Check the type of an array using Array.isArray(). 
+// Why might we use this instead of 'typeof'?
+// const isArrayCheck = ...
 
+// CHALLENGE: Create two empty objects 'obj1 = {}' and 'obj2 = {}'.
+// Compare them using 'obj1 === obj2'. Explain the result.
 
-# ── Exercise 2: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 2 passed")
-
-
-# ── Exercise 3: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Exercise 4: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Exercise 5: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Exercise 6: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge: [Title] ──────────────────────────────────────────────
-# TODO: [describe challenge that combines multiple ideas]
-
-
-
-print("✓ Challenge passed")
-
-
-print("\n🎉 All exercises passed!")
+// --- Verification ---
+console.log("--- Results ---");
+try {
+    // Test your results here
+    console.log("Floating Point Quirk: 0.1 + 0.2 =", 0.1 + 0.2);
+} catch (e) {
+    console.log("Error: fill in all TODOs to see results!");
+}

@@ -1,79 +1,57 @@
-"""
-[Topic Name] — Solutions
-========================
-Run: python solution.py
+// solution.js - Testing answers
 
-Complete answers for all exercises.
-"""
+// TODO 1
+/*
+test("multiply 2 * 3", () => {
+    expect(multiply(2, 3)).toBe(6);
+});
+*/
 
+// TODO 2
+/*
+test("greet returns correct message", () => {
+    expect(greet("Alice")).toBe("Hello Alice");
+});
+*/
 
-# ── Solution 1 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
+// TODO 3
+/*
+test("array contains item1", () => {
+    expect(getArray()).toContain("item1");
+});
+*/
 
+// TODO 4
+// Answer: Use jest.mock() or jest.fn(). 
+// e.g. apiCall.mockReturnValue({ success: true });
 
+// TODO 5
+// Answer: 'toBe' checks for reference equality (same object in memory). 
+// 'toEqual' checks for deep equality (same values inside the object).
 
-print("✓ Exercise 1 passed")
+// TODO 6
+// Answer: 'beforeEach' runs before every individual test, ensuring 
+// a fresh state (like a new database connection or reset variables).
 
-# ALTERNATIVE: [show a different valid approach]
+// CHALLENGE ANSWER
+function assert(actual, expected, message) {
+    if (actual !== expected) {
+        throw new Error(`FAIL: ${message} (Expected ${expected}, got ${actual})`);
+    }
+    console.log(`PASS: ${message}`);
+}
 
+// --- Verification ---
+console.log("--- Verification (Manual) ---");
+assert(5, 5, "Sum test basic");
+try {
+    assert(5, 10, "Failure test");
+} catch (err) {
+    console.log(`Caught expected failure: ${err.message}`);
+}
 
-# ── Solution 2 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 2 passed")
-
-
-# ── Solution 3 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Solution 4 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Solution 5 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Solution 6 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge Solution ──────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Challenge passed")
-
-
-# ─── KEY TAKEAWAYS ───────────────────────────────────────────────────
-#
-# 1. [Takeaway 1]
-# 2. [Takeaway 2]
-# 3. [Takeaway 3]
-# 4. [Takeaway 4]
-# 5. [Takeaway 5]
-#
-# Next topic: [next-topic-name]
-# ─────────────────────────────────────────────────────────────────────
-
-print("\n🎉 All exercises passed!")
+console.log("\n--- Why it works ---");
+console.log("1. Assertions: These are the core of testing — a statement of truth that the code must satisfy.");
+console.log("2. Mocking: Letting you test code in isolation from external services (Database, API, File System).");
+console.log("3. Automation: Once written, tests can run every time you save a file, catching bugs within seconds.");
+console.log("4. Shared Logic: describe/test structures provide a hierarchical view of your app's requirements.");

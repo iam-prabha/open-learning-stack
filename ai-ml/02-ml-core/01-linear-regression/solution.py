@@ -1,79 +1,38 @@
-"""
-[Topic Name] — Solutions
-========================
-Run: python solution.py
+# solution.py - Linear Regression answers
 
-Complete answers for all exercises.
-"""
+import numpy as np
+from sklearn.linear_model import LinearRegression
 
+# TODO 1 & 2
+X = np.array([1, 2, 3, 4, 5]).reshape(-1, 1)
+y = np.array([2, 4, 6, 8, 10])
 
-# ── Solution 1 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
+# TODO 3
+model = LinearRegression()
+model.fit(X, y)
 
+# TODO 4
+print(f"Slope: {model.coef_[0]:.2f}")
 
+# TODO 5
+pred_6 = model.predict([[6]])
+print(f"Prediction for 6: {pred_6[0]:.2f}")
 
-print("✓ Exercise 1 passed")
+# TODO 6
+# Answer: MSE is more sensitive to large errors (due to 
+# the squaring), and its derivative is 'nicer' for 
+# optimization (gradient descent).
 
-# ALTERNATIVE: [show a different valid approach]
+# CHALLENGE ANSWER
+slope = model.coef_[0]
+intercept = model.intercept_
+manual_pred = (slope * 10) + intercept
+print(f"Manual Prediction for 10: {manual_pred:.2f}")
 
+print("\n--- Why it works ---")
+print("1. Simplicity: Linear regression is fast and easy to interpret. You can explain exactly *why* a prediction was made using the slope.")
+print("2. Baseline: It serves as a perfect 'baseline' model—if a complex neural network can't beat linear regression, the complex model is overkill.")
+print("3. Extrapolation: It allows us to estimate values outside of our original data range (though this can be risky).")
+print("4. Statistical Foundation: It is literally the most studied algorithm in statistics, with decades of math proving its properties.")
 
-# ── Solution 2 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 2 passed")
-
-
-# ── Solution 3 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Solution 4 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Solution 5 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Solution 6 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge Solution ──────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Challenge passed")
-
-
-# ─── KEY TAKEAWAYS ───────────────────────────────────────────────────
-#
-# 1. [Takeaway 1]
-# 2. [Takeaway 2]
-# 3. [Takeaway 3]
-# 4. [Takeaway 4]
-# 5. [Takeaway 5]
-#
-# Next topic: [next-topic-name]
-# ─────────────────────────────────────────────────────────────────────
-
-print("\n🎉 All exercises passed!")
+export {};

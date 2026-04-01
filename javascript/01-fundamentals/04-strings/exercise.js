@@ -1,68 +1,34 @@
-"""
-[Topic Name] — Exercises
-========================
-Run: python exercise.py (after filling in the TODOs)
+// exercise.js - Practice with strings
 
-6 exercises + 1 challenge. Fill in every TODO, then run
-the file — you should see "All exercises passed! 🎉"
-"""
+// TODO 1: Create a variable 'product' ("Laptop") and 'price' (999).
+// Use a template literal to log: "The Laptop costs $999."
 
+// TODO 2: Create a multi-line string that contains a short poem 
+// (at least 3 lines).
 
-# ── Exercise 1: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-# Hint: [optional hint]
+// TODO 3: Given the string 'message = "  HELLO WORLD  "', 
+// chain two methods to trim the spaces AND convert it to lowercase.
+// const message = "  HELLO WORLD  ";
+// const cleaned = ...
 
+// TODO 4: Check if the string "I love coding" contains the word "love".
+// (Hint: use .includes())
 
+// TODO 5: Use .split() to convert a comma-separated string 
+// "apple,orange,banana" into an array of fruits.
 
-print("✓ Exercise 1 passed")
+// TODO 6: Extract only the word "JS" from the string "Learning JS is fun" 
+// using .slice(). (Find the start and end indices manually).
 
+// CHALLENGE: Write a function 'capitalize(word)' that returns the 
+// word with only the first letter uppercase. 
+// Example: "python" -> "Python"
 
-# ── Exercise 2: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 2 passed")
-
-
-# ── Exercise 3: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Exercise 4: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Exercise 5: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Exercise 6: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge: [Title] ──────────────────────────────────────────────
-# TODO: [describe challenge that combines multiple ideas]
-
-
-
-print("✓ Challenge passed")
-
-
-print("\n🎉 All exercises passed!")
+// --- Verification ---
+console.log("--- Results ---");
+try {
+    // console.log(cleaned);
+    // console.log(`Contains 'love'? ${result4}`);
+} catch (e) {
+    console.log("Error: fill in all TODOs to see results!");
+}

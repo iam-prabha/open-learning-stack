@@ -1,68 +1,31 @@
-"""
-[Topic Name] — Exercises
-========================
-Run: python exercise.py (after filling in the TODOs)
+# exercise.py - Practice with Decision Trees
 
-6 exercises + 1 challenge. Fill in every TODO, then run
-the file — you should see "All exercises passed! 🎉"
-"""
+from sklearn.datasets import load_breast_cancer
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.model_selection import train_test_split
 
+# TODO 1: Load the 'breast_cancer' dataset.
+data = load_breast_cancer()
+X, y = data.data, data.target
 
-# ── Exercise 1: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-# Hint: [optional hint]
+# TODO 2: Split data into 80% train and 20% test.
 
+# TODO 3: Initialize a DecisionTreeClassifier with 
+# 'max_depth=5' and fit it to the training data.
 
+# TODO 4: Calculate the accuracy on the test set.
 
-print("✓ Exercise 1 passed")
+# TODO 5: Which mathematical metric does a tree use 
+# to decide which question to ask first?
+# Answer: ...
 
+# TODO 6: What is 'Pruning' and why do we do it?
+# Answer: ...
 
-# ── Exercise 2: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
+# CHALLENGE: Find the FEATURE IMPORTANCE for all features 
+# and print the names of the top 3 most important features.
+# (Hint: model.feature_importances_)
 
-
-
-print("✓ Exercise 2 passed")
-
-
-# ── Exercise 3: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Exercise 4: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Exercise 5: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Exercise 6: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge: [Title] ──────────────────────────────────────────────
-# TODO: [describe challenge that combines multiple ideas]
-
-
-
-print("✓ Challenge passed")
-
-
-print("\n🎉 All exercises passed!")
+# --- Verification ---
+print("--- Results ---")
+# Check your tree logic vs the solution!

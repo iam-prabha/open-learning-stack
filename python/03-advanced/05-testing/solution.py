@@ -1,79 +1,67 @@
-"""
-[Topic Name] — Solutions
-========================
-Run: python solution.py
+# solution.py - Testing answers
 
-Complete answers for all exercises.
-"""
+import unittest
+from unittest.mock import MagicMock
 
+# The function under test
+def is_palindrome(s):
+    if not isinstance(s, str):
+        return False
+    clean_s = "".join(filter(str.isalnum, s)).lower()
+    return clean_s == clean_s[::-1]
 
-# ── Solution 1 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
+# TODO 1-4: Unit tests
+class TestPalindrome(unittest.TestCase):
+    def test_valid_palindrome(self):
+        self.assertTrue(is_palindrome("Racecar"))
+        self.assertTrue(is_palindrome("A man a plan a canal Panama"))
 
+    def test_invalid_palindrome(self):
+        self.assertFalse(is_palindrome("hello"))
+        self.assertFalse(is_palindrome("python"))
 
+    def test_non_string(self):
+        self.assertFalse(is_palindrome(123))
 
-print("✓ Exercise 1 passed")
+    def test_empty_string(self):
+        self.assertTrue(is_palindrome(""))
 
-# ALTERNATIVE: [show a different valid approach]
+# TODO 5: Pytest style
+def test_basic_math():
+    assert 2 + 2 == 4
 
+# TODO 6: Mocking
+def get_user_email(db, user_id):
+    user = db.get_user(user_id)
+    return user['email']
 
-# ── Solution 2 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
+class TestDatabase(unittest.TestCase):
+    def test_get_user_email(self):
+        mock_db = MagicMock()
+        mock_db.get_user.return_value = {'id': 1, 'email': 'test@example.com'}
+        
+        email = get_user_email(mock_db, 1)
+        self.assertEqual(email, 'test@example.com')
+        mock_db.get_user.assert_called_with(1)
 
+# CHALLENGE
+def strictly_positive(n):
+    if n <= 0:
+        raise ValueError("Must be positive")
+    return n
 
+class TestValueErrors(unittest.TestCase):
+    def test_strictly_positive_error(self):
+        with self.assertRaises(ValueError):
+            strictly_positive(-5)
 
-print("✓ Exercise 2 passed")
+# --- Verification ---
+if __name__ == '__main__':
+    print("--- Running tests ---")
+    unittest.main()
 
-
-# ── Solution 3 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Solution 4 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Solution 5 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Solution 6 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge Solution ──────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Challenge passed")
-
-
-# ─── KEY TAKEAWAYS ───────────────────────────────────────────────────
-#
-# 1. [Takeaway 1]
-# 2. [Takeaway 2]
-# 3. [Takeaway 3]
-# 4. [Takeaway 4]
-# 5. [Takeaway 5]
-#
-# Next topic: [next-topic-name]
-# ─────────────────────────────────────────────────────────────────────
-
-print("\n🎉 All exercises passed!")
+print("\n--- Why it works ---")
+print("1. unittest.TestCase: Provides assertions like assertEqual and assertRaises.")
+print("2. Mocking (MagicMock): Replaces slow or unreliable dependencies (DB, API) with predictable objects.")
+print("3. Pytest: Modern standard that favors simple functions over classes, making tests easier to write.")
+print("4. Unit vs Integration: These are 'unit' tests because they isolate the logic from the rest of the world.")

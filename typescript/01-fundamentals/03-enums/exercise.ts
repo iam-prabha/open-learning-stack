@@ -1,68 +1,26 @@
-"""
-[Topic Name] — Exercises
-========================
-Run: python exercise.py (after filling in the TODOs)
+// exercise.ts - Practice with Enums
 
-6 exercises + 1 challenge. Fill in every TODO, then run
-the file — you should see "All exercises passed! 🎉"
-"""
+// TODO 1: Create a numeric enum 'Day' starting with 
+// Monday (1), Tuesday (2), etc.
 
+// TODO 2: Declare a variable for 'today' and set it to Monday.
 
-# ── Exercise 1: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-# Hint: [optional hint]
+// TODO 3: Create a string enum 'LogLevel' with values 
+// for INFO, WARN, and ERROR.
 
+// TODO 4: Write a function 'logMessage(level, msg)' that 
+// uses the 'LogLevel' enum for the 'level' parameter.
 
+// TODO 5: Log a 'WARN' message using your function.
 
-print("✓ Exercise 1 passed")
+// TODO 6: Try to look up the name of a string enum value using 
+// its value (e.g. LogLevel["INFO"]). Does it work? 
+// Answer: ...
 
+// CHALLENGE: Create a numeric enum 'ErrorCode' with custom 
+// values for: NOT_FOUND (404), UNAUTHORIZED (401), 
+// and SERVER_ERROR (500).
 
-# ── Exercise 2: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 2 passed")
-
-
-# ── Exercise 3: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Exercise 4: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Exercise 5: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Exercise 6: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge: [Title] ──────────────────────────────────────────────
-# TODO: [describe challenge that combines multiple ideas]
-
-
-
-print("✓ Challenge passed")
-
-
-print("\n🎉 All exercises passed!")
+// --- Verification ---
+console.log("--- Results ---");
+// Fill in and check your enum logic!

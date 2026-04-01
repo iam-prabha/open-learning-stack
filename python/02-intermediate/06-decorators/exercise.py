@@ -1,68 +1,52 @@
-"""
-[Topic Name] — Exercises
-========================
-Run: python exercise.py (after filling in the TODOs)
+# exercise.py - Practice decorators
 
-6 exercises + 1 challenge. Fill in every TODO, then run
-the file — you should see "All exercises passed! 🎉"
-"""
+import functools
 
+# TODO 1: Write a decorator 'logger' that prints "[CALL] func_name" before
+# calling the function and "[DONE] func_name" after. Use functools.wraps.
+# def logger(func):
+#     ...
 
-# ── Exercise 1: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-# Hint: [optional hint]
+# TODO 2: Apply @logger to a function 'add(a, b)' that returns a + b.
+# @logger
+# def add(a, b):
+#     ...
 
+# TODO 3: Write a decorator 'validate_positive' that raises ValueError
+# if the first argument is negative, before calling the function.
+# def validate_positive(func):
+#     ...
 
+# TODO 4: Apply @validate_positive to 'square_root(n)' which returns n**0.5.
+# import math
+# @validate_positive
+# def square_root(n):
+#     ...
 
-print("✓ Exercise 1 passed")
+# TODO 5: Write a decorator factory 'prefix(text)' that prepends 'text' to
+# the string result of the wrapped function.
+# def prefix(text):
+#     ...
 
+# TODO 6: Apply @prefix("RESULT: ") to function 'describe(x)' that returns str(x).
+# @prefix("RESULT: ")
+# def describe(x):
+#     ...
 
-# ── Exercise 2: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
+# CHALLENGE: Write a 'cache' decorator that stores results in a dict
+# keyed by the arguments. Call the wrapped function only if args not cached.
+# def cache(func):
+#     ...
 
-
-
-print("✓ Exercise 2 passed")
-
-
-# ── Exercise 3: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Exercise 4: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Exercise 5: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Exercise 6: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge: [Title] ──────────────────────────────────────────────
-# TODO: [describe challenge that combines multiple ideas]
-
-
-
-print("✓ Challenge passed")
-
-
-print("\n🎉 All exercises passed!")
+# --- Verification ---
+print("--- Results ---")
+try:
+    print(add(3, 5))
+    print(square_root(16))
+    try:
+        square_root(-4)
+    except ValueError as e:
+        print(f"Caught expected error: {e}")
+    print(describe(42))
+except NameError as e:
+    print(f"Error: {e} — fill in all TODOs")

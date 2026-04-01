@@ -1,68 +1,29 @@
-"""
-[Topic Name] — Exercises
-========================
-Run: python exercise.py (after filling in the TODOs)
+// exercise.js - Practice with Web APIs
 
-6 exercises + 1 challenge. Fill in every TODO, then run
-the file — you should see "All exercises passed! 🎉"
-"""
+// TODO 1: Write an async function 'getUsers' that fetches 
+// data from "https://jsonplaceholder.typicode.com/users".
 
+// TODO 2: Console.log only the 'name' of the first user in the result.
+// (Don't forget to check response.ok!)
 
-# ── Exercise 1: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-# Hint: [optional hint]
+// TODO 3: Save the username "LearnJS" to LocalStorage 
+// with the key "current_user".
 
+// TODO 4: Retrieve that value and log "Welcome, [value]" if it exists.
 
+// TODO 5: Use the URLSearchParams API to parse the string "?theme=dark&lang=en". 
+// Log the value of 'theme'.
 
-print("✓ Exercise 1 passed")
+// TODO 6: What is a "Race Condition" in the context of Fetch requests?
+// Answer: ...
 
+// CHALLENGE: Write a function that uses 'fetch' and 'AbortController' 
+// to cancel a request if it takes longer than 2 seconds.
 
-# ── Exercise 2: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 2 passed")
-
-
-# ── Exercise 3: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Exercise 4: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Exercise 5: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Exercise 6: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge: [Title] ──────────────────────────────────────────────
-# TODO: [describe challenge that combines multiple ideas]
-
-
-
-print("✓ Challenge passed")
-
-
-print("\n🎉 All exercises passed!")
+// --- Verification ---
+console.log("--- Results ---");
+try {
+    // getUsers();
+} catch (e) {
+    console.log("Error: fill in all TODOs to see results!");
+}

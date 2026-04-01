@@ -1,68 +1,38 @@
-"""
-[Topic Name] — Exercises
-========================
-Run: python exercise.py (after filling in the TODOs)
+// exercise.js - Practice with functions
 
-6 exercises + 1 challenge. Fill in every TODO, then run
-the file — you should see "All exercises passed! 🎉"
-"""
+// TODO 1: Write a function declaration 'isEven(num)' 
+// that returns true if a number is even.
 
+// TODO 2: Write a function expression 'subtract(a, b)' 
+// that returns the difference.
 
-# ── Exercise 1: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-# Hint: [optional hint]
+// TODO 3: Convert this standard function to an arrow function:
+/*
+function powerOfTwo(n) {
+  return n * n;
+}
+*/
+// const powerOfTwo = ...
 
+// TODO 4: Write a function 'calculateTotal' that takes 'price' 
+// and an optional 'tax' (default to 0.1). Return price + (price * tax).
 
+// TODO 5: Use an arrow function with '.map()' to double 
+// every number in this array: [10, 20, 30].
+// const numbers = [10, 20, 30];
+// const doubled = ...
 
-print("✓ Exercise 1 passed")
+// TODO 6: Write a function 'describePerson' that takes 'name' and 'age' 
+// and returns a template literal string like "Alice is 25 years old."
 
+// CHALLENGE: Write a function 'findMax' that takes an array of numbers 
+// and returns the largest one. (Hint: use a loop or Math.max with spread).
 
-# ── Exercise 2: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 2 passed")
-
-
-# ── Exercise 3: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Exercise 4: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Exercise 5: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Exercise 6: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge: [Title] ──────────────────────────────────────────────
-# TODO: [describe challenge that combines multiple ideas]
-
-
-
-print("✓ Challenge passed")
-
-
-print("\n🎉 All exercises passed!")
+// --- Verification ---
+console.log("--- Results ---");
+try {
+    // console.log(`isEven(4): ${isEven(4)}`);
+    // console.log(`doubled: ${doubled}`);
+} catch (e) {
+    console.log("Error: fill in all TODOs to see results!");
+}

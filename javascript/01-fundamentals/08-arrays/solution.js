@@ -1,79 +1,43 @@
-"""
-[Topic Name] — Solutions
-========================
-Run: python solution.py
+// solution.js - Array answers
 
-Complete answers for all exercises.
-"""
+// TODO 1 & 2
+const hobbies = ["reading", "hiking", "gaming"];
+hobbies.push("coding");
+hobbies.shift(); // removes "reading"
 
+// TODO 3
+const ages = [12, 18, 25, 40, 15, 30];
+const adults = ages.filter(a => a >= 18);
 
-# ── Solution 1 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
+// TODO 4
+const fruits = ["Apple", "Orange", "Banana"];
+const labeledFruits = fruits.map(f => `Fresh ${f}`);
 
+// TODO 5
+const set1 = [1, 2], set2 = [3, 4];
+const allNums = [...set1, ...set2];
 
+// TODO 6
+const colors = ["gold", "silver", "bronze"];
+const [top1, top2] = colors;
 
-print("✓ Exercise 1 passed")
+// CHALLENGE ANSWER
+const animals = ["cat", "elephant", "dog", "giraffe"];
+const longest = animals.reduce((prev, curr) => {
+    return curr.length > prev.length ? curr : prev;
+}, "");
 
-# ALTERNATIVE: [show a different valid approach]
+// --- Verification ---
+console.log("--- Verification ---");
+console.log(`Hobbies:`, hobbies);
+console.log(`Adults:  `, adults);
+console.log(`Labeled: `, labeledFruits);
+console.log(`All Nums:`, allNums);
+console.log(`Top 2:   ${top1}, ${top2}`);
+console.log(`Longest animal: ${longest}`);
 
-
-# ── Solution 2 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 2 passed")
-
-
-# ── Solution 3 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Solution 4 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Solution 5 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Solution 6 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge Solution ──────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Challenge passed")
-
-
-# ─── KEY TAKEAWAYS ───────────────────────────────────────────────────
-#
-# 1. [Takeaway 1]
-# 2. [Takeaway 2]
-# 3. [Takeaway 3]
-# 4. [Takeaway 4]
-# 5. [Takeaway 5]
-#
-# Next topic: [next-topic-name]
-# ─────────────────────────────────────────────────────────────────────
-
-print("\n🎉 All exercises passed!")
+console.log("\n--- Why it works ---");
+console.log("1. Mutation (.push, .shift): These change the original array. Useful for local state.");
+console.log("2. Immutability (.map, .filter): These return new arrays, keeping your data 'pipelined' and safer.");
+console.log("3. Spread (...): Creates a shallow copy. Modifying the copy doesn't affect the original array.");
+console.log("4. Destructuring: A concise way to 'unpack' values. Improves code readability significantly.");

@@ -1,79 +1,46 @@
-"""
-[Topic Name] — Solutions
-========================
-Run: python solution.py
+// solution.ts - Project References answers
 
-Complete answers for all exercises.
-"""
+// TODO 1
+// Answer: Incremental builds. By splitting your project, 
+// TypeScript can recompile ONLY the parts that have changed, 
+// rather than checking the entire workspace.
 
+// TODO 2
+// Answer: 'composite'
 
-# ── Solution 1 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
+// TODO 3
+// Answer: 'tsc --build' or 'tsc -b'
 
+// TODO 4
+// Answer: Because other projects only see the '.d.ts' 
+// declaration files, not the actual source code. 
+// Without declarations, there are no types to reference.
 
+// TODO 5
+/*
+{
+    "references": [
+        { "path": "../utils" },
+        { "path": "../api" }
+    ]
+}
+*/
 
-print("✓ Exercise 1 passed")
+// TODO 6
+// Answer: No. Circular references are forbidden because 
+// TypeScript needs a clear 'Dependency Graph' to build 
+// things in the correct order.
 
-# ALTERNATIVE: [show a different valid approach]
+// CHALLENGE ANSWER
+// Answer: When 'incremental' is enabled, TypeScript creates 
+// a '.tsbuildinfo' file that caches information about the 
+// project's state. On the next build, it compares this cache 
+// to the current files to skip work that doesn't need to be done.
 
+console.log("\n--- Why it works ---");
+console.log("1. Modularity: Project references force you to design your code as a set of interacting modules (like 'domain' and 'infra'), which is a best practice.");
+console.log("2. Scale: This is the ONLY way to manage TypeScript in projects with millions of lines of code without build times exploding.");
+console.log("3. Enforced Hierarchy: It prevents 'spaghetti' imports by clearly defining which projects can see which other projects.");
+console.log("4. Shared Logic: It makes it trivial to share types between your backend (Node.js) and frontend (React/Vue) in a monorepo.");
 
-# ── Solution 2 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 2 passed")
-
-
-# ── Solution 3 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Solution 4 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Solution 5 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Solution 6 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge Solution ──────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Challenge passed")
-
-
-# ─── KEY TAKEAWAYS ───────────────────────────────────────────────────
-#
-# 1. [Takeaway 1]
-# 2. [Takeaway 2]
-# 3. [Takeaway 3]
-# 4. [Takeaway 4]
-# 5. [Takeaway 5]
-#
-# Next topic: [next-topic-name]
-# ─────────────────────────────────────────────────────────────────────
-
-print("\n🎉 All exercises passed!")
+export {};

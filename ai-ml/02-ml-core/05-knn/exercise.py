@@ -1,68 +1,32 @@
-"""
-[Topic Name] — Exercises
-========================
-Run: python exercise.py (after filling in the TODOs)
+# exercise.py - Practice with k-NN
 
-6 exercises + 1 challenge. Fill in every TODO, then run
-the file — you should see "All exercises passed! 🎉"
-"""
+import numpy as np
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.datasets import load_digits
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
 
+# TODO 1: Load the 'digits' dataset (8x8 images of numbers).
+digits = load_digits()
+X, y = digits.data, digits.target
 
-# ── Exercise 1: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-# Hint: [optional hint]
+# TODO 2: Split data (80% train, 20% test).
 
+# TODO 3: Scale the data. (k-NN is very sensitive to scale!)
 
+# TODO 4: Initialize a KNeighborsClassifier with k=5. 
+# Fit it to the training data.
 
-print("✓ Exercise 1 passed")
+# TODO 5: Calculate the test accuracy.
 
+# TODO 6: What happens to the 'Decision Boundary' 
+# as you INCREASE 'k'? (Does it get smoother or more jagged?)
+# Answer: ...
 
-# ── Exercise 2: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
+# CHALLENGE: Write a loop to test k=1, k=3, and k=21. 
+# Which one performs best? Why might a very high 'k' 
+# be a bad idea?
 
-
-
-print("✓ Exercise 2 passed")
-
-
-# ── Exercise 3: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Exercise 4: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Exercise 5: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Exercise 6: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge: [Title] ──────────────────────────────────────────────
-# TODO: [describe challenge that combines multiple ideas]
-
-
-
-print("✓ Challenge passed")
-
-
-print("\n🎉 All exercises passed!")
+# --- Verification ---
+print("--- Results ---")
+# Check your k-NN logic vs the solution!

@@ -1,79 +1,48 @@
-"""
-[Topic Name] — Solutions
-========================
-Run: python solution.py
+// solution.js - Destructuring answers
 
-Complete answers for all exercises.
-"""
+// TODO 1
+const car = { brand: "Tesla", model: "Model 3", year: 2022 };
+const { brand, model } = car;
 
+// TODO 2
+const profile = { firstName: "Bob" };
+const { firstName: name, status = "User" } = profile;
 
-# ── Solution 1 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
+// TODO 3 & 4
+const points = [10, 20, 30, 40];
+const [p1, , p3, ...remaining] = points;
 
+// TODO 5
+const user = {
+    name: "Alice",
+    address: {
+        city: "New York",
+        zip: 10001
+    }
+};
+const { address: { city } } = user;
 
+// TODO 6
+let a = 5, b = 10;
+[a, b] = [b, a]; // Swapped!
 
-print("✓ Exercise 1 passed")
+// CHALLENGE ANSWER
+function displaySummary({ title, stats: { views, likes } }) {
+    console.log(`${title}: ${views} views, ${likes} likes`);
+}
+displaySummary({ title: "JS Tips", stats: { views: 500, likes: 42 } });
 
-# ALTERNATIVE: [show a different valid approach]
+// --- Verification ---
+console.log("--- Verification ---");
+console.log(`Car: ${brand} ${model}`);
+console.log(`Profile: ${name} (${status})`);
+console.log(`Points 1 & 3: ${p1}, ${p3}`);
+console.log(`Remaining points: ${remaining}`);
+console.log(`City: ${city}`);
+console.log(`Swapped: a=${a}, b=${b}`);
 
-
-# ── Solution 2 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 2 passed")
-
-
-# ── Solution 3 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Solution 4 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Solution 5 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Solution 6 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge Solution ──────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Challenge passed")
-
-
-# ─── KEY TAKEAWAYS ───────────────────────────────────────────────────
-#
-# 1. [Takeaway 1]
-# 2. [Takeaway 2]
-# 3. [Takeaway 3]
-# 4. [Takeaway 4]
-# 5. [Takeaway 5]
-#
-# Next topic: [next-topic-name]
-# ─────────────────────────────────────────────────────────────────────
-
-print("\n🎉 All exercises passed!")
+console.log("\n--- Why it works ---");
+console.log("1. Shallow Extraction: It only extracts the references. If you destructure an object, modifying it will still affect the original if it's a reference type.");
+console.log("2. Aliasing: Extremely useful when external APIs return property names that clash with your current variables.");
+console.log("3. Rest/Spread integration: Destructuring is naturally designed to work with the 'rest' operator to gather leftovers.");
+console.log("4. Readability: It tells other developers exactly which data pieces a function dependencies on right in the parameter list.");

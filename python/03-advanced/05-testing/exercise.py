@@ -1,68 +1,41 @@
-"""
-[Topic Name] — Exercises
-========================
-Run: python exercise.py (after filling in the TODOs)
+# exercise.py - Practice Testing
 
-6 exercises + 1 challenge. Fill in every TODO, then run
-the file — you should see "All exercises passed! 🎉"
-"""
+import unittest
+from unittest.mock import MagicMock
 
+# Function to test: returns True if string is a palindrome
+def is_palindrome(s):
+    if not isinstance(s, str):
+        return False
+    clean_s = "".join(filter(str.isalnum, s)).lower()
+    return clean_s == clean_s[::-1]
 
-# ── Exercise 1: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-# Hint: [optional hint]
+# TODO 1: Create a class 'TestPalindrome(unittest.TestCase)'
+# class TestPalindrome(unittest.TestCase):
+#     ...
 
+# TODO 2: Add a test 'test_valid_palindrome' to test "Racecar" and "A man a plan a canal Panama".
+# (Hint: use self.assertTrue())
 
+# TODO 3: Add a test 'test_invalid_palindrome' to test "hello" and "python".
+# (Hint: use self.assertFalse())
 
-print("✓ Exercise 1 passed")
+# TODO 4: Add a test 'test_non_string' to ensure is_palindrome(123) returns False.
 
+# TODO 5: Write a simple pytest-style function 'test_basic_math' that
+# asserts 2 + 2 == 4.
+# def test_basic_math():
+#     ...
 
-# ── Exercise 2: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
+# TODO 6: Use MagicMock to mock a 'database.get_user(id)' call in a test.
+# def get_user_email(db, user_id):
+#     user = db.get_user(user_id)
+#     return user['email']
 
+# CHALLENGE: Create a test for a function that raises 'ValueError' 
+# and use 'self.assertRaises' to verify it.
 
-
-print("✓ Exercise 2 passed")
-
-
-# ── Exercise 3: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Exercise 4: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Exercise 5: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Exercise 6: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge: [Title] ──────────────────────────────────────────────
-# TODO: [describe challenge that combines multiple ideas]
-
-
-
-print("✓ Challenge passed")
-
-
-print("\n🎉 All exercises passed!")
+# --- Verification ---
+if __name__ == '__main__':
+    print("Run this file to execute the unittest suite.")
+    # unittest.main()

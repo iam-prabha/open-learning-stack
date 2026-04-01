@@ -1,68 +1,27 @@
-"""
-[Topic Name] — Exercises
-========================
-Run: python exercise.py (after filling in the TODOs)
+// exercise.ts - Practice with Declaration Files
 
-6 exercises + 1 challenge. Fill in every TODO, then run
-the file — you should see "All exercises passed! 🎉"
-"""
+// TODO 1: Create a mock library 'logger.js' that 
+// exports a function 'info(msg)'.
 
+// TODO 2: Create a 'logger.d.ts' file to declare 
+// the types for your 'logger.js' library.
 
-# ── Exercise 1: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-# Hint: [optional hint]
+// TODO 3: Import 'info' from 'logger' and use it correctly.
 
+// TODO 4: Use 'declare global' to add a new property 
+// 'appName' (string) to the NodeJS 'ProcessEnv' interface.
 
+// TODO 5: What is the command to install type definitions 
+// for a popular library like 'lodash'?
+// Answer: ...
 
-print("✓ Exercise 1 passed")
+// TODO 6: Why do we use '.d.ts' instead of just writing 
+// types inside the '.js' file?
+// Answer: ...
 
+// CHALLENGE: Create a declaration file for a module 'api' 
+// that exports a class 'Client' with a method 'fetch(url: string)'.
 
-# ── Exercise 2: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 2 passed")
-
-
-# ── Exercise 3: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Exercise 4: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Exercise 5: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Exercise 6: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge: [Title] ──────────────────────────────────────────────
-# TODO: [describe challenge that combines multiple ideas]
-
-
-
-print("✓ Challenge passed")
-
-
-print("\n🎉 All exercises passed!")
+// --- Verification ---
+console.log("--- Results ---");
+// Check your declaration logic vs the solution!

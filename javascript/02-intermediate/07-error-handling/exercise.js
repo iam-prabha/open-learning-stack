@@ -1,68 +1,37 @@
-"""
-[Topic Name] — Exercises
-========================
-Run: python exercise.py (after filling in the TODOs)
+// exercise.js - Practice with Error Handling
 
-6 exercises + 1 challenge. Fill in every TODO, then run
-the file — you should see "All exercises passed! 🎉"
-"""
+// TODO 1: Wrap this JSON.parse call in a try/catch block:
+// const data = JSON.parse("{ invalid json }");
 
+// TODO 2: Write a function 'divide(a, b)' that throws an Error 
+// with the message "Cannot divide by zero" if b is 0.
 
-# ── Exercise 1: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-# Hint: [optional hint]
+// TODO 3: Call your 'divide' function inside a try/catch block 
+// and log the error message if it fails.
 
+// TODO 4: Use a 'finally' block to log "Operation attempted" 
+// whether the division succeeded or failed.
 
+// TODO 5: Create a custom error class 'ValidationError' that 
+// extends Error and includes a 'field' property in the constructor.
 
-print("✓ Exercise 1 passed")
+// TODO 6: Write an async function 'fetchSafe()' that calls 
+// an imaginary 'fetchData()' function and catches any errors.
+/*
+async function fetchSafe() {
+  try {
+    await fetchData();
+  } catch (err) { ... }
+}
+*/
 
+// CHALLENGE: Create a function 'validateEmail(email)' that throws 
+// a ValidationError if the email doesn't contain an "@" symbol.
 
-# ── Exercise 2: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 2 passed")
-
-
-# ── Exercise 3: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Exercise 4: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Exercise 5: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Exercise 6: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge: [Title] ──────────────────────────────────────────────
-# TODO: [describe challenge that combines multiple ideas]
-
-
-
-print("✓ Challenge passed")
-
-
-print("\n🎉 All exercises passed!")
+// --- Verification ---
+console.log("--- Results ---");
+try {
+    // Test your code here
+} catch (e) {
+    console.log("Error: fill in all TODOs to see results!");
+}

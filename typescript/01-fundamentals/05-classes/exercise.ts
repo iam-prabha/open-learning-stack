@@ -1,68 +1,25 @@
-"""
-[Topic Name] — Exercises
-========================
-Run: python exercise.py (after filling in the TODOs)
+// exercise.ts - Practice with Classes
 
-6 exercises + 1 challenge. Fill in every TODO, then run
-the file — you should see "All exercises passed! 🎉"
-"""
+// TODO 1: Create a class 'Car' with a public property 'make' (string) 
+// and a private property 'speed' (number, default to 0).
 
+// TODO 2: Add a method 'accelerate()' that increases speed by 10.
 
-# ── Exercise 1: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-# Hint: [optional hint]
+// TODO 3: Create a class 'ElectricCar' that extends 'Car' 
+// using the Parameter Property shorthand for its 'batteryLevel' (number).
 
+// TODO 4: Add a readonly property 'serialNumber' (string) to the 'Car' class.
 
+// TODO 5: Create a protected property 'owner' (string) in 'Car'. 
+// Can you access it from an instance of 'ElectricCar'?
 
-print("✓ Exercise 1 passed")
+// TODO 6: What is the main benefit of using Parameter Properties 
+// in the constructor (e.g. constructor(private x: number))?
+// Answer: ...
 
+// CHALLENGE: Create an abstract class 'Notification' with an 
+// abstract method 'send()'. Implement a 'SmsNotification' class.
 
-# ── Exercise 2: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 2 passed")
-
-
-# ── Exercise 3: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Exercise 4: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Exercise 5: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Exercise 6: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge: [Title] ──────────────────────────────────────────────
-# TODO: [describe challenge that combines multiple ideas]
-
-
-
-print("✓ Challenge passed")
-
-
-print("\n🎉 All exercises passed!")
+// --- Verification ---
+console.log("--- Results ---");
+// Test your class logic here!

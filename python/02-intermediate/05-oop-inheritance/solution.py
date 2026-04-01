@@ -1,79 +1,62 @@
-"""
-[Topic Name] — Solutions
-========================
-Run: python solution.py
+# solution.py - OOP inheritance answers
 
-Complete answers for all exercises.
-"""
+class Vehicle:
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
 
+    def describe(self):
+        return f"{self.year} {self.make} {self.model}"
 
-# ── Solution 1 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
+    def fuel_type(self):
+        return "Unknown"
 
-
-
-print("✓ Exercise 1 passed")
-
-# ALTERNATIVE: [show a different valid approach]
-
-
-# ── Solution 2 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
+    def __repr__(self):
+        return f"{self.__class__.__name__}({self.make!r}, {self.model!r}, {self.year})"
 
 
+class Car(Vehicle):
+    def __init__(self, make, model, year, num_doors):
+        super().__init__(make, model, year)
+        self.num_doors = num_doors
 
-print("✓ Exercise 2 passed")
-
-
-# ── Solution 3 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 3 passed")
+    def fuel_type(self):
+        return "Gasoline"
 
 
-# ── Solution 4 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
+class ElectricCar(Car):
+    def __init__(self, make, model, year, num_doors, battery_kwh):
+        super().__init__(make, model, year, num_doors)
+        self.battery_kwh = battery_kwh
+
+    def fuel_type(self):
+        return "Electric"
+
+    def range_estimate(self):
+        return self.battery_kwh * 6
 
 
+# Verification
+c = Car("Toyota", "Camry", 2022, 4)
+e = ElectricCar("Tesla", "Model 3", 2024, 4, 82)
 
-print("✓ Exercise 4 passed")
+print("--- Verification ---")
+for v in [c, e]:
+    print(f"{v.describe()} | Fuel: {v.fuel_type()}")
 
+print(f"\nRange estimate: {e.range_estimate()} km")
 
-# ── Solution 5 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
+print("\n--- isinstance checks ---")
+print(f"ElectricCar is Vehicle? {isinstance(e, Vehicle)}")
+print(f"ElectricCar is Car? {isinstance(e, Car)}")
+print(f"ElectricCar is ElectricCar? {isinstance(e, ElectricCar)}")
 
+print(f"\nrepr(c): {repr(c)}")
+print(f"repr(e): {repr(e)}")
 
-
-print("✓ Exercise 5 passed")
-
-
-# ── Solution 6 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge Solution ──────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Challenge passed")
-
-
-# ─── KEY TAKEAWAYS ───────────────────────────────────────────────────
-#
-# 1. [Takeaway 1]
-# 2. [Takeaway 2]
-# 3. [Takeaway 3]
-# 4. [Takeaway 4]
-# 5. [Takeaway 5]
-#
-# Next topic: [next-topic-name]
-# ─────────────────────────────────────────────────────────────────────
-
-print("\n🎉 All exercises passed!")
+print("\n--- Why it works ---")
+print("1. super().__init__() propagates up the chain: ElectricCar -> Car -> Vehicle.")
+print("2. Polymorphism: same .describe()/.fuel_type() call works on all subclass instances.")
+print("3. isinstance() checks entire MRO (method resolution order), so ElectricCar is also a Vehicle.")
+print("4. __repr__ on Vehicle is inherited automatically by all subclasses.")

@@ -1,68 +1,35 @@
-"""
-[Topic Name] — Exercises
-========================
-Run: python exercise.py (after filling in the TODOs)
+# exercise.py - Practice with Probability
 
-6 exercises + 1 challenge. Fill in every TODO, then run
-the file — you should see "All exercises passed! 🎉"
-"""
+import random
 
+# TODO 1: Create a function 'roll_die()' that returns 
+# a random integer between 1 and 6.
 
-# ── Exercise 1: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-# Hint: [optional hint]
+# TODO 2: Calculate the experimental probability of 
+# rolling a '6' over 6000 rolls. 
+# (Expected value: ~1000)
 
+# TODO 3: What is the code for Bayes' Theorem? 
+# Fill in the blanks: P(A|B) = (P(B|A) * P(...)) / P(...)
 
+# TODO 4: If P(Rain) = 0.2 and P(Clouds|Rain) = 0.9, 
+# and P(Clouds) = 0.4. Use Bayes' Theorem to find 
+# P(Rain|Clouds).
+# (Calculation: (0.9 * 0.2) / 0.4 = ...)
 
-print("✓ Exercise 1 passed")
+# TODO 5: Define the difference between 'Discrete' 
+# and 'Continuous' distributions.
+# Answer: ...
 
+# TODO 6: Which distribution would you use to model 
+# the number of heads in 10 coin flips?
+# Answer: ... Distribution
 
-# ── Exercise 2: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
+# CHALLENGE: Create a function that calculates 
+# the probability of drawing an Ace of Spades 
+# from a full deck (52 cards) 3 times in a row, 
+# WITH replacement (meaning you put the card back).
 
-
-
-print("✓ Exercise 2 passed")
-
-
-# ── Exercise 3: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Exercise 4: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Exercise 5: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Exercise 6: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge: [Title] ──────────────────────────────────────────────
-# TODO: [describe challenge that combines multiple ideas]
-
-
-
-print("✓ Challenge passed")
-
-
-print("\n🎉 All exercises passed!")
+# --- Verification ---
+print("--- Results ---")
+# Check your probability logic vs the solution!

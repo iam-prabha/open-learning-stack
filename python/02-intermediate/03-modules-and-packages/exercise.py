@@ -1,68 +1,48 @@
-"""
-[Topic Name] — Exercises
-========================
-Run: python exercise.py (after filling in the TODOs)
+# exercise.py - Practice with modules and packages
 
-6 exercises + 1 challenge. Fill in every TODO, then run
-the file — you should see "All exercises passed! 🎉"
-"""
+import math
+import random
+import os
+import json
+from datetime import datetime
 
+# TODO 1: Use the 'math' module to calculate the hypotenuse
+# of a right triangle with sides a=3 and b=4.
+# hypotenuse = ...
 
-# ── Exercise 1: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-# Hint: [optional hint]
+# TODO 2: Use 'random' to pick 3 unique numbers from range(1, 10).
+# sample = ...
 
+# TODO 3: Use 'os.path' to check if a file "README.md" exists
+# in the current directory. Store the result in 'readme_exists'.
+# readme_exists = ...
 
+# TODO 4: Use the 'datetime' module to compute how many days
+# are left until New Year's Day (Jan 1, 2027).
+# days_left = ...
 
-print("✓ Exercise 1 passed")
+# TODO 5: Use 'json.dumps' to convert a Python dict into a JSON string.
+data = {"name": "Alice", "score": 95, "active": True}
+# json_str = ...
 
+# TODO 6: Use 'json.loads' to parse that JSON string back into a dict
+# and access the 'name' field.
+# parsed = ...
+# name = ...
 
-# ── Exercise 2: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
+# CHALLENGE: Write a one-liner that lists all .py files in the current
+# directory using os.listdir() and a list comprehension.
+# py_files = ...
 
-
-
-print("✓ Exercise 2 passed")
-
-
-# ── Exercise 3: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Exercise 4: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Exercise 5: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Exercise 6: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge: [Title] ──────────────────────────────────────────────
-# TODO: [describe challenge that combines multiple ideas]
-
-
-
-print("✓ Challenge passed")
-
-
-print("\n🎉 All exercises passed!")
+# --- Verification ---
+print("--- Results ---")
+try:
+    print(f"Hypotenuse: {hypotenuse}")
+    print(f"Sample: {sample}")
+    print(f"README exists: {readme_exists}")
+    print(f"Days left: {days_left}")
+    print(f"JSON string: {json_str}")
+    print(f"Parsed name: {name}")
+    print(f"Python files: {py_files}")
+except NameError as e:
+    print(f"Error: {e} — fill in all TODOs")

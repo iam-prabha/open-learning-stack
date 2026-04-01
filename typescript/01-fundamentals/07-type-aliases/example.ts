@@ -1,20 +1,35 @@
-"""
-[Topic Name] — Working Demo
-============================
-Run: python example.py
+// example.ts - Giving types a name with Type Aliases
 
-Covers: [list what this demo covers]
-"""
+// 1. Primtive Alias
+type UserID = string | number;
+let currentUserID: UserID = "abc-123";
 
+// 2. Object Alias
+type Point = {
+    x: number;
+    y: number;
+};
 
-# ─── SECTION: [Section Name] ────────────────────────────────────────
+function draw(p: Point) {
+    console.log(`Drawing at ${p.x}, ${p.y}`);
+}
+draw({ x: 10, y: 20 });
 
-# WHY: [explain why this approach is used]
+// 3. Union Alias (Very common!)
+type Status = "success" | "error" | "loading";
+let status: Status = "loading";
 
+// 4. Function Alias
+type MathFunc = (n1: number, n2: number) => number;
 
-# ─── SECTION: [Section Name] ────────────────────────────────────────
+const add: MathFunc = (a, b) => a + b;
+const sub: MathFunc = (a, b) => a - b;
 
-# WHY: [explain why this approach is used]
+// 5. Combining types with Intersection in an Alias
+type User = { name: string };
+type Admin = User & { role: "admin" };
 
-
-print("\n✅ All examples ran successfully!")
+const admin: Admin = {
+    name: "Alice",
+    role: "admin"
+};

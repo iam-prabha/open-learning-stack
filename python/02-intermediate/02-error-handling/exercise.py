@@ -1,68 +1,49 @@
-"""
-[Topic Name] — Exercises
-========================
-Run: python exercise.py (after filling in the TODOs)
+# exercise.py - Practice error handling
 
-6 exercises + 1 challenge. Fill in every TODO, then run
-the file — you should see "All exercises passed! 🎉"
-"""
+# TODO 1: Write a function 'safe_divide(a, b)' that returns a/b,
+# but catches ZeroDivisionError and returns None instead.
+# def safe_divide(a, b):
+#     ...
 
+# TODO 2: Write a function 'read_int(prompt_value)' that converts a
+# string to int, catches ValueError, and returns -1 on failure.
+# def read_int(prompt_value):
+#     ...
 
-# ── Exercise 1: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-# Hint: [optional hint]
+# TODO 3: Wrap both a risky conversion AND a print in try/except/else/finally.
+# - try: convert "hello" to float
+# - except ValueError: print "Bad input"
+# - else: print the converted value
+# - finally: print "Done"
+# ...
 
+# TODO 4: Define a custom exception 'NegativeNumberError(Exception)'
+# that stores the offending number.
+# class NegativeNumberError(Exception):
+#     ...
 
+# TODO 5: Write a function 'square_root(n)' that raises NegativeNumberError
+# if n is negative, else returns n ** 0.5.
+# def square_root(n):
+#     ...
 
-print("✓ Exercise 1 passed")
+# TODO 6: Catch the NegativeNumberError from calling square_root(-9) and
+# print a user-friendly message.
+# ...
 
+# CHALLENGE: Write a function 'load_config(path)' that opens a file,
+# reads JSON from it, and handles FileNotFoundError and json.JSONDecodeError
+# separately, returning a dict or None.
+# import json
+# def load_config(path):
+#     ...
 
-# ── Exercise 2: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 2 passed")
-
-
-# ── Exercise 3: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Exercise 4: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Exercise 5: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Exercise 6: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge: [Title] ──────────────────────────────────────────────
-# TODO: [describe challenge that combines multiple ideas]
-
-
-
-print("✓ Challenge passed")
-
-
-print("\n🎉 All exercises passed!")
+# --- Verification ---
+print("--- Results ---")
+try:
+    print("safe_divide(10, 2):", safe_divide(10, 2))
+    print("safe_divide(10, 0):", safe_divide(10, 0))
+    print("read_int('42'):", read_int("42"))
+    print("read_int('abc'):", read_int("abc"))
+except NameError as e:
+    print(f"Error: {e} — fill in all TODOs")

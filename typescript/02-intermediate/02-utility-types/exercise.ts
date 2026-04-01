@@ -1,68 +1,34 @@
-"""
-[Topic Name] — Exercises
-========================
-Run: python exercise.py (after filling in the TODOs)
+// exercise.ts - Practice with Utility Types
 
-6 exercises + 1 challenge. Fill in every TODO, then run
-the file — you should see "All exercises passed! 🎉"
-"""
+interface Product {
+    id: number;
+    name: string;
+    price: number;
+    description: string;
+    category: "electronics" | "home" | "food";
+}
 
+// TODO 1: Create a type 'ProductUpdate' that makes all 
+// properties of 'Product' optional.
 
-# ── Exercise 1: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-# Hint: [optional hint]
+// TODO 2: Create a type 'ProductBasicInfo' that ONLY 
+// includes 'id', 'name', and 'price'.
 
+// TODO 3: Create a type 'ProductPublic' that includes 
+// everything EXCEPT 'description'.
 
+// TODO 4: Create a variable 'inventory' using 'Record' 
+// that maps product IDs (numbers) to their 'Product' object.
 
-print("✓ Exercise 1 passed")
+// TODO 5: Create a readonly version of 'Product' called 'ReadonlyProduct'.
 
+// TODO 6: Why is 'ReturnType<typeof myFunc>' useful in 
+// large projects?
+// Answer: ...
 
-# ── Exercise 2: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
+// CHALLENGE: Create a function 'updateProduct(id, changes)' 
+// where 'changes' uses one of the utility types above.
 
-
-
-print("✓ Exercise 2 passed")
-
-
-# ── Exercise 3: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Exercise 4: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Exercise 5: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Exercise 6: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge: [Title] ──────────────────────────────────────────────
-# TODO: [describe challenge that combines multiple ideas]
-
-
-
-print("✓ Challenge passed")
-
-
-print("\n🎉 All exercises passed!")
+// --- Verification ---
+console.log("--- Results ---");
+// Fill in the logic and verify!

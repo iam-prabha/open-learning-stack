@@ -1,68 +1,28 @@
-"""
-[Topic Name] — Exercises
-========================
-Run: python exercise.py (after filling in the TODOs)
+// exercise.ts - Practice with Arrays and Tuples
 
-6 exercises + 1 challenge. Fill in every TODO, then run
-the file — you should see "All exercises passed! 🎉"
-"""
+// TODO 1: Create an array 'prices' that only accepts numbers.
 
+// TODO 2: Create a tuple 'rgb' that stores exactly 3 numbers 
+// (for Red, Green, and Blue).
 
-# ── Exercise 1: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-# Hint: [optional hint]
+// TODO 3: Write a function 'sumPair' that takes a tuple 
+// of two numbers [number, number] and returns their sum.
 
+// TODO 4: Create a readonly array 'days' with the strings 
+// ["Mon", "Tue", "Wed"]. Try to use .push() and observe the error.
 
+// TODO 5: Create a variable 'userStatus' which is a tuple of 
+// [string, number]. Use destructuring to get the values into 
+// two separate variables.
 
-print("✓ Exercise 1 passed")
+// TODO 6: Why should you prefer an object over a tuple when 
+// you have more than 3 elements?
+// Answer: ...
 
+// CHALLENGE: Create a generic tuple type 'Pair<T>' that 
+// represents a tuple containing two elements of the same type T.
+// (Hint: type Pair<T> = [T, T])
 
-# ── Exercise 2: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 2 passed")
-
-
-# ── Exercise 3: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Exercise 4: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Exercise 5: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Exercise 6: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge: [Title] ──────────────────────────────────────────────
-# TODO: [describe challenge that combines multiple ideas]
-
-
-
-print("✓ Challenge passed")
-
-
-print("\n🎉 All exercises passed!")
+// --- Verification ---
+console.log("--- Results ---");
+// Check your logic vs the solution!

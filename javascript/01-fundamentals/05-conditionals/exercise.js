@@ -1,68 +1,40 @@
-"""
-[Topic Name] — Exercises
-========================
-Run: python exercise.py (after filling in the TODOs)
+// exercise.js - Practice with conditionals
 
-6 exercises + 1 challenge. Fill in every TODO, then run
-the file — you should see "All exercises passed! 🎉"
-"""
+// TODO 1: Write an if/else statement to check if 'temperature' is 
+// above 30. If so, log "It's hot!", otherwise log "It's fine."
+// const temperature = 32;
+// ...
 
+// TODO 2: Use a ternary operator to assign "Allowed" to 'message' 
+// if 'isAuthenticated' is true, and "Denied" otherwise.
+// const isAuthenticated = true;
+// const message = ...
 
-# ── Exercise 1: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-# Hint: [optional hint]
+// TODO 3: Write a switch statement for 'fruit' ("apple", "banana", "orange").
+// Log its color for each case. Add a 'default' for unknown fruits.
+// let fruit = "banana";
+// ...
 
+// TODO 4: Check if 'myValue' exists (is not null/undefined/empty) 
+// using simple 'if (myValue)'.
+// let myValue = "";
+// ...
 
+// TODO 5: Combine two conditions: log "Can vote" if 'age' is 18+ 
+// AND 'isCitizen' is true.
+// const age = 20, isCitizen = true;
+// ...
 
-print("✓ Exercise 1 passed")
+// TODO 6: Use a switch statement but deliberately omit a 'break' 
+// for one case. Observe what happens when you run it.
 
+// CHALLENGE: Write a 'fizzBuzz(n)' logic. If n is divisible by 3, 
+// log "Fizz". If divisible by 5, "Buzz". If divisible by both, "FizzBuzz".
 
-# ── Exercise 2: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 2 passed")
-
-
-# ── Exercise 3: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Exercise 4: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Exercise 5: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Exercise 6: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge: [Title] ──────────────────────────────────────────────
-# TODO: [describe challenge that combines multiple ideas]
-
-
-
-print("✓ Challenge passed")
-
-
-print("\n🎉 All exercises passed!")
+// --- Verification ---
+console.log("--- Results ---");
+try {
+    // console.log(`Access: ${message}`);
+} catch (e) {
+    console.log("Error: fill in all TODOs to see results!");
+}

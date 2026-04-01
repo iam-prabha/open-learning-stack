@@ -1,68 +1,41 @@
-"""
-[Topic Name] — Exercises
-========================
-Run: python exercise.py (after filling in the TODOs)
+# exercise.py - Practice Metaclasses
 
-6 exercises + 1 challenge. Fill in every TODO, then run
-the file — you should see "All exercises passed! 🎉"
-"""
+# TODO 1: Create a class 'MyDynamicClass' dynamically using the 'type()' function.
+# It should have one method 'hello()' that returns "Greetings!".
+# MyDynamicClass = ...
 
+# TODO 2: Write a metaclass 'PrefixMeta' that automatically adds a prefix "attr_"
+# to all user-defined attributes in the class.
+# (Hint: modify the 'attrs' dictionary in __new__)
+# class PrefixMeta(type):
+#     ...
 
-# ── Exercise 1: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-# Hint: [optional hint]
+# TODO 3: Create a class 'Simple' that uses PrefixMeta and define a variable 'test = 42'.
+# Verify that it is accessible as 'Simple.attr_test'.
+# class Simple(metaclass=PrefixMeta):
+#     test = 42
 
+# TODO 4: Write a metaclass 'Singleton' that ensures only ONE instance
+# of a class can ever be created.
+# (Hint: override __call__ in the metaclass to return a stored instance)
+# class Singleton(type):
+#     ...
 
+# TODO 5: Create a class 'DatabaseConnection' that uses the Singleton metaclass.
+# class DatabaseConnection(metaclass=Singleton):
+#     ...
 
-print("✓ Exercise 1 passed")
+# TODO 6: Check if two instances of DatabaseConnection are the same object.
 
+# CHALLENGE: Create a metaclass 'TraceMeta' that wraps all methods of a class
+# to print "Entering method: {name}" before execution.
 
-# ── Exercise 2: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 2 passed")
-
-
-# ── Exercise 3: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Exercise 4: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Exercise 5: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Exercise 6: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge: [Title] ──────────────────────────────────────────────
-# TODO: [describe challenge that combines multiple ideas]
-
-
-
-print("✓ Challenge passed")
-
-
-print("\n🎉 All exercises passed!")
+# --- Verification ---
+print("--- Results ---")
+try:
+    # Test your code here
+    pass
+except NameError as e:
+    print(f"Error: {e} — fill in all TODOs")
+except Exception as e:
+    print(f"Runtime error: {e}")

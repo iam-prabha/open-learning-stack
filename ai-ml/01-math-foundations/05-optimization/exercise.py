@@ -1,68 +1,36 @@
-"""
-[Topic Name] — Exercises
-========================
-Run: python exercise.py (after filling in the TODOs)
+# exercise.py - Practice with Optimization
 
-6 exercises + 1 challenge. Fill in every TODO, then run
-the file — you should see "All exercises passed! 🎉"
-"""
+import numpy as np
 
+# TODO 1: Given a loss function f(w) = w^2 + 4w, 
+# find the gradient at w = 0.
+# (Hint: f'(w) = 2w + 4)
 
-# ── Exercise 1: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-# Hint: [optional hint]
+# TODO 2: If the gradient is +4 and our learning 
+# rate is 0.1, what will be our next weight 
+# if we start at w=0?
+# (Formula: w_new = w_old - lr * grad)
 
+# TODO 3: Define 'Stochastic Gradient Descent' 
+# in one sentence.
+# Answer: ...
 
+# TODO 4: What happens to the optimization process 
+# if the learning rate is EXTREMELY small (e.g. 0.0000001)?
+# Answer: ...
 
-print("✓ Exercise 1 passed")
+# TODO 5: Define a simple 'Momentum' update. 
+# (It uses the PREVIOUS step's velocity to speed up 
+# a slow descent).
 
+# TODO 6: Why is 'MSE' (Mean Squared Error) a common 
+# choice for a Loss Function in regression?
+# Answer: ...
 
-# ── Exercise 2: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
+# CHALLENGE: Write a loop that runs Gradient Descent 
+# for f(w) = w^2 until the loss is smaller than 0.001. 
+# Print the number of steps taken.
 
-
-
-print("✓ Exercise 2 passed")
-
-
-# ── Exercise 3: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Exercise 4: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Exercise 5: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Exercise 6: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge: [Title] ──────────────────────────────────────────────
-# TODO: [describe challenge that combines multiple ideas]
-
-
-
-print("✓ Challenge passed")
-
-
-print("\n🎉 All exercises passed!")
+# --- Verification ---
+print("--- Results ---")
+# Check your logic vs the solution!

@@ -1,68 +1,43 @@
-"""
-[Topic Name] — Exercises
-========================
-Run: python exercise.py (after filling in the TODOs)
+# exercise.py - Practice with RNNs
 
-6 exercises + 1 challenge. Fill in every TODO, then run
-the file — you should see "All exercises passed! 🎉"
-"""
+import torch
+import torch.nn as nn
 
+# TODO 1: Create an RNN layer with:
+# - input_size: 10
+# - hidden_size: 20
+# - batch_first: True
+rnn = None # nn.RNN(...)
 
-# ── Exercise 1: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-# Hint: [optional hint]
+# TODO 2: Create a 'Many-to-One' RNN model that takes 
+# a sequence of 10 words (each a vector of 5) and 
+# predicts 1 output class (binary).
 
+# TODO 3: What is the shape of the initial hidden 
+# state 'h0' for a 1-layer RNN with batch_size=8 
+# and hidden_size=20?
+# Answer: (..., ..., ...)
 
+# TODO 4: Why do RNNs struggle with sequences that 
+# are hundreds of words long?
+# Answer: ...
 
-print("✓ Exercise 1 passed")
+# TODO 5: If 'batch_first=True', what is the expected 
+# shape of the input tensor X?
+# Answer: (Batch, Seq, Feature) or (Seq, Batch, Feature)?
 
+# TODO 6: Use 'torch.tanh' to manually update a 
+# hidden state 'h_prev' given input 'x' and 
+# weight 'Wh = 0.5', 'Wx = 1.0'.
+h_prev = torch.tensor([0.1])
+x = torch.tensor([1.0])
+# h_new = ...
 
-# ── Exercise 2: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
+# CHALLENGE: Modify the 'SimpleRNN' from example.py 
+# to be 'Many-to-Many'. It should return a prediction 
+# for EVERY time step in the sequence.
+# (Hint: Don't slice 'out[:, -1, :]')
 
-
-
-print("✓ Exercise 2 passed")
-
-
-# ── Exercise 3: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Exercise 4: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Exercise 5: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Exercise 6: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge: [Title] ──────────────────────────────────────────────
-# TODO: [describe challenge that combines multiple ideas]
-
-
-
-print("✓ Challenge passed")
-
-
-print("\n🎉 All exercises passed!")
+# --- Verification ---
+print("--- Results ---")
+# Check your sequence logic vs the solution!

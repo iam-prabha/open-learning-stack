@@ -1,68 +1,49 @@
-"""
-[Topic Name] — Exercises
-========================
-Run: python exercise.py (after filling in the TODOs)
+# exercise.py - Practice OOP inheritance
 
-6 exercises + 1 challenge. Fill in every TODO, then run
-the file — you should see "All exercises passed! 🎉"
-"""
+# Given base class:
+class Vehicle:
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
 
+    def describe(self):
+        return f"{self.year} {self.make} {self.model}"
 
-# ── Exercise 1: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-# Hint: [optional hint]
-
-
-
-print("✓ Exercise 1 passed")
+    def fuel_type(self):
+        return "Unknown"
 
 
-# ── Exercise 2: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
+# TODO 1: Create a class 'Car(Vehicle)' with an extra attribute 'num_doors'.
+# Call super().__init__() properly.
+# class Car(Vehicle):
+#     ...
 
+# TODO 2: Override 'fuel_type()' in Car to return "Gasoline".
 
+# TODO 3: Create a class 'ElectricCar(Car)' with an attribute 'battery_kwh'.
+# Override 'fuel_type()' to return "Electric".
+# class ElectricCar(Car):
+#     ...
 
-print("✓ Exercise 2 passed")
+# TODO 4: Add a method 'range_estimate()' to ElectricCar that returns
+# battery_kwh * 6 (a rough km estimate).
 
+# TODO 5: Create a list of one Car and one ElectricCar.
+# Print their describe() and fuel_type() using a for loop (polymorphism).
 
-# ── Exercise 3: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
+# TODO 6: Check and print whether your ElectricCar is an instance of
+# Vehicle, Car, and ElectricCar.
 
+# CHALLENGE: Add a '__repr__' to Vehicle that includes make, model, year.
+# Verify that repr() works on Car and ElectricCar automatically.
 
-
-print("✓ Exercise 3 passed")
-
-
-# ── Exercise 4: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Exercise 5: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Exercise 6: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge: [Title] ──────────────────────────────────────────────
-# TODO: [describe challenge that combines multiple ideas]
-
-
-
-print("✓ Challenge passed")
-
-
-print("\n🎉 All exercises passed!")
+# --- Verification ---
+print("--- Results ---")
+try:
+    c = Car("Toyota", "Camry", 2022, 4)
+    e = ElectricCar("Tesla", "Model 3", 2024, 4, 82)
+    print(c.describe(), "|", c.fuel_type())
+    print(e.describe(), "|", e.fuel_type(), "| Range:", e.range_estimate(), "km")
+except NameError as e_:
+    print(f"Error: {e_} — fill in all TODOs")

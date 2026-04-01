@@ -1,79 +1,48 @@
-"""
-[Topic Name] — Solutions
-========================
-Run: python solution.py
+# solution.py - CNN answers
 
-Complete answers for all exercises.
-"""
+import torch
+import torch.nn as nn
 
+# TODO 1
+conv = nn.Conv2d(in_channels=3, out_channels=16, kernel_size=3, padding=1)
 
-# ── Solution 1 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
+# TODO 2
+pool = nn.MaxPool2d(kernel_size=2, stride=2)
 
+# TODO 3
+# Answer: 5x5 (The size is halved)
 
+# TODO 4
+# Answer: Stride is the number of pixels the filter 'jumps' 
+# across the image. A larger stride reduces the output 
+# size and computational cost but might miss fine details.
 
-print("✓ Exercise 1 passed")
+# TODO 5
+class MiniCNN(nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.conv = nn.Conv2d(1, 4, 3)
+        self.flatten = nn.Flatten()
+        self.fc = nn.Linear(4 * 26 * 26, 10) # 28-3+1 = 26
+    def forward(self, x):
+        return self.fc(self.flatten(self.conv(x)))
 
-# ALTERNATIVE: [show a different valid approach]
+# TODO 6
+# Answer: [B, 10, 32, 32] (Channels change to 10, Size stays 32)
 
+# CHALLENGE ANSWER
+x = torch.randn(1, 1, 10, 10)
+m = nn.Sequential(
+    nn.Conv2d(1, 2, kernel_size=3), # -> [1, 2, 8, 8]
+    nn.MaxPool2d(2, 2),             # -> [1, 2, 4, 4]
+    nn.Flatten()                    # -> [1, 2*4*4] = [1, 32]
+)
+print(f"Final shape: {m(x).shape}") # length 32
 
-# ── Solution 2 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
+print("\n--- Why it works ---")
+print("1. Translational Invariance: CNNs can detect a 'cat' whether it's in the top-left or bottom-right of the photo.")
+print("2. Parameter Sharing: A filter that detects 'edges' is useful everywhere in the image, so we use the same filter for every pixel spot.")
+print("3. Pooling: It makes the network robust to small movements or distortions in the input image.")
+print("4. Hierarchical Learning: Deeper layers automatically combine simple features (lines) into complex ones (faces).")
 
-
-
-print("✓ Exercise 2 passed")
-
-
-# ── Solution 3 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Solution 4 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Solution 5 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Solution 6 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge Solution ──────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Challenge passed")
-
-
-# ─── KEY TAKEAWAYS ───────────────────────────────────────────────────
-#
-# 1. [Takeaway 1]
-# 2. [Takeaway 2]
-# 3. [Takeaway 3]
-# 4. [Takeaway 4]
-# 5. [Takeaway 5]
-#
-# Next topic: [next-topic-name]
-# ─────────────────────────────────────────────────────────────────────
-
-print("\n🎉 All exercises passed!")
+export {};

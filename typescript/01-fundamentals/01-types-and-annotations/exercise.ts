@@ -1,68 +1,29 @@
-"""
-[Topic Name] — Exercises
-========================
-Run: python exercise.py (after filling in the TODOs)
+// exercise.ts - Practice with Types
 
-6 exercises + 1 challenge. Fill in every TODO, then run
-the file — you should see "All exercises passed! 🎉"
-"""
+// TODO 1: Declare a variable 'planet' with a type 'string' and value "Earth".
 
+// TODO 2: Declare a variable 'distance' with a type 'number' and value 149.6.
 
-# ── Exercise 1: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-# Hint: [optional hint]
+// TODO 3: Create an array 'colors' that only accepts strings.
 
+// TODO 4: Add type annotations to this function:
+/*
+function multiply(x, y) {
+    return x * y;
+}
+*/
 
+// TODO 5: Create a variable 'points' and let TypeScript INFER its type 
+// by assigning it the number 10. Then try to assign it a string and 
+// see what error the editor/compiler gives.
 
-print("✓ Exercise 1 passed")
+// TODO 6: Why should we avoid using 'any' whenever possible?
+// Answer: ...
 
+// CHALLENGE: Create a variable 'user' that should be an object 
+// with a mandatory 'id' (number) and an optional 'email' (string).
+// (Hint: use '?:' for optional properties)
 
-# ── Exercise 2: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 2 passed")
-
-
-# ── Exercise 3: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Exercise 4: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Exercise 5: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Exercise 6: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge: [Title] ──────────────────────────────────────────────
-# TODO: [describe challenge that combines multiple ideas]
-
-
-
-print("✓ Challenge passed")
-
-
-print("\n🎉 All exercises passed!")
+// --- Verification ---
+console.log("--- Results ---");
+// After filling in, check your code logic!

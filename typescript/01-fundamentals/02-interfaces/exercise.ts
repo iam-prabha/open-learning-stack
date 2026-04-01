@@ -1,68 +1,28 @@
-"""
-[Topic Name] — Exercises
-========================
-Run: python exercise.py (after filling in the TODOs)
+// exercise.ts - Practice with Interfaces
 
-6 exercises + 1 challenge. Fill in every TODO, then run
-the file — you should see "All exercises passed! 🎉"
-"""
+// TODO 1: Create an interface 'Product' with:
+// - id (readonly number)
+// - name (string)
+// - price (number)
+// - description (optional string)
 
+// TODO 2: Create a 'laptop' object that implements 'Product'.
 
-# ── Exercise 1: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-# Hint: [optional hint]
+// TODO 3: Try to change the 'id' of 'laptop' and observe the error.
 
+// TODO 4: Create an interface 'DigitalProduct' that EXTENDS 'Product' 
+// and adds a 'downloadUrl' (string) property.
 
+// TODO 5: Create a 'musicFile' object that implements 'DigitalProduct'.
 
-print("✓ Exercise 1 passed")
+// TODO 6: Create an interface 'Settings' that uses an index 
+// signature to allow any string key with a boolean value.
+// e.g. { darkMode: true, notifications: false }
 
+// CHALLENGE: Create an interface 'MathOperation' that 
+// describes a function that takes two numbers and returns a number.
+// Implement it with an 'add' function.
 
-# ── Exercise 2: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 2 passed")
-
-
-# ── Exercise 3: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Exercise 4: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Exercise 5: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Exercise 6: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge: [Title] ──────────────────────────────────────────────
-# TODO: [describe challenge that combines multiple ideas]
-
-
-
-print("✓ Challenge passed")
-
-
-print("\n🎉 All exercises passed!")
+// --- Verification ---
+console.log("--- Results ---");
+// Check your code against the solution!

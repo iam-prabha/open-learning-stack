@@ -1,20 +1,39 @@
-"""
-[Topic Name] — Working Demo
-============================
-Run: python example.py
+// example.js - let, const, and scope in JavaScript
 
-Covers: [list what this demo covers]
-"""
+// 1. const vs let
+const pi = 3.14159;
+let score = 0;
 
+console.log("--- Initial Values ---");
+console.log(`Pi: ${pi}`);
+console.log(`Score: ${score}`);
 
-# ─── SECTION: [Section Name] ────────────────────────────────────────
+// pi = 3.14; // Error: Assignment to constant variable.
+score = 10;   // OK: let can be re-assigned
+console.log(`New Score: ${score}`);
 
-# WHY: [explain why this approach is used]
+// 2. Block Scope
+console.log("\n--- Block Scope ---");
+if (true) {
+    const blockScoped = "I only live in this IF block";
+    var functionScoped = "I leak out of the block!";
+    console.log(blockScoped);
+}
 
+// console.log(blockScoped); // ReferenceError
+console.log(`var leaked: ${functionScoped}`);
 
-# ─── SECTION: [Section Name] ────────────────────────────────────────
+// 3. Hoisting (The 'var' quirk)
+console.log("\n--- Hoisting ---");
+console.log(`hoistedVar before decl: ${hoistedVar}`); // prints undefined (doesn't crash)
+var hoistedVar = "I was hoisted";
 
-# WHY: [explain why this approach is used]
+// console.log(notHoisted); // ReferenceError: Cannot access before initialization
+let notHoisted = "I am safe";
 
-
-print("\n✅ All examples ran successfully!")
+// 4. Constants and Objects
+console.log("\n--- const and Objects ---");
+const user = { name: "Alice" };
+// user = { name: "Bob" }; // Error: Re-assigning the label
+user.name = "Bob";         // OK: Mutating the internal data
+console.log(`User name: ${user.name}`);

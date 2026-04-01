@@ -1,68 +1,31 @@
-"""
-[Topic Name] — Exercises
-========================
-Run: python exercise.py (after filling in the TODOs)
+// exercise.ts - Practice with Narrowing
 
-6 exercises + 1 challenge. Fill in every TODO, then run
-the file — you should see "All exercises passed! 🎉"
-"""
+// TODO 1: Wrap this function in a 'typeof' check to fix the error:
+/*
+function getLength(input: string | number) {
+    return input.length;
+}
+*/
 
+// TODO 2: Use 'instanceof' to check if 'error' is an instance 
+// of the built-in 'Error' class.
 
-# ── Exercise 1: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-# Hint: [optional hint]
+// TODO 3: Use the 'in' operator to check if 'pet' (Bird | Fish) 
+// has a 'swim' method.
 
+// TODO 4: Write a type predicate function 'isString' that 
+// takes 'any' and returns 'val is string'.
 
+// TODO 5: Use your 'isString' function to safely call 
+// '.toLowerCase()' on a 'unknown' variable.
 
-print("✓ Exercise 1 passed")
+// TODO 6: Why can't you use 'instanceof' to check if an 
+// object implements an 'interface'?
+// Answer: ...
 
+// CHALLENGE: Create a union of { type: 'success', data: string } | { type: 'failure', message: string }.
+// Write a function that narrows the union using the 'type' property.
 
-# ── Exercise 2: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 2 passed")
-
-
-# ── Exercise 3: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Exercise 4: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Exercise 5: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Exercise 6: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge: [Title] ──────────────────────────────────────────────
-# TODO: [describe challenge that combines multiple ideas]
-
-
-
-print("✓ Challenge passed")
-
-
-print("\n🎉 All exercises passed!")
+// --- Verification ---
+console.log("--- Results ---");
+// Fill in the guards and test your logic!

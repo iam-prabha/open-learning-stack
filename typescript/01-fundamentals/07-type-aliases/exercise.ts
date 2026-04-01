@@ -1,68 +1,27 @@
-"""
-[Topic Name] — Exercises
-========================
-Run: python exercise.py (after filling in the TODOs)
+// exercise.ts - Practice with Type Aliases
 
-6 exercises + 1 challenge. Fill in every TODO, then run
-the file — you should see "All exercises passed! 🎉"
-"""
+// TODO 1: Create a type alias 'ID' that can be either a 
+// string or a number.
 
+// TODO 2: Create a type alias 'Coordinates' that is an 
+// object with 'lat' and 'lng' as numbers.
 
-# ── Exercise 1: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-# Hint: [optional hint]
+// TODO 3: Write a function 'move' that takes a 
+// 'Coordinates' object and returns nothing (void).
 
+// TODO 4: Create a type alias 'Callback' for a function that 
+// takes one argument (error: string | null) and returns void.
 
+// TODO 5: Create a type alias 'UserResponse' that is a union 
+// of { success: true; data: string } and { success: false; error: string }.
 
-print("✓ Exercise 1 passed")
+// TODO 6: When is it better to use an 'interface' over a 'type alias'?
+// Answer: ...
 
+// CHALLENGE: Create a type alias 'DeepPartial<T>' is too advanced, 
+// let's try this: Create a type alias 'Circle' and 'Square', 
+// then a type alias 'Shape' that is a union of both.
 
-# ── Exercise 2: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 2 passed")
-
-
-# ── Exercise 3: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Exercise 4: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Exercise 5: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Exercise 6: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge: [Title] ──────────────────────────────────────────────
-# TODO: [describe challenge that combines multiple ideas]
-
-
-
-print("✓ Challenge passed")
-
-
-print("\n🎉 All exercises passed!")
+// --- Verification ---
+console.log("--- Results ---");
+// Check your code against the solution!

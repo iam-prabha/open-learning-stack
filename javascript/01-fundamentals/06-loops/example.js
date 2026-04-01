@@ -1,20 +1,38 @@
-"""
-[Topic Name] — Working Demo
-============================
-Run: python example.py
+// example.js - Iteration in JavaScript
 
-Covers: [list what this demo covers]
-"""
+// 1. Classic for loop
+console.log("--- for loop ---");
+for (let i = 1; i <= 3; i++) {
+    console.log(`Lap ${i}`);
+}
 
+// 2. while loop
+console.log("\n--- while loop ---");
+let count = 3;
+while (count > 0) {
+    console.log(`Blastoff in ${count}...`);
+    count--;
+}
 
-# ─── SECTION: [Section Name] ────────────────────────────────────────
+// 3. for...of (Best for Arrays/Strings)
+console.log("\n--- for...of (Values) ---");
+const fruits = ["apple", "banana", "cherry"];
+for (const fruit of fruits) {
+    console.log(`Eating ${fruit}`);
+}
 
-# WHY: [explain why this approach is used]
+// 4. for...in (Best for Objects)
+console.log("\n--- for...in (Keys) ---");
+const user = { name: "Alice", Role: "Admin", id: 501 };
+for (const key in user) {
+    console.log(`${key}: ${user[key]}`);
+}
 
-
-# ─── SECTION: [Section Name] ────────────────────────────────────────
-
-# WHY: [explain why this approach is used]
-
-
-print("\n✅ All examples ran successfully!")
+// 5. break and continue
+console.log("\n--- break/continue ---");
+for (let j = 1; j <= 5; j++) {
+    if (j === 2) continue; // Skip 2
+    if (j === 4) break;    // Stop at 4
+    console.log(`Number ${j}`);
+}
+// Outputs: 1, 3

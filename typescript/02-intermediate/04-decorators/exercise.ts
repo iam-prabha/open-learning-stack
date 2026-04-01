@@ -1,68 +1,28 @@
-"""
-[Topic Name] — Exercises
-========================
-Run: python exercise.py (after filling in the TODOs)
+// exercise.ts - Practice with Decorators
 
-6 exercises + 1 challenge. Fill in every TODO, then run
-the file — you should see "All exercises passed! 🎉"
-"""
+// TODO 1: Create a simple class decorator 'Sealed' that 
+// calls Object.seal(constructor) on the class.
 
+// TODO 2: Apply the '@Sealed' decorator to a 'Database' class.
 
-# ── Exercise 1: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-# Hint: [optional hint]
+// TODO 3: Create a method decorator 'Deprecated' that 
+// logs a warning message "This method is deprecated" 
+// whenever the method is called.
 
+// TODO 4: Apply '@Deprecated' to a 'getData' method 
+// in an 'ApiService' class.
 
+// TODO 5: Create a decorator factory 'Color(value: string)' 
+// that adds a 'color' property to the class prototype.
 
-print("✓ Exercise 1 passed")
+// TODO 6: What setting MUST be enabled in tsconfig.json 
+// to use decorators?
+// Answer: ...
 
+// CHALLENGE: Create a property decorator 'Required' that 
+// collects the names of decorated properties in a 
+// metadata array on the class.
 
-# ── Exercise 2: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 2 passed")
-
-
-# ── Exercise 3: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Exercise 4: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Exercise 5: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Exercise 6: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge: [Title] ──────────────────────────────────────────────
-# TODO: [describe challenge that combines multiple ideas]
-
-
-
-print("✓ Challenge passed")
-
-
-print("\n🎉 All exercises passed!")
+// --- Verification ---
+console.log("--- Results ---");
+// Check your decorator logic vs the solution!

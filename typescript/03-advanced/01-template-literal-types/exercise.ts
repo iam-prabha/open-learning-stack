@@ -1,68 +1,27 @@
-"""
-[Topic Name] — Exercises
-========================
-Run: python exercise.py (after filling in the TODOs)
+// exercise.ts - Practice with Template Literal Types
 
-6 exercises + 1 challenge. Fill in every TODO, then run
-the file — you should see "All exercises passed! 🎉"
-"""
+// TODO 1: Create a type 'Protocol' with values "http" or "https".
 
+// TODO 2: Create a type 'URL' that is a template literal 
+// starting with 'Protocol' followed by "://localhost".
 
-# ── Exercise 1: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-# Hint: [optional hint]
+// TODO 3: Create two types: 'Size' (small, large) and 
+// 'Fruit' (apple, banana).
 
+// TODO 4: Create a union 'Order' that combines every size 
+// with every fruit using a hyphen (e.g., "small-apple").
 
+// TODO 5: Use 'Uppercase' to create a type 'ERROR_CODE' 
+// that is "FATAL" if the input is "fatal".
 
-print("✓ Exercise 1 passed")
+// TODO 6: What is a "Cartesian Product" in the context of 
+// template literal types?
+// Answer: ...
 
+// CHALLENGE: Create a type 'PropEvent' that takes a union of 
+// strings (e.g., "click" | "scroll") and transforms them into 
+// "on_Click" | "on_Scroll" (note the underscore and capitalization).
 
-# ── Exercise 2: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 2 passed")
-
-
-# ── Exercise 3: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Exercise 4: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Exercise 5: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Exercise 6: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge: [Title] ──────────────────────────────────────────────
-# TODO: [describe challenge that combines multiple ideas]
-
-
-
-print("✓ Challenge passed")
-
-
-print("\n🎉 All exercises passed!")
+// --- Verification ---
+console.log("--- Results ---");
+// Check your string patterns vs the solution!

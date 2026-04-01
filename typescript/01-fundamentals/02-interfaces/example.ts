@@ -1,20 +1,50 @@
-"""
-[Topic Name] — Working Demo
-============================
-Run: python example.py
+// example.ts - Contracts for Objects with Interfaces
 
-Covers: [list what this demo covers]
-"""
+// 1. Basic Interface
+interface User {
+    readonly id: number; // Cannot be changed after creation
+    name: string;
+    email: string;
+    age?: number; // Optional property
+}
 
+const alice: User = {
+    id: 101,
+    name: "Alice",
+    email: "alice@example.com"
+};
 
-# ─── SECTION: [Section Name] ────────────────────────────────────────
+// alice.id = 200; // Error: Cannot assign to 'id' because it is a read-only property
 
-# WHY: [explain why this approach is used]
+console.log("--- Basic Interface ---");
+console.log(`User: ${alice.name}, Email: ${alice.email}`);
 
+// 2. Extending Interfaces (Inheritance)
+interface Employee extends User {
+    role: string;
+    salary: number;
+}
 
-# ─── SECTION: [Section Name] ────────────────────────────────────────
+const bob: Employee = {
+    id: 102,
+    name: "Bob",
+    email: "bob@tech.co",
+    role: "Developer",
+    salary: 80000
+};
 
-# WHY: [explain why this approach is used]
+console.log("\n--- Extended Interface ---");
+console.log(`${bob.name} is a ${bob.role} with ID ${bob.id}`);
 
+// 3. Index Signatures (For dynamic keys)
+interface StringMap {
+    [key: string]: string;
+}
 
-print("\n✅ All examples ran successfully!")
+const translations: StringMap = {
+    "hello": "ciao",
+    "goodbye": "addio"
+};
+
+console.log("\n--- Index Signatures ---");
+console.log(`Translate 'hello': ${translations["hello"]}`);

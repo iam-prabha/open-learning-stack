@@ -1,79 +1,56 @@
-"""
-[Topic Name] — Solutions
-========================
-Run: python solution.py
+// solution.js - Promises answers
 
-Complete answers for all exercises.
-"""
+// TODO 1
+function wait(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
 
+// TODO 2
+wait(1000).then(() => console.log("Hello after 1s"));
 
-# ── Solution 1 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
+// TODO 3 & 4
+const checkRandom = new Promise((resolve, reject) => {
+    const num = Math.random();
+    if (num >= 0.5) {
+        resolve(`Success: ${num}`);
+    } else {
+        reject(`Oops! ${num} was too low`);
+    }
+});
 
+checkRandom
+    .then(msg => console.log(msg))
+    .catch(err => console.error(err));
 
+// TODO 5
+Promise.resolve(5)
+    .then(n => n * 2) // 10
+    .then(n => n * 2) // 20
+    .then(n => n * 2) // 40
+    .then(res => console.log(`Chain Result: ${res}`));
 
-print("✓ Exercise 1 passed")
+// TODO 6
+const p1 = Promise.resolve("Alice");
+const p2 = Promise.resolve("Bob");
+const p3 = Promise.resolve("Charlie");
 
-# ALTERNATIVE: [show a different valid approach]
+Promise.all([p1, p2, p3]).then(names => {
+    console.log(`Fetched names: ${names}`);
+});
 
+// CHALLENGE ANSWER
+function delayedError() {
+    return new Promise((_, reject) => {
+        setTimeout(() => reject("Timed out"), 3000);
+    });
+}
 
-# ── Solution 2 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
+// --- Verification ---
+console.log("--- Verification ---");
+console.log("Running async tests...");
 
-
-
-print("✓ Exercise 2 passed")
-
-
-# ── Solution 3 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Solution 4 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Solution 5 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Solution 6 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge Solution ──────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Challenge passed")
-
-
-# ─── KEY TAKEAWAYS ───────────────────────────────────────────────────
-#
-# 1. [Takeaway 1]
-# 2. [Takeaway 2]
-# 3. [Takeaway 3]
-# 4. [Takeaway 4]
-# 5. [Takeaway 5]
-#
-# Next topic: [next-topic-name]
-# ─────────────────────────────────────────────────────────────────────
-
-print("\n🎉 All exercises passed!")
+console.log("\n--- Why it works ---");
+console.log("1. State Machine: A promise is ALWAYS in one of three states: pending, fulfilled, or rejected.");
+console.log("2. Immutability: Once a promise resolves or rejects, its value CANNOT change.");
+console.log("3. Chaining: Returning a value from .then() wraps it in a new promise automatically.");
+console.log("4. Promise.all: Useful for speed — it starts all tasks at once rather than waiting for each one.");

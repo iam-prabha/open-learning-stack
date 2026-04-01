@@ -1,68 +1,42 @@
-"""
-[Topic Name] — Exercises
-========================
-Run: python exercise.py (after filling in the TODOs)
+# exercise.py - Practice Context Managers
 
-6 exercises + 1 challenge. Fill in every TODO, then run
-the file — you should see "All exercises passed! 🎉"
-"""
+import contextlib
 
+# TODO 1: Create a class-based context manager 'ListBuffer' that 
+# accepts a list, appends items to a temporary internal list during
+# the 'with' block, and ONLY extends the original list in __exit__
+# if NO exception occurred.
+# class ListBuffer:
+#     ...
 
-# ── Exercise 1: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-# Hint: [optional hint]
+# TODO 2: Write a function-based context manager 'tag(name)' using
+# @contextlib.contextmanager that prints "<name>" on enter and "</name>" on exit.
+# @contextlib.contextmanager
+# def tag(name):
+#     ...
 
+# TODO 3: Write a context manager 'suppress_errors(*exceptions)' that
+# swallows specific exceptions provided as arguments.
+# (Hint: __exit__ should return check 'exc_type' and return True/False)
+# class suppress_errors:
+#     ...
 
+# TODO 4: Use your 'suppress_errors' to ignore a ZeroDivisionError.
 
-print("✓ Exercise 1 passed")
+# TODO 5: Create a context manager 'ChangingPrecision' for the 'decimal' module
+# that temporarily sets a specific precision and restores it in __exit__.
+# import decimal
+# ...
 
+# TODO 6: Demonstrate 'ListBuffer' failing to commit if an error occurs.
 
-# ── Exercise 2: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
+# CHALLENGE: Create a context manager 'DatabaseTransaction' that 
+# prints "BEGIN", "COMMIT" on success, and "ROLLBACK" on error.
 
-
-
-print("✓ Exercise 2 passed")
-
-
-# ── Exercise 3: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Exercise 4: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Exercise 5: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Exercise 6: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge: [Title] ──────────────────────────────────────────────
-# TODO: [describe challenge that combines multiple ideas]
-
-
-
-print("✓ Challenge passed")
-
-
-print("\n🎉 All exercises passed!")
+# --- Verification ---
+print("--- Results ---")
+try:
+    # Test your code here
+    pass
+except Exception as e:
+    print(f"Error: {e}")

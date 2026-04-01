@@ -1,68 +1,36 @@
-"""
-[Topic Name] — Exercises
-========================
-Run: python exercise.py (after filling in the TODOs)
+# exercise.py - Practice Performance
 
-6 exercises + 1 challenge. Fill in every TODO, then run
-the file — you should see "All exercises passed! 🎉"
-"""
+import timeit
 
+# TODO 1: Compare the speed of 'a + b' (string concatenation) 
+# vs '"".join([a, b])' for 1000 iterations.
+# s1 = "hello"
+# s2 = "world"
+# ...
 
-# ── Exercise 1: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-# Hint: [optional hint]
+# TODO 2: Write a function 'sum_loop(n)' that uses a for loop to sum range(n).
+# def sum_loop(n):
+#     ...
 
+# TODO 3: Write a function 'sum_builtin(n)' that uses the built-in 'sum()' function.
+# def sum_builtin(n):
+#     ...
 
+# TODO 4: Use timeit to compare sum_loop(1000) and sum_builtin(1000).
 
-print("✓ Exercise 1 passed")
+# TODO 5: Create a large list of 100,000 numbers.
+# data = list(range(100000))
 
+# TODO 6: Measure how long it takes to find if -1 (not in list) 
+# is in the list versus a set containing the same numbers.
+# (Hint: use timeit.timeit(..., number=100))
 
-# ── Exercise 2: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
+# CHALLENGE: Profile this function using cProfile and identify which part
+# is taking the longest.
+# def mystery_task():
+#     [x**2 for x in range(1000000)]
+#     [x**3 for x in range(1000000)]
 
-
-
-print("✓ Exercise 2 passed")
-
-
-# ── Exercise 3: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Exercise 4: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Exercise 5: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Exercise 6: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge: [Title] ──────────────────────────────────────────────
-# TODO: [describe challenge that combines multiple ideas]
-
-
-
-print("✓ Challenge passed")
-
-
-print("\n🎉 All exercises passed!")
+# --- Verification ---
+print("--- Results ---")
+# Print your benchmark results here

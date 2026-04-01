@@ -1,79 +1,47 @@
-"""
-[Topic Name] — Solutions
-========================
-Run: python solution.py
+// solution.ts - Enums answers
 
-Complete answers for all exercises.
-"""
+// TODO 1
+enum Day {
+    Monday = 1,
+    Tuesday,
+    Wednesday,
+    Thursday,
+    Friday,
+    Saturday,
+    Sunday
+}
 
+// TODO 2
+let today: Day = Day.Monday;
 
-# ── Solution 1 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
+// TODO 3
+enum LogLevel {
+    INFO = "INFO",
+    WARN = "WARN",
+    ERROR = "ERROR"
+}
 
+// TODO 4
+function logMessage(level: LogLevel, msg: string) {
+    console.log(`[${level}] ${msg}`);
+}
 
+// TODO 5
+logMessage(LogLevel.WARN, "Disk space low!");
 
-print("✓ Exercise 1 passed")
+// TODO 6
+// Answer: No, string enums do not support reverse mapping like 
+// numeric enums. You would get an error or undefined.
 
-# ALTERNATIVE: [show a different valid approach]
+// CHALLENGE ANSWER
+enum ErrorCode {
+    NOT_FOUND = 404,
+    UNAUTHORIZED = 401,
+    SERVER_ERROR = 500
+}
 
-
-# ── Solution 2 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 2 passed")
-
-
-# ── Solution 3 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Solution 4 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Solution 5 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Solution 6 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge Solution ──────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Challenge passed")
-
-
-# ─── KEY TAKEAWAYS ───────────────────────────────────────────────────
-#
-# 1. [Takeaway 1]
-# 2. [Takeaway 2]
-# 3. [Takeaway 3]
-# 4. [Takeaway 4]
-# 5. [Takeaway 5]
-#
-# Next topic: [next-topic-name]
-# ─────────────────────────────────────────────────────────────────────
-
-print("\n🎉 All exercises passed!")
+console.log("\n--- Why it works ---");
+console.log("1. Documentation: Enums make your code more readable by using human names instead of magic numbers or strings.");
+console.log("2. Type Safety: TypeScript will ensure you only use values defined in the enum, preventing typos like 'PENDNG' instead of 'Pending'.");
+console.log("3. Refactoring: If you change an enum value in one place, it's updated everywhere the enum is used.");
+console.log("4. Intent: Using an enum signal to other developers that this variable has a fixed, restricted set of possible values.");

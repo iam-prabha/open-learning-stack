@@ -39,9 +39,9 @@ This roadmap shows the learning order across all tracks. Start at the top, work 
 
 | Track | Fundamentals | Intermediate | Advanced |
 |---|---|---|---|
-| Python | 🟢 10 topics | 🟡 8 topics | 🟡 6 topics |
-| JavaScript | 🟡 10 topics | 🟡 8 topics | 🟡 5 topics |
-| TypeScript | 🟡 10 topics | 🟡 8 topics | 🟡 5 topics |
+| Python | 🟢 10 topics | 🟢 8 topics | 🟢 6 topics |
+| JavaScript | 🟢 10 topics | 🟢 8 topics | 🟢 5 topics |
+| TypeScript | 🟢 10 topics | 🟢 8 topics | 🟢 5 topics |
 | Go | 🟡 10 topics | 🟡 8 topics | 🟡 5 topics |
 | Rust | 🟡 10 topics | 🟡 8 topics | 🟡 5 topics |
 
@@ -49,7 +49,7 @@ This roadmap shows the learning order across all tracks. Start at the top, work 
 |---|---|---|
 | 01-math-foundations | 🟢 Active | 5 |
 | 02-ml-core | 🟢 Active | 8 |
-| 03-deep-learning | 🟡 Planned | 6 |
+| 03-deep-learning | 🟢 Active | 6 |
 | 04-llms | 🟡 Planned | 6 |
 | 05-mlops | 🟡 Planned | 5 |
 

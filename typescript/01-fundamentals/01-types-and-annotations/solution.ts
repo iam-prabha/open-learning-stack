@@ -1,79 +1,37 @@
-"""
-[Topic Name] — Solutions
-========================
-Run: python solution.py
+// solution.ts - Types and Annotations answers
 
-Complete answers for all exercises.
-"""
+// TODO 1
+let planet: string = "Earth";
 
+// TODO 2
+let distance: number = 149.6;
 
-# ── Solution 1 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
+// TODO 3
+let colors: string[] = ["Red", "Green", "Blue"];
 
+// TODO 4
+function multiply(x: number, y: number): number {
+    return x * y;
+}
 
+// TODO 5
+let points = 10;
+// points = "low"; // Error: Type 'string' is not assignable to type 'number'
 
-print("✓ Exercise 1 passed")
+// TODO 6
+// Answer: 'any' disables type checking. If you use it, you lose the safety 
+// of TypeScript, essentially going back to standard JavaScript, which 
+// allows bugs to sneak into production.
 
-# ALTERNATIVE: [show a different valid approach]
+// CHALLENGE ANSWER
+let user: { id: number; email?: string } = {
+    id: 1,
+    // email is optional, so it's okay to omit it
+};
+user.email = "test@example.com";
 
-
-# ── Solution 2 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 2 passed")
-
-
-# ── Solution 3 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Solution 4 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Solution 5 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Solution 6 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge Solution ──────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Challenge passed")
-
-
-# ─── KEY TAKEAWAYS ───────────────────────────────────────────────────
-#
-# 1. [Takeaway 1]
-# 2. [Takeaway 2]
-# 3. [Takeaway 3]
-# 4. [Takeaway 4]
-# 5. [Takeaway 5]
-#
-# Next topic: [next-topic-name]
-# ─────────────────────────────────────────────────────────────────────
-
-print("\n🎉 All exercises passed!")
+console.log("\n--- Why it works ---");
+console.log("1. Safety: By defining types, you get red squiggles (errors) in the IDE as you type, not after you refresh the browser.");
+console.log("2. Documentation: Types serve as living documentation. A new developer knows exactly what 'multiply' expects without reading the whole function.");
+console.log("3. Inference: TypeScript is smart. It doesn't force you to type everything — only the things it can't figure out on its own.");
+console.log("4. Autocomplete: Because TS knows your object structure, it provides perfect code-completion (Intellisense).");

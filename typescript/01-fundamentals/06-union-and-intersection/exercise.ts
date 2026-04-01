@@ -1,68 +1,30 @@
-"""
-[Topic Name] — Exercises
-========================
-Run: python exercise.py (after filling in the TODOs)
+// exercise.ts - Practice with Unions and Intersections
 
-6 exercises + 1 challenge. Fill in every TODO, then run
-the file — you should see "All exercises passed! 🎉"
-"""
+// TODO 1: Create a variable 'result' that can be 
+// either a boolean or the number 0.
 
+// TODO 2: Write a function 'printLength' that takes 
+// a parameter that is either a string or string[].
+// (Hint: use Array.isArray() to check if it's an array)
 
-# ── Exercise 1: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-# Hint: [optional hint]
+// TODO 3: Create a literal union 'Status' with 
+// "Online", "Offline", and "Away".
 
+// TODO 4: Create two interfaces: 'Logger' (with a log method) 
+// and 'Writer' (with a write method).
 
+// TODO 5: Create a type 'LogWriter' that is an 
+// INTERSECTION of 'Logger' and 'Writer'. Implement an 
+// object that fits the 'LogWriter' type.
 
-print("✓ Exercise 1 passed")
+// TODO 6: Why can you only access common properties of 
+// a union type without narrowing?
+// Answer: ...
 
+// CHALLENGE: Create a function 'processData' that accepts 
+// a union of { type: "user"; info: string } | { type: "admin"; level: number }.
+// Use the 'type' property to handle both cases.
 
-# ── Exercise 2: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 2 passed")
-
-
-# ── Exercise 3: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Exercise 4: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Exercise 5: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Exercise 6: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge: [Title] ──────────────────────────────────────────────
-# TODO: [describe challenge that combines multiple ideas]
-
-
-
-print("✓ Challenge passed")
-
-
-print("\n🎉 All exercises passed!")
+// --- Verification ---
+console.log("--- Results ---");
+// Check your code logic vs solution!

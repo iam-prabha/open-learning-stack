@@ -1,79 +1,58 @@
-"""
-[Topic Name] — Solutions
-========================
-Run: python solution.py
+// solution.ts - Decorators answers
 
-Complete answers for all exercises.
-"""
+// TODO 1 & 2
+function Sealed(constructor: Function) {
+    Object.seal(constructor);
+    Object.seal(constructor.prototype);
+}
 
+@Sealed
+class Database {}
 
-# ── Solution 1 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
+// TODO 3 & 4
+function Deprecated(target: any, propertyKey: string, descriptor: PropertyDescriptor) {
+    const originalMethod = descriptor.value;
+    descriptor.value = function (...args: any[]) {
+        console.warn(`[WARNING]: Method '${propertyKey}' is deprecated.`);
+        return originalMethod.apply(this, args);
+    };
+}
 
+class ApiService {
+    @Deprecated
+    getData() { return { data: [] }; }
+}
 
+// TODO 5
+function Color(value: string) {
+    return function (constructor: Function) {
+        constructor.prototype.color = value;
+    };
+}
 
-print("✓ Exercise 1 passed")
+@Color("Red")
+class Home {}
 
-# ALTERNATIVE: [show a different valid approach]
+// TODO 6
+// Answer: 'experimentalDecorators' must be set to true in the 
+// 'compilerOptions' section of your tsconfig.json.
 
+// CHALLENGE ANSWER
+function Required(target: any, propertyKey: string) {
+    const targetClass = target.constructor;
+    if (!targetClass.requiredMetadata) {
+        targetClass.requiredMetadata = [];
+    }
+    targetClass.requiredMetadata.push(propertyKey);
+}
 
-# ── Solution 2 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
+class UserForm {
+    @Required
+    name: string = "";
+}
 
-
-
-print("✓ Exercise 2 passed")
-
-
-# ── Solution 3 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Solution 4 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Solution 5 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Solution 6 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge Solution ──────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Challenge passed")
-
-
-# ─── KEY TAKEAWAYS ───────────────────────────────────────────────────
-#
-# 1. [Takeaway 1]
-# 2. [Takeaway 2]
-# 3. [Takeaway 3]
-# 4. [Takeaway 4]
-# 5. [Takeaway 5]
-#
-# Next topic: [next-topic-name]
-# ─────────────────────────────────────────────────────────────────────
-
-print("\n🎉 All exercises passed!")
+console.log("\n--- Why it works ---");
+console.log("1. Meta-programming: Decorators allow you to separate cross-cutting concerns (like logging or validation) from your core business logic.");
+console.log("2. DRY Principle: Instead of adding logs inside every single method, you apply one @Log decorator once.");
+console.log("3. Declarative Code: Decorators make your code much more readable by clearly showing the 'intent' (e.g., @Deprecated) directly above the code.");
+console.log("4. Extensibility: Frameworks like NestJS and Angular use decorators heavily to handle dependency injection and routing.");

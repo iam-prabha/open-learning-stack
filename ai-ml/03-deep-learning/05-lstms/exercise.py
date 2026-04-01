@@ -1,68 +1,37 @@
-"""
-[Topic Name] — Exercises
-========================
-Run: python exercise.py (after filling in the TODOs)
+# exercise.py - Practice with LSTMs
 
-6 exercises + 1 challenge. Fill in every TODO, then run
-the file — you should see "All exercises passed! 🎉"
-"""
+import torch
+import torch.nn as nn
 
+# TODO 1: Create an LSTM layer with:
+# - input_size: 16
+# - hidden_size: 32
+# - num_layers: 2
+# - batch_first: True
 
-# ── Exercise 1: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-# Hint: [optional hint]
+# TODO 2: What are the two states maintained by an 
+# LSTM during its forward pass?
+# Answer: ... and ...
 
+# TODO 3: What is the purpose of the 'Forget Gate'?
+# Answer: ...
 
+# TODO 4: Initialize the initial states 'h0' and 'c0' 
+# for a batch of 4 sequences, with 32 hidden units 
+# and 1 layer.
 
-print("✓ Exercise 1 passed")
+# TODO 5: Why is the 'Cell State' (c_t) called the 
+# 'Memory Highway'?
+# Answer: ...
 
+# TODO 6: Given an input [2, 10, 16], what is the 
+# shape of the 'out' variable from an LSTM?
+# Answer: (..., ..., ...)
 
-# ── Exercise 2: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
+# CHALLENGE: Create a bidirectional LSTM and print 
+# the shape of its hidden state. How does it differ 
+# from a single-directional one?
 
-
-
-print("✓ Exercise 2 passed")
-
-
-# ── Exercise 3: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Exercise 4: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Exercise 5: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Exercise 6: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge: [Title] ──────────────────────────────────────────────
-# TODO: [describe challenge that combines multiple ideas]
-
-
-
-print("✓ Challenge passed")
-
-
-print("\n🎉 All exercises passed!")
+# --- Verification ---
+print("--- Results ---")
+# Check your architecture logic vs the solution!

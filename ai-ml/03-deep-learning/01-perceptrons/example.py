@@ -1,20 +1,49 @@
-"""
-[Topic Name] — Working Demo
-============================
-Run: python example.py
+# example.py - Building a Perceptron with PyTorch
 
-Covers: [list what this demo covers]
-"""
+import torch
+import torch.nn as nn
 
+# 1. Defining the Perceptron
+# In PyTorch, a single perceptron is a Linear layer with 1 output
+class Perceptron(nn.Module):
+    def __init__(self, input_size):
+        super(Perceptron, self,"" ).__init__()
+        # 1 output neuron, with a bias term enabled by default
+        self.fc = nn.Linear(input_size, 1)
+        # Activation function (Sigmoid for binary probability)
+        self.activation = nn.Sigmoid()
 
-# ─── SECTION: [Section Name] ────────────────────────────────────────
+    def forward(self, x):
+        return self.activation(self.fc(x))
 
-# WHY: [explain why this approach is used]
+# 2. Simulated Data (binary logic gate: AND)
+# In an AND gate, output is 1 only if both inputs are 1
+X = torch.tensor([[0., 0.], [0., 1.], [1., 0.], [1., 1.]])
+y = torch.tensor([[0.], [0.], [0.], [1.]])
 
+# 3. Training Loop (Overview)
+model = Perceptron(input_size=2)
+criterion = nn.BCELoss() # Binary Cross Entropy Loss
+optimizer = torch.optim.SGD(model.parameters(), lr=0.1)
 
-# ─── SECTION: [Section Name] ────────────────────────────────────────
+print("--- Initial Predictions ---")
+with torch.no_grad():
+    print(model(X))
 
-# WHY: [explain why this approach is used]
+# 4. Train for 100 epochs
+for epoch in range(100):
+    # Zero gradients
+    optimizer.zero_grad()
+    # Forward pass
+    outputs = model(X)
+    loss = criterion(outputs, y)
+    # Backward pass
+    loss.backward()
+    # Update weights
+    optimizer.step()
 
-
-print("\n✅ All examples ran successfully!")
+print("\n--- Final Predictions (After Training) ---")
+with torch.no_grad():
+    final_out = model(X)
+    print(final_out)
+    print("Interpretation: values > 0.5 are 'True'")

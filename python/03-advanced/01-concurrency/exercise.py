@@ -1,68 +1,44 @@
-"""
-[Topic Name] — Exercises
-========================
-Run: python exercise.py (after filling in the TODOs)
+# exercise.py - Practice Concurrency
 
-6 exercises + 1 challenge. Fill in every TODO, then run
-the file — you should see "All exercises passed! 🎉"
-"""
+import threading
+import multiprocessing
+import asyncio
+import time
 
+# TODO 1: Write a function 'print_numbers()' that prints numbers 1-5 with a 0.5s delay.
+# def print_numbers():
+#     ...
 
-# ── Exercise 1: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-# Hint: [optional hint]
+# TODO 2: Start two threads that both run 'print_numbers()' concurrently.
+# Wait for both to finish.
 
+# TODO 3: Write a CPU-heavy function 'find_primes(n)' and run it across
+# multiple processes using multiprocessing.Pool.
+# def find_primes(n):
+#     ...
 
+# TODO 4: Use a Lock to prevent two threads from modifying the same
+# global variable 'counter' at the same time.
+# counter = 0
+# counter_lock = threading.Lock()
+# def increment():
+#     ...
 
-print("✓ Exercise 1 passed")
+# TODO 5: Create an async function 'fetch_data(id)' that sleeps (simulates network)
+# for 1 second and then returns a string like "Data for id {id}".
+# async def fetch_data(id):
+#     ...
 
+# TODO 6: Run fetch_data for IDs 1, 2, and 3 concurrently using asyncio.gather().
 
-# ── Exercise 2: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
+# CHALLENGE: Compare the execution time of running a CPU-heavy task sequentially
+# vs with threading vs with multiprocessing. Explain why threading might 
+# not be faster for CPU-bound tasks in Python.
 
-
-
-print("✓ Exercise 2 passed")
-
-
-# ── Exercise 3: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Exercise 4: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Exercise 5: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Exercise 6: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge: [Title] ──────────────────────────────────────────────
-# TODO: [describe challenge that combines multiple ideas]
-
-
-
-print("✓ Challenge passed")
-
-
-print("\n🎉 All exercises passed!")
+# --- Verification ---
+print("--- Results ---")
+try:
+    # Test your code here
+    pass
+except NameError as e:
+    print(f"Error: {e} — fill in all TODOs")

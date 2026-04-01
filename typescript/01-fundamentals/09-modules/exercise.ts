@@ -1,68 +1,29 @@
-"""
-[Topic Name] — Exercises
-========================
-Run: python exercise.py (after filling in the TODOs)
+// exercise.ts - Practice with Modules
 
-6 exercises + 1 challenge. Fill in every TODO, then run
-the file — you should see "All exercises passed! 🎉"
-"""
+// TODO 1: Create a file 'config.ts' and export a 
+// constant 'API_KEY' (string).
 
+// TODO 2: Create an interface 'Settings' in 'config.ts' 
+// and export it.
 
-# ── Exercise 1: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-# Hint: [optional hint]
+// TODO 3: Import BOTH 'API_KEY' and 'Settings' from 
+// './config' in a new file.
 
+// TODO 4: How would you import ONLY the 'Settings' interface 
+// in a way that minimizes bundle size?
+// Answer (Conceptual): ...
 
+// TODO 5: How would you import every export from a file 
+// './math' and give them a nickname 'MathTools'?
 
-print("✓ Exercise 1 passed")
+// TODO 6: What happens to 'import type' statements when 
+// TypeScript compiles into JavaScript?
+// Answer: ...
 
+// CHALLENGE: Create a file 'logger.ts' with a default 
+// export (a function) and a named export (a constant). 
+// Import both in one single line.
 
-# ── Exercise 2: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 2 passed")
-
-
-# ── Exercise 3: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Exercise 4: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Exercise 5: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Exercise 6: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge: [Title] ──────────────────────────────────────────────
-# TODO: [describe challenge that combines multiple ideas]
-
-
-
-print("✓ Challenge passed")
-
-
-print("\n🎉 All exercises passed!")
+// --- Verification ---
+console.log("--- Results ---");
+// Check your module syntax vs the solution!

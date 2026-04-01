@@ -1,68 +1,38 @@
-"""
-[Topic Name] — Exercises
-========================
-Run: python exercise.py (after filling in the TODOs)
+# exercise.py - Practice with Calculus
 
-6 exercises + 1 challenge. Fill in every TODO, then run
-the file — you should see "All exercises passed! 🎉"
-"""
+import torch
 
+# TODO 1: Find the derivative of f(x) = 3x^2 + 10x 
+# at the point x = 5.
+# (Calculus check: f'(x) = 6x + 10 = 6*5 + 10 = 40)
 
-# ── Exercise 1: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-# Hint: [optional hint]
+# TODO 2: Create a function g(x) = sin(x) and use 
+# a tiny 'h' (e.g. 0.0001) to approximate its 
+# derivative at x = 0.
+def g(x):
+    # return ...
+    return 0
 
+# TODO 3: Which math concept allows us to find 
+# the 'Direction of Steepest Ascent' for a multi-input function?
+# Answer: ...
 
+# TODO 4: Find the gradient of h(x, y, z) = x*y + z 
+# at the point (1, 2, 3) using PyTorch.
 
-print("✓ Exercise 1 passed")
+# TODO 5: What is the 'Chain Rule' in plain English?
+# Answer: ...
 
+# TODO 6: If the derivative of our Loss function 
+# with respect to a weight is POSITIVE, should we 
+# INCREASE or DECREASE that weight to lower the loss?
+# Answer: ...
 
-# ── Exercise 2: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
+# CHALLENGE: Manually calculate the derivative of 
+# f(g(x)) where f(u) = u^2 and g(x) = x + 3 
+# at x = 2.
+# (Hint: Use the Chain Rule: f'(g(x)) * g'(x))
 
-
-
-print("✓ Exercise 2 passed")
-
-
-# ── Exercise 3: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Exercise 4: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Exercise 5: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Exercise 6: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge: [Title] ──────────────────────────────────────────────
-# TODO: [describe challenge that combines multiple ideas]
-
-
-
-print("✓ Challenge passed")
-
-
-print("\n🎉 All exercises passed!")
+# --- Verification ---
+print("--- Results ---")
+# Check your calculus logic vs the solution!

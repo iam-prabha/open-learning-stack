@@ -1,68 +1,36 @@
-"""
-[Topic Name] — Exercises
-========================
-Run: python exercise.py (after filling in the TODOs)
+// exercise.js - Practice with Iterators
 
-6 exercises + 1 challenge. Fill in every TODO, then run
-the file — you should see "All exercises passed! 🎉"
-"""
+// TODO 1: Extract the iterator from this array using Symbol.iterator:
+// const names = ["Alice", "Bob", "Charlie"];
+// const it = ...
 
+// TODO 2: Manually call it.next() twice and log the results.
 
-# ── Exercise 1: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-# Hint: [optional hint]
+// TODO 3: Use a 'for...of' loop to iterate over the string "JavaScript".
 
+// TODO 4: Create a custom iterable 'counter' that yields 3, 2, 1 
+// and then stops. (Implement [Symbol.iterator])
+/*
+const countdown = {
+  [Symbol.iterator]() { ... }
+};
+*/
 
+// TODO 5: Use the spread operator (...) to convert your 'countdown' 
+// object into an array.
+// const countArr = ...
 
-print("✓ Exercise 1 passed")
+// TODO 6: What property must an object have to be considered "Iterable"?
+// Answer: ...
 
+// CHALLENGE: Create an object 'namesGroup' that has a 'members' array 
+// and allows direct iteration over the 'members' using 'for...of' on the object itself.
 
-# ── Exercise 2: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 2 passed")
-
-
-# ── Exercise 3: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Exercise 4: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Exercise 5: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Exercise 6: [Title] ─────────────────────────────────────────────
-# TODO: [describe what to build]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge: [Title] ──────────────────────────────────────────────
-# TODO: [describe challenge that combines multiple ideas]
-
-
-
-print("✓ Challenge passed")
-
-
-print("\n🎉 All exercises passed!")
+// --- Verification ---
+console.log("--- Results ---");
+try {
+    // console.log(`Names Iterator:`, it.next());
+    // for (const val of countdown) console.log(val);
+} catch (e) {
+    console.log("Error: fill in all TODOs to see results!");
+}

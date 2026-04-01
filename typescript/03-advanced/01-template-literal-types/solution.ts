@@ -1,79 +1,29 @@
-"""
-[Topic Name] — Solutions
-========================
-Run: python solution.py
+// solution.ts - Template Literal Types answers
 
-Complete answers for all exercises.
-"""
+// TODO 1 & 2
+type Protocol = "http" | "https";
+type MyURL = `${Protocol}://localhost`;
 
+// TODO 3 & 4
+type Size = "small" | "large";
+type Fruit = "apple" | "banana";
+type Order = `${Size}-${Fruit}`;
 
-# ── Solution 1 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
+// TODO 5
+type Input = "fatal";
+type ERROR_CODE = Uppercase<Input>;
 
+// TODO 6
+// Answer: It refers to the way TypeScript automatically generates 
+// every possible combination when two or more unions are 
+// interpolated into a template literal type.
 
+// CHALLENGE ANSWER
+type PropEvent<T extends string> = `on_${Capitalize<T>}`;
+type Events = PropEvent<"click" | "scroll">; // "on_Click" | "on_Scroll"
 
-print("✓ Exercise 1 passed")
-
-# ALTERNATIVE: [show a different valid approach]
-
-
-# ── Solution 2 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 2 passed")
-
-
-# ── Solution 3 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 3 passed")
-
-
-# ── Solution 4 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 4 passed")
-
-
-# ── Solution 5 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 5 passed")
-
-
-# ── Solution 6 ──────────────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Exercise 6 passed")
-
-
-# ── Challenge Solution ──────────────────────────────────────────────
-# WHY: [explain why this approach works]
-
-
-
-print("✓ Challenge passed")
-
-
-# ─── KEY TAKEAWAYS ───────────────────────────────────────────────────
-#
-# 1. [Takeaway 1]
-# 2. [Takeaway 2]
-# 3. [Takeaway 3]
-# 4. [Takeaway 4]
-# 5. [Takeaway 5]
-#
-# Next topic: [next-topic-name]
-# ─────────────────────────────────────────────────────────────────────
-
-print("\n🎉 All exercises passed!")
+console.log("\n--- Why it works ---");
+console.log("1. String Precision: Template types allow you to enforce strict patterns (like Protocols or API paths) that plain strings cannot.");
+console.log("2. Automation: Instead of manually typing out 50 combinations of CSS classes or events, you generate them in one line.");
+console.log("3. API Design: They are the foundation of 'Type-safe pathing' in frameworks, ensuring you can't navigate to a nonexistent route.");
+console.log("4. Readability: Combined with Mapped Types, they make complex key transformations transparent and easy to follow.");
