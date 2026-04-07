@@ -16,9 +16,16 @@ Learn AI and Machine Learning from math foundations to production MLOps.
 
 → [01-math-foundations/01-linear-algebra/](01-math-foundations/01-linear-algebra/)
 
-## The 5th file: notebook.ipynb
+## The 5th file: notebook.py (paired with notebook.ipynb)
 
-AI/ML topics that involve math or visual concepts include a `notebook.ipynb` with pre-rendered visualizations. These notebooks use matplotlib/seaborn and are designed to build intuition *before* writing code.
+AI/ML topics that involve math or visual concepts include a `notebook.py` paired with `notebook.ipynb` via [Jupytext](https://jupytext.readthedocs.io/). The `.py` file runs in any terminal/REPL; the `.ipynb` opens in Jupyter/Colab with rendered plots. They stay in sync:
+
+```bash
+# After editing either file, sync them:
+jupytext --sync notebook.ipynb
+```
+
+Run the visualization: `python notebook.py` (requires `numpy`, `matplotlib`).
 
 ## Full topic order
 

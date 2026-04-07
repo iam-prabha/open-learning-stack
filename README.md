@@ -28,6 +28,29 @@ python exercise.py         # Try the exercises (fill in TODOs)
 python solution.py         # Check the answers
 ```
 
+## Run on your device (no setup needed)
+
+You don't need to install any compiler. Copy any code file and paste it into a free online editor:
+
+| Track | Where to run | Link |
+|---|---|---|
+| Python | CodeChef IDE | [codechef.com/ide](https://www.codechef.com/ide) |
+| Python (AI/ML) | Google Colab | [colab.research.google.com](https://colab.research.google.com) |
+| JavaScript | JSFiddle | [jsfiddle.net](https://jsfiddle.net) |
+| TypeScript | TypeScript Playground | [typescriptlang.org/play](https://www.typescriptlang.org/play) |
+| Go | Go Playground | [go.dev/play](https://go.dev/play/) |
+| Rust | Rust Playground | [play.rust-lang.org](https://play.rust-lang.org) |
+
+**All languages in one place:** [Replit](https://replit.com) supports every language in this repo (free account required).
+
+### Quick start
+1. Open any `example.py`, `exercise.py`, or `solution.py` in this repo
+2. Copy the code
+3. Paste into the matching platform above
+4. Hit Run
+
+**AI/ML notebooks:** Upload `notebook.ipynb` directly to Google Colab, or paste `notebook.py` into a Colab code cell.
+
 ## Repository structure
 
 ```text
